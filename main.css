@@ -1,0 +1,298 @@
+*{
+    margin: 0;
+    Padding: 0;
+}
+
+
+body, main, aside, footer {
+    border: 1px solid black;
+}
+
+
+body {
+    width: 95%;
+    max-width: 1024px;
+    background-color: lightpink;
+    margin: 15px auto;
+}
+
+/* ------------------------------------------------------------------------------------ */
+
+header {
+    width: 100%;
+    height: 5%;
+    border-bottom: 1px solid black;
+    padding: 15px 0;
+    margin-bottom: 20px;
+}
+
+#logo {
+    height: 70px;
+    float: left;
+}
+
+h2 {
+    text-align: center;
+    vertical-align: middle;
+    color: blueviolet;
+    line-height: 70px;
+}
+
+/* ------------------------ NAVIGATION BAR ----------------------------- */
+
+nav {
+    height: 50px;
+    padding: 10px 0;
+    clear: both;
+    width: 100%;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0 auto;
+    position: relative;
+}
+
+nav > ul {
+    width: 98%;
+}
+
+nav ul::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+nav ul li {
+    border-left: 1px black solid;
+    border-top: 1px black solid;
+    border-bottom: 1px black solid;
+    width: 14.18%;
+    margin-bottom: 0.5em;
+    float: left;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+}
+
+nav ul li a {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    color: white;
+    padding: 0.5em;
+    background-color: blueviolet;
+}
+
+nav ul li a.current {
+    background-color: deeppink;
+}
+
+nav ul li a.lastitem {
+    border-right: 1px black solid;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li {
+    float: none;
+    width: 100%;
+    margin-bottom: 0.1em;
+}
+
+nav ul li ul li a {
+    border-right: 1px black solid;
+}
+
+/* ------------------------ HERO SECTION ----------------------------- */
+
+
+main {
+    width: 62%;
+    float: left;
+    padding: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 2em;
+    border-bottom: 1px solid #ccc;
+    padding: 1.5em;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.hero h1 {
+    color: blueviolet;
+    margin-bottom: 3%;
+    font-size: 1.8em;
+}
+
+.hero p {
+    margin-bottom: 4%;
+    line-height: 1.5;
+}
+
+.register-button {
+    display: inline-block;
+    background-color: deeppink;
+    color: white;
+    padding: 0.7em 1.5em;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.register-button:hover {
+    background-color: #ff0080;
+    transform: scale(1.05);
+}
+
+/* ------------------------ FEATURES SECTION ----------------------------- */
+
+.features {
+    margin-bottom: 2em;
+}
+
+
+.features h2 {
+    color: blueviolet;
+    margin-bottom: 1em;
+    text-align: center;
+    font-size: 1.6em;
+    padding: 0.5em 0;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+}
+
+.feature-box {
+    margin-bottom: 1.2em;
+    padding: 1em;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-left: 3px solid blueviolet;
+}
+
+.feature-box h3 {
+    color: deeppink;
+    margin-bottom: 0.5em;
+    text-align: left;
+    padding-bottom: 0.3em;
+    font-size: 1.2em;
+}
+
+/* ------------------------ TESTIMONIAL SECTION ----------------------------- */
+
+.testimonial {
+    margin-bottom: 2em;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 1.2em;
+    border-left: 3px solid blueviolet;
+}
+
+.testimonial h2 {
+    color: blueviolet;
+    margin-bottom: 0.8em;
+    font-size: 1.6em;
+}
+
+blockquote {
+    font-style: italic;
+    margin-left: 1em;
+    line-height: 1.5;
+}
+
+cite {
+    display: block;
+    text-align: right;
+    margin-top: 0.8em;
+    font-weight: bold;
+    color: deeppink;
+}
+
+/* ------------------------ HOW IT WORKS SECTION ----------------------------- */
+
+.how-it-works {
+    margin-bottom: 2em;
+    padding: 1.2em;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-left: 3px solid blueviolet;
+}
+
+.how-it-works h2 {
+    color: blueviolet;
+    margin-bottom: 0.8em;
+    text-align: center;
+    font-size: 1.6em;
+}
+
+.how-it-works ol {
+    padding-left: 2em;
+    margin-bottom: 0.5em;
+}
+
+.how-it-works li {
+    margin-bottom: 0.8em;
+    line-height: 1.4;
+    padding: 0.5em 0;
+}
+
+.how-it-works strong {
+    color: deeppink;
+}
+
+/* ------------------------ ADDITIONAL FEATURES ----------------------------- */
+
+aside {
+    width: 28%;
+    float: right;
+    padding: 1.5em;
+    background-color: #FAFAFA;
+    margin-bottom: 1.5em;
+}
+
+h3 {
+    text-align: center;
+    padding-bottom: 1em;
+    color: blueviolet;
+}
+
+aside li {
+    list-style-type: none;
+    margin-bottom: 0.5em;
+}
+
+aside li a {
+    text-decoration: none;
+    color: green;
+}
+
+aside li a:visited {
+    color: brown;
+}
+
+aside li a:focus, aside li a:hover {
+    color: pink;
+}
+
+/* ------------------------ FOOTER ----------------------------- */
+
+footer {
+    width: 100%;
+    height: auto;
+    clear: both;
+    color: white;
+    background-color: blueviolet;
+    text-align: center;
+    padding: 1.5em 0;
+}
+
+
+footer p {
+    margin-bottom: 0.8em;
+}
