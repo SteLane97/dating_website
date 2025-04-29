@@ -3,17 +3,29 @@
     Padding: 0;
 }
 
-
-body, main, aside, footer {
-    border: 1px solid black;
+header, main{
+    background-color: lightpink;
 }
 
+body, main, aside {
+    border: 2px solid blueviolet;
+}
+
+body, main, aside {
+    border-radius: 5px;
+}
 
 body {
     width: 95%;
     max-width: 1024px;
-    background-color: lightpink;
+    background-color: lightpink; 
     margin: 15px auto;
+    font-size: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 /* ------------------------------------------------------------------------------------ */
@@ -21,14 +33,25 @@ body {
 header {
     width: 100%;
     height: 5%;
-    border-bottom: 1px solid black;
-    padding: 15px 0;
-    margin-bottom: 20px;
+    border-bottom: 2px solid blueviolet;
+    padding: 2% 0;
+    margin-bottom: 2%;
 }
 
 #logo {
-    height: 70px;
+    height: auto;
+    width: 7%;
+    min-width: 30px;
     float: left;
+}
+
+header h2 {
+    font-size: 3em;
+}
+
+header h2 a {
+    text-decoration: none;
+    color: blueviolet;
 }
 
 h2 {
@@ -36,6 +59,7 @@ h2 {
     vertical-align: middle;
     color: blueviolet;
     line-height: 70px;
+    font-size: 1.7em;
 }
 
 /* ------------------------ NAVIGATION BAR ----------------------------- */
@@ -113,24 +137,26 @@ nav ul li ul li a {
 
 
 main {
-    width: 62%;
+    width: 55%;
     float: left;
-    padding: 1.5em;
-    margin-bottom: 1.5em;
+    padding: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 2%;
 }
 
 .hero {
     text-align: center;
-    margin-bottom: 2em;
+    margin-bottom: 4%;
     border-bottom: 1px solid #ccc;
-    padding: 1.5em;
+    padding: 3%;
     background-color: rgba(255, 255, 255, 0.3);
 }
 
 .hero h1 {
     color: blueviolet;
     margin-bottom: 3%;
-    font-size: 1.8em;
+    font-size: 2em;
 }
 
 .hero p {
@@ -144,7 +170,7 @@ main {
     color: white;
     padding: 0.7em 1.5em;
     text-decoration: none;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     font-weight: bold;
     transition: background-color 0.3s;
 }
@@ -172,8 +198,8 @@ main {
 }
 
 .feature-box {
-    margin-bottom: 1.2em;
-    padding: 1em;
+    margin-bottom: 3%;
+    padding: 2%;
     background-color: rgba(255, 255, 255, 0.4);
     border-left: 3px solid blueviolet;
 }
@@ -183,15 +209,15 @@ main {
     margin-bottom: 0.5em;
     text-align: left;
     padding-bottom: 0.3em;
-    font-size: 1.2em;
+    font-size: 1.4em;
 }
 
 /* ------------------------ TESTIMONIAL SECTION ----------------------------- */
 
 .testimonial {
-    margin-bottom: 2em;
+    margin-bottom: 4%;
     background-color: rgba(255, 255, 255, 0.4);
-    padding: 1.2em;
+    padding: 2.5%;
     border-left: 3px solid blueviolet;
 }
 
@@ -218,8 +244,8 @@ cite {
 /* ------------------------ HOW IT WORKS SECTION ----------------------------- */
 
 .how-it-works {
-    margin-bottom: 2em;
-    padding: 1.2em;
+    margin-bottom: 4%;
+    padding: 2.5%;
     background-color: rgba(255, 255, 255, 0.4);
     border-left: 3px solid blueviolet;
 }
@@ -249,11 +275,12 @@ cite {
 /* ------------------------ ADDITIONAL FEATURES ----------------------------- */
 
 aside {
-    width: 28%;
+    width: 25%;
     float: right;
-    padding: 1.5em;
+    padding: 2%;
     background-color: #FAFAFA;
-    margin-bottom: 1.5em;
+    margin-bottom: 2%;
+    margin-right: 2%;
 }
 
 h3 {
@@ -296,3 +323,32 @@ footer {
 footer p {
     margin-bottom: 0.8em;
 }
+
+footer a {
+    color: white;
+}
+
+
+
+/* ------------------------ MEDIA QUERIES ----------------------------- */
+
+@media screen and (max-width: 1050px) {
+    nav ul li {
+        width: 13.9%; 
+    }
+    
+    nav ul li a {
+        padding: 0.5em 0.3em;
+    }
+    
+    nav {
+        font-size: 95%;
+    }
+}
+
+@media only screen and (max-width: 900px) { 
+    html {font-size: 90%;}
+ }
+
+ @media only screen and (max-width: 767px) { 
+ }
