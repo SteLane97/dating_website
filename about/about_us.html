@@ -3,9 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Connecting Hearts | About Us</title>
+    <link rel="stylesheet" href="../slicknav.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../jquery.slicknav.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      $('#nav_menu').slicknav({prependTo:"#mobile_menu"});
+    });
+    </script>
+    <link rel="stylesheet" href="../main.css"> 
 </head>
 <body>
-    
+    <header>
+        <a href="../index.html"><img src="../image.png" alt="Company Logo" id="logo"></a>
+        <h2><a href="../index.html" id="company_name">Connecting Hearts</a></h2>
+        <nav id="mobile_menu"></nav>
+        <nav id="nav_menu">
+            <ul>
+                <li>
+                    <a href="../index.html">Home</a>   
+                </li>
+
+                <li>
+                    <a href="about.html" class="current">About</a>
+                    <ul>
+                        <li><a href="about_us.html" class="current">About Us</a></li>
+                        <li><a href="our_team.html">Our Team</a></li>
+                        <li><a href="global_reach.html">Global Reach</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="../services/services.html">Services</a>
+                    <ul>
+                        <li><a href="../services/membership_plans.html">Membership Plans</a></li>
+                        <li><a href="../services/features.html">Features</a></li>
+                        <li><a href="../services/premium_features.html">Premium Features</a></li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <a href="../success_stories/success_stories.html">Success Stories</a>
+                    <ul>
+                        <li><a href="../success_stories/testimonials.html">Testimonials</a></li>
+                        <li><a href="../success_stories/featured_couples.html">Featured Couples</a></li>
+                        <li><a href="../success_stories/share_story.html">Share Your Story</a></li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <a href="../events/events.html">News &amp; Events</a>
+                    <ul>
+                        <li><a href="../events/blog.html">Blog</a></li>
+                        <li><a href="../events/upcoming_events.html">Upcoming Events</a></li>
+                        <li><a href="../events/promotions.html">Promotions</a></li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <a href="../safety/safety.html">Safety</a>
+                    <ul>
+                        <li><a href="../safety/safety_guide.html">Dating Safety Guide</a></li>
+                        <li><a href="../safety/privacy_policy.html">Privacy Policy</a></li>
+                        <li><a href="../safety/help_centre.html">Help Centre</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="../contact.html" class="lastitem">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>About Us</h1>
+            <p>Discover the story behind Connecting Hearts and our commitment to creating meaningful connections.</p>
+        </section>
+        
+        <section class="features">
+            <h2>Our Story</h2>
+            
+            <div class="feature-box">
+                <h3>The Beginning</h3>
+                <p>Connecting Hearts was founded in 2020 by a group of relationship experts who recognized the need for a dating platform that prioritized genuine connections over superficial matches. We started as a small team with a big vision: to revolutionize the way people find love online.</p>
+            </div>
+            
+            <div class="feature-box">
+                <h3>Our Growth</h3>
+                <p>From our humble beginnings, we've grown to become a global platform serving users across multiple continents. Our user base has expanded steadily, and we've continuously evolved our features and technology to better serve our community. Throughout this growth, we've remained committed to our core values of trust, innovation, and user satisfaction.</p>
+            </div>
+            
+            <div class="feature-box">
+                <h3>Our Philosophy</h3>
+                <p>At Connecting Hearts, we believe that meaningful relationships are built on compatibility, shared values, and mutual respect. Our platform is designed to help users find matches who complement their personality and lifestyle, leading to more fulfilling and lasting connections. We prioritize quality over quantity, focusing on helping our users find the right match rather than simply providing numerous options.</p>
+            </div>
+        </section>
+
+        <section class="how-it-works">
+            <h2>Our Core Values</h2>
+            <ol>
+                <li><strong>Trust</strong> - We prioritize user safety and data protection, creating a secure environment for online dating.</li>
+                <li><strong>Innovation</strong> - We continuously improve our platform with new features and technologies to enhance the user experience.</li>
+                <li><strong>Inclusivity</strong> - We welcome users from all backgrounds, creating a diverse and inclusive community.</li>
+                <li><strong>User Satisfaction</strong> - We listen to our users' feedback and strive to exceed their expectations.</li>
+                <li><strong>Sustainability</strong> - We're committed to eco-friendly practices and supporting charitable causes.</li>
+            </ol>
+        </section>
+        
+        <section class="feature-box">
+            <h2>Our Future Vision</h2>
+            <p>Looking ahead, we envision Connecting Hearts as more than just a dating platform—we aim to be a comprehensive resource for relationship building and personal growth. Our future plans include:</p>
+            <ul>
+                <li>Expanding our feature set to include more interactive and innovative tools</li>
+                <li>Enhancing our mobile app for an even more seamless user experience</li>
+                <li>Partnering with relationship experts and organizations to provide valuable resources</li>
+                <li>Growing our global presence to reach more users around the world</li>
+                <li>Developing community initiatives to support causes related to healthy relationships</li>
+            </ul>
+        </section>
+    </main>
+
+    <aside>
+        <h3>Additional Resources</h3>
+        <ul>
+            <li><a href="../safety/safety_guide.html">Online Dating Safety Guide</a></li>
+            <li><a href="../dating_tips.html">Dating Tips &amp; Advice</a></li>
+            <li><a href="../success_stories/success_stories.html">Success Stories</a></li>
+            <li><a href="../events/events.html">Upcoming Events</a></li>
+            <li><a href="../events/blog.html">Relationship Blog</a></li>
+            <li><a href="../faq.html">FAQ / Help Center</a></li>
+            <li><a href="../services/premium_features.html">Premium Features</a></li>  
+        </ul>
+    </aside>
+
+    <footer>
+        <p>&copy; 2025 Connecting Hearts. All rights reserved. Connecting Hearts | <a href="../safety/privacy_policy.html">Privacy Policy</a> | <a href="../terms_of_service.html">Terms of Service</a> | <a href="../contact.html">Contact Us</a></p>
+        
+        <p>Helping people find meaningful connections since 2020.</p>
+        
+        <p>123 Love Lane, London, UK | <a href="mailto:support@connectinghearts.com">support@connectinghearts.com</a> | <a href="tel:+44 (0)20 1234 5678">+44 (0)20 1234 5678</a></p>
+    </footer>
 </body>
 </html>

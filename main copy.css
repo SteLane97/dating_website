@@ -6,17 +6,17 @@
 body {
     width: 95%;
     max-width: 1024px;
-    background-color: #b4e1d8; 
+    background-color: lightpink; 
     margin: 15px auto;
     font-size: 100%;
 }
 
 header, main{
-    background-color: #b4e1d8;
+    background-color: lightpink;
 }
 
 body, main, aside {
-    border: 2px solid #1e5959;
+    border: 2px solid blueviolet;
     border-radius: 5px
 }
 
@@ -30,7 +30,7 @@ img {
 header {
     width: 100%;
     height: 5%;
-    border-bottom: 2px solid #1e5959;
+    border-bottom: 2px solid blueviolet;
     padding: 2% 0;
     margin-bottom: 2%;
 }
@@ -53,13 +53,13 @@ header h2 {
 
 header h2 a {
     text-decoration: none;
-    color: #1e5959;
+    color: blueviolet;
     font-size: 1em;
 }
 
 h2 {
     text-align: center;
-    color: #1e5959;
+    color: blueviolet;
     line-height: 1.3;
     font-size: 1.7em;
 }
@@ -114,11 +114,11 @@ h2 {
     text-align: center;
     color: white;
     padding: 0.5em;
-    background-color: #1e5959;
+    background-color: blueviolet;
 }
 
 #nav_menu ul li a.current {
-    background-color: #e74c3c;
+    background-color: deeppink;
 }
 
 #nav_menu ul li a.lastitem {
@@ -142,16 +142,16 @@ h2 {
 /* ------------------------ SLICKNAV MENU ----------------------------- */
 
 .slicknav_menu {
-    background-color: #b4e1d8;
+    background-color: lightpink;
     padding: 10px;
 }
   
 .slicknav_btn {
-    background-color: #1e5959;
+    background-color: blueviolet;
 }
   
 .slicknav_nav {
-    background-color: #1e5959;
+    background-color: blueviolet;
     border-radius: 5px;
 }
   
@@ -160,7 +160,7 @@ h2 {
 }
   
 .slicknav_nav a:hover, .slicknav_nav .slicknav_row:hover {
-    background: #e74c3c;
+    background: deeppink;
     border-radius: 5px;
 }
   
@@ -187,7 +187,7 @@ main {
 }
 
 .hero h1 {
-    color: #1e5959;
+    color: blueviolet;
     margin-bottom: 3%;
     font-size: 2em;
 }
@@ -199,17 +199,17 @@ main {
 
 .register-button {
     display: inline-block;
-    background-color: #e74c3c;
+    background-color: deeppink;
     color: white;
     padding: 0.7em 1.5em;
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
-    border: #1e5959 solid 2px;
+    border: blueviolet solid 2px;
 }
 
 .register-button:hover {
-    background-color: #e74c3c;
+    background-color: deeppink;
     transform: scale(1.05);
 }
 
@@ -231,11 +231,11 @@ main {
     margin-bottom: 1.5em;
     padding: 2%;
     background-color: rgba(255, 255, 255, 0.4);
-    border-left: 3px solid #1e5959;
+    border-left: 3px solid blueviolet;
 }
 
 .feature-box h3 {
-    color: #e74c3c;
+    color: deeppink;
     margin-bottom: 0.5em;
     text-align: left;
     padding-bottom: 0.3em;
@@ -248,7 +248,7 @@ main {
     margin-bottom: 1.5em;
     background-color: rgba(255, 255, 255, 0.4);
     padding: 2.5%;
-    border-left: 3px solid #1e5959;
+    border-left: 3px solid blueviolet;
 }
 
 blockquote {
@@ -262,7 +262,7 @@ cite {
     text-align: right;
     margin-top: 0.8em;
     font-weight: bold;
-    color: #e74c3c;
+    color: deeppink;
 }
 
 /* ------------------------ HOW IT WORKS SECTION ----------------------------- */
@@ -271,7 +271,7 @@ cite {
     margin-bottom: 1.5em;
     padding: 2.5%;
     background-color: rgba(255, 255, 255, 0.4);
-    border-left: 3px solid #1e5959;
+    border-left: 3px solid blueviolet;
 }
 
 .how-it-works ol {
@@ -286,7 +286,7 @@ cite {
 }
 
 .how-it-works strong {
-    color: #e74c3c;
+    color: deeppink;
 }
 
 /* ------------------------ ADDITIONAL FEATURES ----------------------------- */
@@ -295,14 +295,14 @@ aside {
     width: 25%;
     float: right;
     padding: 2%;
-    background-color: #f1f8f6;
+    background-color: #FAFAFA;
     margin: 0 2% 2% 0;
 }
 
 h3 {
     text-align: center;
     padding-bottom: 1em;
-    color: #1e5959;
+    color: blueviolet;
 }
 
 aside li {
@@ -316,11 +316,11 @@ aside li a {
 }
 
 aside li a:visited {
-    color: #d35400;
+    color: #5b3a29;
 }
 
 aside li a:focus, aside li a:hover {
-    color: #e4b5c6;
+    color: deeppink;
 }
 
 /* ------------------------ FOOTER ----------------------------- */
@@ -330,7 +330,7 @@ footer {
     height: auto;
     clear: both;
     color: white;
-    background-color: #1e5959;
+    background-color: blueviolet;
     text-align: center;
     padding: 1.5em 0;
 }
@@ -385,21 +385,10 @@ footer a {
         padding-top: 5px;
         padding-bottom: 5px;
     }
-    #logo {
-        width: 18%;
-        min-width: 60px;
-    }
 }
 
 @media only screen and (max-width: 479px) {
     html {font-size: 80%;} 
-    #logo {
-        width: 20%;
-        min-width: 50px;
-        margin: 0 auto 10px auto;
-        float: none;
-        display: block;
-    }
     header h2 {
         font-size: 1.8em;
         line-height: 1.2;
