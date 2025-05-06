@@ -3,16 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connecting Hearts | Homepage</title>
-    <link rel="stylesheet" href="slicknav.css">
+    <title>Connecting Hearts | Testimonials</title>
+    <link rel="stylesheet" href="../slicknav.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="jquery.slicknav.min.js"></script>
+    <script src="../jquery.slicknav.min.js"></script>
     <script>
     $(document).ready(function(){
       $('#nav_menu').slicknav({prependTo:"#mobile_menu"});
     });
     </script>
     <link rel="stylesheet" href="../main.css"> 
+    <style>
+        /* Additional styles specific to testimonials page */
+        .testimonial-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 2em 0;
+        }
+        
+        .testimonial-card {
+            width: 48%;
+            margin-bottom: 2em;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .testimonial-couple {
+            font-weight: bold;
+            color: #e74c3c;
+            margin-top: 1em;
+            text-align: right;
+        }
+        
+        .testimonial-meta {
+            font-size: 0.9em;
+            color: #1e5959;
+            text-align: right;
+            font-style: italic;
+        }
+        
+        @media only screen and (max-width: 767px) {
+            .testimonial-card {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -26,43 +62,43 @@
                 </li>
 
                 <li>
-                    <a href="../about/about.html">About</a>
+                    <a href="#">About</a>
                     <ul>
-                        <li><a href="../about/about_us.html">About Us</a></li>
+                        <li><a href="../about/about.html">About Us</a></li>
                         <li><a href="../about/our_team.html">Our Team</a></li>
                         <li><a href="../about/global_reach.html">Global Reach</a></li>
                     </ul>
                 </li>
 
                 <li>
-                    <a href="../services/services.html">Services</a>
+                    <a href="#">Services</a>
                     <ul>
+                        <li><a href="../services/services.html">Services &amp; Features</a></li>
                         <li><a href="../services/membership_plans.html">Membership Plans</a></li>
-                        <li><a href="../services/features.html">Features</a></li>
                         <li><a href="../services/premium_features.html">Premium Features</a></li>
                     </ul>
                 </li>
                 
                 <li>
-                    <a href="../success_stories/success_stories.html" class="current">Success Stories</a>
+                    <a href="#" class="current">Success Stories</a>
                     <ul>
-                        <li><a href="../success_stories/testimonials.html" class="current">Testimonials</a></li>
-                        <li><a href="../success_stories/featured_couples.html">Featured Couples</a></li>
-                        <li><a href="../success_stories/share_story.html">Share Your Story</a></li>
+                        <li><a href="testimonials.html" class="current">Testimonials</a></li>
+                        <li><a href="featured_couples.html">Featured Couples</a></li>
+                        <li><a href="share_story.html">Share Your Story</a></li>
                     </ul>
                 </li>
                 
                 <li>
-                    <a href="../events/events.html">News &amp; Events</a>
+                    <a href="#">News &amp; Events</a>
                     <ul>
+                        <li><a href="../events/events.html">Upcoming Events</a></li>
                         <li><a href="../events/blog.html">Blog</a></li>
-                        <li><a href="../events/upcoming_events.html">Upcoming Events</a></li>
                         <li><a href="../events/promotions.html">Promotions</a></li>
                     </ul>
                 </li>
                 
                 <li>
-                    <a href="../safety/safety.html">Safety</a>
+                    <a href="#">Safety</a>
                     <ul>
                         <li><a href="../safety/safety_guide.html">Dating Safety Guide</a></li>
                         <li><a href="../safety/privacy_policy.html">Privacy Policy</a></li>
@@ -79,46 +115,138 @@
 
     <main>
         <section class="hero">
-            <h1>Find Your Perfect Match Today</h1>
-            <p>Welcome to Connecting Hearts, where meaningful relationships begin. Our advanced matching algorithm helps you find compatible partners based on your preferences and values.</p>
-            <a href="../register.html" class="register-button">Create Your Profile</a>
+            <h1>Testimonials</h1>
+            <p>Read inspiring stories from couples who found their perfect match on Connecting Hearts.</p>
+        </section>
+        
+        <section class="feature-box">
+            <h2>Real Success Stories</h2>
+            <p>At Connecting Hearts, we're committed to helping people find meaningful relationships. We're proud to share these testimonials from real couples who connected through our platform. These stories inspire us and remind us why we created Connecting Hearts.</p>
         </section>
         
         <section class="features">
-            <h2>Why Choose Connecting Hearts?</h2>
+            <h2>What Our Users Say</h2>
             
-            <div class="feature-box">
-                <h3>Smart Matching</h3>
-                <p>Our algorithm suggests compatible matches based on your preferences, interests, and behavior patterns.</p>
-            </div>
-            
-            <div class="feature-box">
-                <h3>Safe Environment</h3>
-                <p>We prioritize user safety with comprehensive guidelines and privacy measures to ensure a secure dating experience.</p>
-            </div>
-            
-            <div class="feature-box">
-                <h3>Global Community</h3>
-                <p>Connect with people from around the world with our platform serving users across London, New York, Sydney, Tokyo, and beyond.</p>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial">
+                        <blockquote>
+                            "We met on Connecting Hearts and have been inseparable ever since. The platform made it easy for us to find each other based on our shared interests and values."
+                        </blockquote>
+                        <div class="testimonial-couple">— Anna &amp; Mark</div>
+                        <div class="testimonial-meta">Together since January 2023</div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial">
+                        <blockquote>
+                            "The video chat feature allowed us to connect on a deeper level before meeting in person. It was a game-changer for building trust early in our relationship."
+                        </blockquote>
+                        <div class="testimonial-couple">— Sarah &amp; David</div>
+                        <div class="testimonial-meta">Engaged after 14 months</div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial">
+                        <blockquote>
+                            "The customer support team is incredibly helpful. They guided us through the process and made sure we felt safe using the platform. We're grateful to have found each other!"
+                        </blockquote>
+                        <div class="testimonial-couple">— Rachel &amp; John</div>
+                        <div class="testimonial-meta">Married in April 2024</div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial">
+                        <blockquote>
+                            "I was skeptical about online dating at first, but Connecting Hearts made it easy to find someone with similar values and relationship goals. We clicked instantly when we met."
+                        </blockquote>
+                        <div class="testimonial-couple">— Michael &amp; Priya</div>
+                        <div class="testimonial-meta">Together since May 2023</div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial">
+                        <blockquote>
+                            "The matching algorithm is impressive! We would never have met otherwise since we lived in different cities, but Connecting Hearts brought us together."
+                        </blockquote>
+                        <div class="testimonial-couple">— Jason &amp; Emma</div>
+                        <div class="testimonial-meta">Moving in together after 8 months</div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial">
+                        <blockquote>
+                            "As busy professionals, dating was challenging for both of us. Connecting Hearts simplified the process and helped us find each other despite our hectic schedules."
+                        </blockquote>
+                        <div class="testimonial-couple">— Carlos &amp; Sophie</div>
+                        <div class="testimonial-meta">Together since September 2023</div>
+                    </div>
+                </div>
             </div>
         </section>
-
-        <section class="testimonial">
-            <h2>Success Stories</h2>
+        
+        <section class="features">
+            <h2>International Success Stories</h2>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial">
+                        <blockquote>
+                            "Despite living in different countries initially, we connected through Connecting Hearts. The platform's international features helped us build our relationship across borders."
+                        </blockquote>
+                        <div class="testimonial-couple">— Alejandro &amp; Natalie</div>
+                        <div class="testimonial-meta">London &amp; Madrid, now living together in London</div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial">
+                        <blockquote>
+                            "The cultural sensitivity of the platform helped us navigate our different backgrounds. We appreciate how Connecting Hearts considers cultural factors in matching."
+                        </blockquote>
+                        <div class="testimonial-couple">— Hiroshi &amp; Lauren</div>
+                        <div class="testimonial-meta">Tokyo &amp; Sydney, engaged after 2 years</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="feature-box">
+            <h2>Premium Feature Success</h2>
+            <p>Many of our success stories highlight how our premium features enhanced the dating experience and helped couples connect.</p>
             <blockquote>
-                "We met on Connecting Hearts and have been inseparable ever since. The platform made it easy for us to find each other based on our shared interests and values."
-                <cite>— Anna &amp; Mark</cite>
+                "Using the Date Planner feature made our first few dates so much easier to organize. It took away the stress and helped us focus on getting to know each other."
+                <cite>— Jeremy &amp; Olivia</cite>
             </blockquote>
+            <blockquote>
+                "The exclusive events for premium members are where we met. The relaxed atmosphere made it so much easier to connect in person."
+                <cite>— Daniel &amp; Mia</cite>
+            </blockquote>
+            <p>Learn more about our premium features on our <a href="../services/premium_features.html">Premium Features page</a>.</p>
         </section>
         
         <section class="how-it-works">
-            <h2>How It Works</h2>
+            <h2>Your Success Story Starts Here</h2>
+            <p>Ready to write your own success story? Here's how to get started:</p>
             <ol>
-                <li><strong>Create Your Profile</strong> - Sign up and tell us about yourself and what you're looking for.</li>
-                <li><strong>Discover Matches</strong> - Browse profiles and receive personalized match recommendations.</li>
-                <li><strong>Connect</strong> - Start conversations with people who catch your interest.</li>
-                <li><strong>Meet</strong> - When you're ready, arrange to meet in person and start your journey together.</li>
+                <li><strong>Create Your Profile</strong> - Sign up and tell us about yourself and what you're looking for in a partner.</li>
+                <li><strong>Browse Matches</strong> - Explore potential matches or receive personalized recommendations from our algorithm.</li>
+                <li><strong>Connect</strong> - Start conversations with people who catch your interest using our messaging features.</li>
+                <li><strong>Meet</strong> - When you're ready, arrange to meet in person and see where the connection leads.</li>
             </ol>
+            <p>Join Connecting Hearts today and take the first step toward finding your perfect match!</p>
+            <a href="../register.html" class="register-button">Create Your Profile</a>
+        </section>
+        
+        <section class="feature-box">
+            <h2>Share Your Story</h2>
+            <p>Have you found love on Connecting Hearts? We'd love to hear about your experience! Your story could inspire others who are looking for meaningful connections.</p>
+            <p>Visit our <a href="share_story.html">Share Your Story</a> page to tell us how you met your partner through Connecting Hearts.</p>
         </section>
     </main>
 
@@ -127,19 +255,20 @@
         <ul>
             <li><a href="../safety/safety_guide.html">Online Dating Safety Guide</a></li>
             <li><a href="../dating_tips.html">Dating Tips &amp; Advice</a></li>
-            <li><a href="../success_stories/success_stories.html">Success Stories</a></li>
+            <li><a href="featured_couples.html">Featured Couples</a></li>
             <li><a href="../events/events.html">Upcoming Events</a></li>
             <li><a href="../events/blog.html">Relationship Blog</a></li>
             <li><a href="../faq.html">FAQ / Help Center</a></li>
             <li><a href="../services/premium_features.html">Premium Features</a></li>  
         </ul>
-
     </aside>
+
     <footer>
-        <p>&copy; 2025 Connecting Hearts. All rights reserved.Connecting Hearts | <a href="../safety/privacy_policy.html">Privacy Policy</a> | <a href="../terms_of_service.html">Terms of Service</a> | <a href="../contact.html">Contact Us</a></p>
+        <p>&copy; 2025 Connecting Hearts. All rights reserved. Connecting Hearts | <a href="../safety/privacy_policy.html">Privacy Policy</a> | <a href="../terms_of_service.html">Terms of Service</a> | <a href="../contact.html">Contact Us</a></p>
         
         <p>Helping people find meaningful connections since 2020.</p>
         
-        <p>123 Love Lane, London, UK | <a href="mailto:support@connectinghearts.com">support@connectinghearts.com</a> | <a href="tel:+44 (0)20 1234 5678">+44 (0)20 1234 5678</a></p></footer>
+        <p>123 Love Lane, London, UK | <a href="mailto:support@connectinghearts.com">support@connectinghearts.com</a> | <a href="tel:+44 (0)20 1234 5678">+44 (0)20 1234 5678</a></p>
+    </footer>
 </body>
 </html>

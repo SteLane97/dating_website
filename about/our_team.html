@@ -13,95 +13,6 @@
     });
     </script>
     <link rel="stylesheet" href="../main.css"> 
-    <style>
-        /* Team page specific styles */
-        .team-intro {
-            text-align: center;
-            padding: 2%;
-            margin-bottom: 2em;
-            background-color: rgba(255, 255, 255, 0.4);
-            border-radius: 5px;
-        }
-        
-        .team-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            margin-bottom: 2em;
-        }
-        
-        .team-member {
-            width: 47%;
-            margin-bottom: 2em;
-            padding: 3%;
-            background-color: rgba(255, 255, 255, 0.4);
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
-        }
-        
-        .team-member:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        .team-member::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 5px;
-            height: 100%;
-            background-color: #e74c3c;
-            border-top-left-radius: 5px;
-            border-bottom-left-radius: 5px;
-        }
-        
-        .team-member h3 {
-            color: #1e5959;
-            margin-bottom: 0.3em;
-            text-align: left;
-            padding-bottom: 0.3em;
-            border-bottom: 1px solid #ccc;
-        }
-        
-        .team-member .role {
-            font-weight: bold;
-            color: #e74c3c;
-            margin-bottom: 1em;
-        }
-        
-        .team-values {
-            background-color: #1e5959;
-            color: white;
-            padding: 3%;
-            border-radius: 5px;
-            margin-bottom: 2em;
-        }
-        
-        .team-values h2 {
-            color: white;
-            border-bottom: 1px solid rgba(255,255,255,0.3);
-            padding-bottom: 0.5em;
-            margin-bottom: 1em;
-        }
-        
-        .value-item {
-            margin-bottom: 1em;
-        }
-        
-        .value-item strong {
-            color: #e74c3c;
-        }
-        
-        /* Responsive adjustments */
-        @media only screen and (max-width: 767px) {
-            .team-member {
-                width: 100%;
-            }
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -115,25 +26,25 @@
                 </li>
 
                 <li>
-                    <a href="about.html" class="current">About</a>
+                    <a href="#" class="current">About</a>
                     <ul>
-                        <li><a href="about_us.html">About Us</a></li>
+                        <li><a href="about.html">About Us</a></li>
                         <li><a href="our_team.html" class="current">Our Team</a></li>
                         <li><a href="global_reach.html">Global Reach</a></li>
                     </ul>
                 </li>
 
                 <li>
-                    <a href="../services/services.html">Services</a>
+                    <a href="#">Services</a>
                     <ul>
+                        <li><a href="../services/services.html">Services &amp; Features</a></li>
                         <li><a href="../services/membership_plans.html">Membership Plans</a></li>
-                        <li><a href="../services/features.html">Features</a></li>
                         <li><a href="../services/premium_features.html">Premium Features</a></li>
                     </ul>
                 </li>
                 
                 <li>
-                    <a href="../success_stories/success_stories.html">Success Stories</a>
+                    <a href="#">Success Stories</a>
                     <ul>
                         <li><a href="../success_stories/testimonials.html">Testimonials</a></li>
                         <li><a href="../success_stories/featured_couples.html">Featured Couples</a></li>
@@ -142,16 +53,16 @@
                 </li>
                 
                 <li>
-                    <a href="../events/events.html">News &amp; Events</a>
+                    <a href="#">News &amp; Events</a>
                     <ul>
+                        <li><a href="../events/events.html">Upcoming Events</a></li>
                         <li><a href="../events/blog.html">Blog</a></li>
-                        <li><a href="../events/upcoming_events.html">Upcoming Events</a></li>
                         <li><a href="../events/promotions.html">Promotions</a></li>
                     </ul>
                 </li>
                 
                 <li>
-                    <a href="../safety/safety.html">Safety</a>
+                    <a href="#">Safety</a>
                     <ul>
                         <li><a href="../safety/safety_guide.html">Dating Safety Guide</a></li>
                         <li><a href="../safety/privacy_policy.html">Privacy Policy</a></li>
@@ -172,60 +83,68 @@
             <p>Get to know the dedicated professionals working behind the scenes to help you find your perfect match.</p>
         </section>
         
-        <section class="team-intro">
-            <h2>The Faces Behind Connecting Hearts</h2>
-            <p>Our team brings together expertise in psychology, technology, design, and customer service to create an exceptional online dating experience. Each member is passionate about helping people find meaningful connections and committed to making Connecting Hearts the best dating platform available.</p>
-        </section>
-        
-        <div class="team-grid">
-            <div class="team-member">
-                <h3>Jane Doe</h3>
-                <div class="role">Chief Relationship Advisor</div>
-                <p>Jane brings over 15 years of experience in relationship psychology to her role at Connecting Hearts. She oversees our matching algorithm and ensures that it effectively identifies compatible partners based on personality traits, values, and relationship goals.</p>
-            </div>
-            
-            <div class="team-member">
-                <h3>Ali Smith</h3>
-                <div class="role">User Experience Designer</div>
-                <p>Ali is passionate about creating intuitive and engaging user experiences. With a background in both design and psychology, he brings a unique perspective to our platform's interface and navigation, ensuring that users can easily find and connect with potential matches.</p>
-            </div>
-            
-            <div class="team-member">
-                <h3>Wei White</h3>
-                <div class="role">Customer Support Manager</div>
-                <p>Wei leads our customer support team with a commitment to excellence and user satisfaction. She ensures that all user queries and concerns are addressed promptly and effectively, creating a positive experience for everyone on our platform.</p>
-            </div>
-            
-            <div class="team-member">
-                <h3>Ademoye Khan</h3>
-                <div class="role">Marketing and Community Engagement</div>
-                <p>Ademoye brings creativity and strategic thinking to our marketing and community engagement efforts. He develops campaigns that highlight the unique benefits of Connecting Hearts and organizes events that bring our community together.</p>
-            </div>
-        </div>
-
-        <section class="team-values">
-            <h2>Our Team Values</h2>
-            <div class="value-item">
-                <strong>Excellence:</strong> We are committed to providing the highest quality service in everything we do, from technical development to customer support.
-            </div>
-            <div class="value-item">
-                <strong>Empathy:</strong> We understand that finding a partner can be both exciting and challenging, and we approach our work with sensitivity to our users' experiences.
-            </div>
-            <div class="value-item">
-                <strong>Innovation:</strong> We continuously seek new ways to improve our platform and enhance the online dating experience for our users.
-            </div>
-            <div class="value-item">
-                <strong>Integrity:</strong> We maintain the highest ethical standards in our operations, particularly regarding user privacy and data security.
-            </div>
-            <div class="value-item">
-                <strong>Inclusivity:</strong> We celebrate diversity and are committed to creating a platform where everyone feels welcome and valued.
-            </div>
-        </section>
-        
         <section class="feature-box">
+            <h2>Our Dedicated Staff</h2>
+            <p>Our dedicated staff plays a crucial role in ensuring that users have a safe and enjoyable dating experience. Each member of our team is committed to providing excellent service and maintaining the quality of our platform.</p>
+        </section>
+        
+        <section class="features">
+            <h2>Leadership Team</h2>
+            
+            <div class="feature-box team-member">
+                <h3>Jane Doe</h3>
+                <p><strong>Chief Relationship Advisor</strong></p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras scelerisque lacus vitae nunc tempus, eget pretium lacus efficitur. Suspendisse lacinia dictum ultrices. Integer metus eros, sollicitudin in aliquam sed, tincidunt id diam.</p>
+                <p>Sed pretium nec magna et pharetra. Cras vulputate quis risus non cursus. Integer scelerisque erat eget vestibulum vehicula. Mauris et lobortis justo.</p>
+            </div>
+            
+            <div class="feature-box team-member">
+                <h3>Ali Smith</h3>
+                <p><strong>User Experience Designer</strong></p>
+                <p>Curabitur accumsan fermentum neque eu semper. Donec quis placerat nisl. Etiam pulvinar erat et orci interdum eleifend. Vivamus nulla mi, sagittis feugiat aliquet lobortis, venenatis vitae ante.</p>
+                <p>Sed facilisis dolor ex, at consectetur elit ornare in. Vivamus sit amet scelerisque risus. Pellentesque cursus consectetur mauris, id commodo nisl luctus in. Phasellus quam diam, scelerisque id tellus nec, laoreet ornare augue. Vestibulum commodo leo aliquet erat fringilla volutpat.</p>
+            </div>
+        </section>
+        
+        <section class="features">
+            <h2>Support &amp; Engagement</h2>
+            
+            <div class="feature-box team-member">
+                <h3>Wei White</h3>
+                <p><strong>Customer Support Manager</strong></p>
+                <p>Donec facilisis mauris justo, eget ultricies sem condimentum vel. Cras fringilla est sit amet pulvinar malesuada. Vestibulum mattis ligula nec justo luctus, et pulvinar lacus tempor.</p>
+                <p>Nam pellentesque facilisis urna, et dapibus sem fringilla ac. Nullam malesuada nisi leo, in ornare dolor convallis ut. Nullam sit amet ipsum dignissim, molestie urna a, scelerisque diam. Nulla interdum lectus vehicula tellus maximus pellentesque.</p>
+            </div>
+            
+            <div class="feature-box team-member">
+                <h3>Ademoye Khan</h3>
+                <p><strong>Marketing and Community Engagement</strong></p>
+                <p>Nulla non nisi sit amet est vestibulum hendrerit. Integer ac orci justo. Aliquam quis nulla fringilla, sollicitudin tortor ac, euismod dui. Cras in nunc a urna consectetur volutpat eu vitae dui.</p>
+                <p>Aliquam erat volutpat. Ut nisl massa, porttitor eu erat commodo, dapibus congue nulla. Nulla molestie diam neque, at venenatis dolor egestas ac. Sed sagittis pellentesque ligula ac euismod.</p>
+            </div>
+        </section>
+        
+        <section class="how-it-works">
+            <h2>Our Team Values</h2>
+            <p>At Connecting Hearts, our team is united by our core values:</p>
+            <ol>
+                <li><strong>Trust</strong> - We maintain the highest ethical standards in our operations, particularly regarding user privacy and data security.</li>
+                <li><strong>Innovation</strong> - We continuously seek new ways to improve our platform and enhance the online dating experience.</li>
+                <li><strong>User Satisfaction</strong> - We put our users' needs and experiences at the centre of everything we do.</li>
+            </ol>
+        </section>
+        
+        <section class="how-it-works">
+            <h2>Working at Connecting Hearts</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis varius tellus eget massa pulvinar, at malesuada nisl consectetur. Fusce a quam pulvinar, tristique sem at, tristique sapien.</p>
+            <p>Curabitur viverra quis velit consequat pellentesque. Phasellus velit enim, molestie ac rhoncus in, volutpat vitae ante. Nullam quis malesuada sem. Nullam eu egestas leo.</p>
+        </section>
+        
+        <section class="how-it-works">
             <h2>Join Our Team</h2>
-            <p>Interested in being part of the Connecting Hearts journey? We're always looking for talented individuals who share our passion for helping people find meaningful connections.</p>
-            <p>Visit our <a href="../careers.html">Careers page</a> to see current openings or send your resume to <a href="mailto:careers@connectinghearts.com">careers@connectinghearts.com</a>.</p>
+            <p>Nulla interdum, erat ut consequat maximus, erat diam maximus lorem, eu rhoncus elit leo fermentum velit. Phasellus eget erat et odio scelerisque semper. Nulla dictum nisl purus, vitae aliquam elit blandit eget.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis varius tellus eget massa pulvinar, at malesuada nisl consectetur. Fusce a quam pulvinar, tristique sem at, tristique sapien.</p>
+            <p>Visit our <a href="../careers.html">Careers page</a> to see current openings or send your CV to <a href="mailto:careers@connectinghearts.com">careers@connectinghearts.com</a>.</p>
         </section>
     </main>
 
@@ -234,10 +153,10 @@
         <ul>
             <li><a href="../safety/safety_guide.html">Online Dating Safety Guide</a></li>
             <li><a href="../dating_tips.html">Dating Tips &amp; Advice</a></li>
-            <li><a href="../success_stories/success_stories.html">Success Stories</a></li>
+            <li><a href="../success_stories/testimonials.html">Success Stories</a></li>
             <li><a href="../events/events.html">Upcoming Events</a></li>
             <li><a href="../events/blog.html">Relationship Blog</a></li>
-            <li><a href="../faq.html">FAQ / Help Center</a></li>
+            <li><a href="../faq.html">FAQ / Help Centre</a></li>
             <li><a href="../services/premium_features.html">Premium Features</a></li>  
         </ul>
     </aside>

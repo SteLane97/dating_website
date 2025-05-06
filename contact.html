@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connecting Hearts | Homepage</title>
+    <title>Connecting Hearts | Contact Us</title>
     <link rel="stylesheet" href="slicknav.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="jquery.slicknav.min.js"></script>
@@ -13,6 +13,137 @@
     });
     </script>
     <link rel="stylesheet" href="main.css"> 
+    <style>
+        /* Additional styles specific to contact page */
+        .contact-form {
+            background-color: rgba(255, 255, 255, 0.4);
+            padding: 2em;
+            border-radius: 5px;
+            margin: 1.5em 0;
+            border-left: 3px solid #1e5959;
+        }
+        
+        .form-row {
+            margin-bottom: 1.5em;
+        }
+        
+        .form-row label {
+            display: block;
+            margin-bottom: 0.5em;
+            font-weight: bold;
+            color: #1e5959;
+        }
+        
+        .form-row input[type="text"],
+        .form-row input[type="email"],
+        .form-row select,
+        .form-row textarea {
+            width: 100%;
+            padding: 0.8em;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 1em;
+            box-sizing: border-box;
+        }
+        
+        .form-row textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        
+        .form-row select {
+            height: 40px;
+        }
+        
+        .required {
+            color: #e74c3c;
+        }
+        
+        .contact-submit {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 1em;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            border: 2px solid #1e5959;
+        }
+        
+        .contact-submit:hover {
+            background-color: #c0392b;
+        }
+        
+        .contact-methods {
+            margin: 2em 0;
+        }
+        
+        .contact-method {
+            margin-bottom: 1.5em;
+            padding: 1em;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 5px;
+        }
+        
+        .contact-method h3 {
+            color: #1e5959;
+            margin-bottom: 0.5em;
+            font-size: 1.2em;
+            text-align: left;
+        }
+        
+        .contact-info {
+            margin-bottom: 0.5em;
+        }
+        
+        .contact-note {
+            font-size: 0.9em;
+            font-style: italic;
+            color: #666;
+        }
+        
+        .office-locations {
+            margin: 2em 0;
+        }
+        
+        .office {
+            margin-bottom: 1.5em;
+            padding: 1em;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 5px;
+        }
+        
+        .office h3 {
+            color: #1e5959;
+            margin-bottom: 0.5em;
+            font-size: 1.2em;
+            text-align: left;
+        }
+        
+        .office-address {
+            margin-bottom: 0.5em;
+        }
+        
+        .social-links {
+            margin: 2em 0;
+            text-align: center;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            margin: 0 10px;
+            color: #1e5959;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        
+        .social-links a:hover {
+            color: #e74c3c;
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -26,25 +157,25 @@
                 </li>
 
                 <li>
-                    <a href="about/about.html">About</a>
+                    <a href="#">About</a>
                     <ul>
-                        <li><a href="about/about_us.html">About Us</a></li>
+                        <li><a href="about/about.html">About Us</a></li>
                         <li><a href="about/our_team.html">Our Team</a></li>
                         <li><a href="about/global_reach.html">Global Reach</a></li>
                     </ul>
                 </li>
 
                 <li>
-                    <a href="services/services.html">Services</a>
+                    <a href="#">Services</a>
                     <ul>
+                        <li><a href="services/services.html">Services &amp; Features</a></li>
                         <li><a href="services/membership_plans.html">Membership Plans</a></li>
-                        <li><a href="services/features.html">Features</a></li>
                         <li><a href="services/premium_features.html">Premium Features</a></li>
                     </ul>
                 </li>
                 
                 <li>
-                    <a href="success_stories/success_stories.html">Success Stories</a>
+                    <a href="#">Success Stories</a>
                     <ul>
                         <li><a href="success_stories/testimonials.html">Testimonials</a></li>
                         <li><a href="success_stories/featured_couples.html">Featured Couples</a></li>
@@ -53,16 +184,16 @@
                 </li>
                 
                 <li>
-                    <a href="events/events.html">News &amp; Events</a>
+                    <a href="#">News &amp; Events</a>
                     <ul>
+                        <li><a href="events/events.html">Upcoming Events</a></li>
                         <li><a href="events/blog.html">Blog</a></li>
-                        <li><a href="events/upcoming_events.html">Upcoming Events</a></li>
                         <li><a href="events/promotions.html">Promotions</a></li>
                     </ul>
                 </li>
                 
                 <li>
-                    <a href="safety/safety.html">Safety</a>
+                    <a href="#">Safety</a>
                     <ul>
                         <li><a href="safety/safety_guide.html">Dating Safety Guide</a></li>
                         <li><a href="safety/privacy_policy.html">Privacy Policy</a></li>
@@ -71,7 +202,7 @@
                 </li>
 
                 <li>
-                    <a href="contact.html" class="lastitem current">Contact</a>
+                    <a href="contact.html" class="current lastitem">Contact</a>
                 </li>
             </ul>
         </nav>
@@ -79,46 +210,144 @@
 
     <main>
         <section class="hero">
-            <h1>Find Your Perfect Match Today</h1>
-            <p>Welcome to Connecting Hearts, where meaningful relationships begin. Our advanced matching algorithm helps you find compatible partners based on your preferences and values.</p>
-            <a href="register.html" class="register-button">Create Your Profile</a>
+            <h1>Contact Us</h1>
+            <p>Have questions or feedback? We're here to help!</p>
+        </section>
+        
+        <section class="feature-box">
+            <h2>Get in Touch</h2>
+            <p>At Connecting Hearts, we value your feedback and are committed to providing excellent support. Whether you have questions about our services, need technical assistance, or want to share your success story, our team is ready to assist you.</p>
+            <p>You can reach us through the contact form below or use one of our alternative contact methods listed further down this page.</p>
         </section>
         
         <section class="features">
-            <h2>Why Choose Connecting Hearts?</h2>
+            <h2>Contact Form</h2>
             
-            <div class="feature-box">
-                <h3>Smart Matching</h3>
-                <p>Our algorithm suggests compatible matches based on your preferences, interests, and behavior patterns.</p>
+            <div class="contact-form">
+                <form action="submit_form.php" method="post">
+                    <div class="form-row">
+                        <label for="name">Full Name <span class="required">*</span></label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <label for="email">Email Address <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <label for="subject">Subject <span class="required">*</span></label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Please select a subject</option>
+                            <option value="General Inquiry">General Inquiry</option>
+                            <option value="Technical Support">Technical Support</option>
+                            <option value="Billing Question">Billing Question</option>
+                            <option value="Account Issue">Account Issue</option>
+                            <option value="Feature Request">Feature Request</option>
+                            <option value="Report a User">Report a User</option>
+                            <option value="Partnership Opportunity">Partnership Opportunity</option>
+                            <option value="Press Inquiry">Press Inquiry</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-row">
+                        <label for="message">Message <span class="required">*</span></label>
+                        <textarea id="message" name="message" placeholder="Please provide as much detail as possible so we can better assist you." required></textarea>
+                    </div>
+                    
+                    <div class="form-row">
+                        <label for="account">Account Email (if applicable)</label>
+                        <input type="email" id="account" name="account">
+                    </div>
+                    
+                    <div class="form-row">
+                        <input type="submit" value="Send Message" class="contact-submit">
+                    </div>
+                </form>
             </div>
-            
-            <div class="feature-box">
-                <h3>Safe Environment</h3>
-                <p>We prioritize user safety with comprehensive guidelines and privacy measures to ensure a secure dating experience.</p>
-            </div>
-            
-            <div class="feature-box">
-                <h3>Global Community</h3>
-                <p>Connect with people from around the world with our platform serving users across London, New York, Sydney, Tokyo, and beyond.</p>
-            </div>
-        </section>
-
-        <section class="testimonial">
-            <h2>Success Stories</h2>
-            <blockquote>
-                "We met on Connecting Hearts and have been inseparable ever since. The platform made it easy for us to find each other based on our shared interests and values."
-                <cite>— Anna &amp; Mark</cite>
-            </blockquote>
         </section>
         
         <section class="how-it-works">
-            <h2>How It Works</h2>
-            <ol>
-                <li><strong>Create Your Profile</strong> - Sign up and tell us about yourself and what you're looking for.</li>
-                <li><strong>Discover Matches</strong> - Browse profiles and receive personalized match recommendations.</li>
-                <li><strong>Connect</strong> - Start conversations with people who catch your interest.</li>
-                <li><strong>Meet</strong> - When you're ready, arrange to meet in person and start your journey together.</li>
-            </ol>
+            <h2>Alternative Contact Methods</h2>
+            
+            <div class="contact-methods">
+                <div class="contact-method">
+                    <h3>Customer Support</h3>
+                    <div class="contact-info">Email: <a href="mailto:support@connectinghearts.com">support@connectinghearts.com</a></div>
+                    <div class="contact-info">Phone: +44 (0)20 1234 5678</div>
+                    <div class="contact-note">Available Monday-Friday, 9am-6pm GMT</div>
+                </div>
+                
+                <div class="contact-method">
+                    <h3>Billing and Subscription</h3>
+                    <div class="contact-info">Email: <a href="mailto:billing@connectinghearts.com">billing@connectinghearts.com</a></div>
+                    <div class="contact-note">For questions about payments, subscriptions, and refunds</div>
+                </div>
+                
+                <div class="contact-method">
+                    <h3>Safety and Security</h3>
+                    <div class="contact-info">Email: <a href="mailto:safety@connectinghearts.com">safety@connectinghearts.com</a></div>
+                    <div class="contact-note">For reporting concerning behavior or safety issues</div>
+                </div>
+                
+                <div class="contact-method">
+                    <h3>Media and Press</h3>
+                    <div class="contact-info">Email: <a href="mailto:press@connectinghearts.com">press@connectinghearts.com</a></div>
+                    <div class="contact-note">For media inquiries and interview requests</div>
+                </div>
+                
+                <div class="contact-method">
+                    <h3>Business Development</h3>
+                    <div class="contact-info">Email: <a href="mailto:partnerships@connectinghearts.com">partnerships@connectinghearts.com</a></div>
+                    <div class="contact-note">For partnership opportunities and collaborations</div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="feature-box">
+            <h2>Office Locations</h2>
+            
+            <div class="office-locations">
+                <div class="office">
+                    <h3>London (Headquarters)</h3>
+                    <div class="office-address">
+                        123 Love Lane<br>
+                        London, UK<br>
+                        EC1V 2NX
+                    </div>
+                </div>
+                
+                <div class="office">
+                    <h3>New York</h3>
+                    <div class="office-address">
+                        456 Connection Avenue<br>
+                        New York, NY 10001<br>
+                        United States
+                    </div>
+                </div>
+                
+                <div class="office">
+                    <h3>Sydney</h3>
+                    <div class="office-address">
+                        789 Harmony Street<br>
+                        Sydney, NSW 2000<br>
+                        Australia
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="feature-box">
+            <h2>Connect With Us</h2>
+            <p>Stay updated with the latest news, events, and tips from Connecting Hearts by following us on social media:</p>
+            
+            <div class="social-links">
+                <a href="https://facebook.com/connectinghearts" target="_blank">Facebook</a>
+                <a href="https://twitter.com/connectinghearts" target="_blank">Twitter</a>
+                <a href="https://instagram.com/connectinghearts" target="_blank">Instagram</a>
+                <a href="https://linkedin.com/company/connectinghearts" target="_blank">LinkedIn</a>
+            </div>
         </section>
     </main>
 
@@ -127,19 +356,20 @@
         <ul>
             <li><a href="safety/safety_guide.html">Online Dating Safety Guide</a></li>
             <li><a href="dating_tips.html">Dating Tips &amp; Advice</a></li>
-            <li><a href="success_stories/success_stories.html">Success Stories</a></li>
+            <li><a href="success_stories/testimonials.html">Success Stories</a></li>
             <li><a href="events/events.html">Upcoming Events</a></li>
             <li><a href="events/blog.html">Relationship Blog</a></li>
-            <li><a href="faq.html">FAQ / Help Center</a></li>
+            <li><a href="safety/help_centre.html">Help Centre</a></li>
             <li><a href="services/premium_features.html">Premium Features</a></li>  
         </ul>
-
     </aside>
+
     <footer>
-        <p>&copy; 2025 Connecting Hearts. All rights reserved.Connecting Hearts | <a href="safety/privacy_policy.html">Privacy Policy</a> | <a href="terms_of_service.html">Terms of Service</a> | <a href="contact.html">Contact Us</a></p>
+        <p>&copy; 2025 Connecting Hearts. All rights reserved. Connecting Hearts | <a href="safety/privacy_policy.html">Privacy Policy</a> | <a href="terms_of_service.html">Terms of Service</a> | <a href="contact.html">Contact Us</a></p>
         
         <p>Helping people find meaningful connections since 2020.</p>
         
-        <p>123 Love Lane, London, UK | <a href="mailto:support@connectinghearts.com">support@connectinghearts.com</a> | <a href="tel:+44 (0)20 1234 5678">+44 (0)20 1234 5678</a></p></footer>
+        <p>123 Love Lane, London, UK | <a href="mailto:support@connectinghearts.com">support@connectinghearts.com</a> | <a href="tel:+44 (0)20 1234 5678">+44 (0)20 1234 5678</a></p>
+    </footer>
 </body>
 </html>

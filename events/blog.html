@@ -3,16 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connecting Hearts | Homepage</title>
-    <link rel="stylesheet" href="slicknav.css">
+    <title>Connecting Hearts | Relationship Blog</title>
+    <link rel="stylesheet" href="../slicknav.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="jquery.slicknav.min.js"></script>
+    <script src="../jquery.slicknav.min.js"></script>
     <script>
     $(document).ready(function(){
       $('#nav_menu').slicknav({prependTo:"#mobile_menu"});
     });
     </script>
     <link rel="stylesheet" href="../main.css"> 
+    <style>
+        /* Additional styles specific to blog page */
+        .blog-post {
+            margin-bottom: 2em;
+            padding: 2%;
+            background-color: rgba(255, 255, 255, 0.4);
+            border-left: 3px solid #1e5959;
+        }
+        
+        .blog-date {
+            color: #e74c3c;
+            font-size: 0.9em;
+            margin-bottom: 0.5em;
+        }
+        
+        .blog-title {
+            color: #1e5959;
+            font-size: 1.5em;
+            margin-bottom: 0.5em;
+            font-weight: bold;
+        }
+        
+        .blog-author {
+            font-style: italic;
+            margin-bottom: 1em;
+            font-size: 0.9em;
+        }
+        
+        .blog-excerpt {
+            margin-bottom: 1em;
+            line-height: 1.5;
+        }
+        
+        .blog-categories {
+            margin-bottom: 0.8em;
+        }
+        
+        .blog-category {
+            display: inline-block;
+            background-color: #1e5959;
+            color: white;
+            padding: 3px 8px;
+            font-size: 0.8em;
+            border-radius: 3px;
+            margin-right: 5px;
+        }
+        
+        .read-more {
+            display: inline-block;
+            background-color: #1e5959;
+            color: white;
+            padding: 5px 12px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.9em;
+        }
+        
+        .read-more:hover {
+            background-color: #e74c3c;
+        }
+        
+        .blog-featured {
+            margin-bottom: 2em;
+            padding: 0;
+        }
+        
+        .blog-featured-image {
+            height: 150px;
+            background-color: #ccc;
+            margin-bottom: 15px;
+            display: block;
+            text-align: center;
+            line-height: 150px;
+            color: #1e5959;
+        }
+        
+        .blog-categories-filter {
+            margin-bottom: 2em;
+            background-color: rgba(255, 255, 255, 0.4);
+            padding: 1em;
+            border-radius: 5px;
+        }
+        
+        .filter-title {
+            margin-bottom: 1em;
+            font-weight: bold;
+            color: #1e5959;
+        }
+        
+        .filter-links a {
+            display: inline-block;
+            margin-right: 1em;
+            margin-bottom: 0.5em;
+            color: #1e5959;
+            text-decoration: none;
+        }
+        
+        .filter-links a:hover {
+            color: #e74c3c;
+            text-decoration: underline;
+        }
+        
+        .filter-links a.active {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        
+        .pagination {
+            text-align: center;
+            margin: 2em 0;
+        }
+        
+        .pagination a {
+            display: inline-block;
+            padding: 5px 10px;
+            margin: 0 5px;
+            background-color: #1e5959;
+            color: white;
+            text-decoration: none;
+            border-radius: 3px;
+        }
+        
+        .pagination a:hover {
+            background-color: #e74c3c;
+        }
+        
+        .pagination a.active {
+            background-color: #e74c3c;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -26,25 +157,25 @@
                 </li>
 
                 <li>
-                    <a href="../about/about.html">About</a>
+                    <a href="#">About</a>
                     <ul>
-                        <li><a href="../about/about_us.html">About Us</a></li>
+                        <li><a href="../about/about.html">About Us</a></li>
                         <li><a href="../about/our_team.html">Our Team</a></li>
                         <li><a href="../about/global_reach.html">Global Reach</a></li>
                     </ul>
                 </li>
 
                 <li>
-                    <a href="../services/services.html">Services</a>
+                    <a href="#">Services</a>
                     <ul>
+                        <li><a href="../services/services.html">Services &amp; Features</a></li>
                         <li><a href="../services/membership_plans.html">Membership Plans</a></li>
-                        <li><a href="../services/features.html">Features</a></li>
                         <li><a href="../services/premium_features.html">Premium Features</a></li>
                     </ul>
                 </li>
                 
                 <li>
-                    <a href="../success_stories/success_stories.html">Success Stories</a>
+                    <a href="#">Success Stories</a>
                     <ul>
                         <li><a href="../success_stories/testimonials.html">Testimonials</a></li>
                         <li><a href="../success_stories/featured_couples.html">Featured Couples</a></li>
@@ -53,16 +184,16 @@
                 </li>
                 
                 <li>
-                    <a href="../events/events.html" class="current">News &amp; Events</a>
+                    <a href="#" class="current">News &amp; Events</a>
                     <ul>
-                        <li><a href="../events/blog.html" class="current">Blog</a></li>
-                        <li><a href="../events/upcoming_events.html">Upcoming Events</a></li>
-                        <li><a href="../events/promotions.html">Promotions</a></li>
+                        <li><a href="events.html">Upcoming Events</a></li>
+                        <li><a href="blog.html" class="current">Blog</a></li>
+                        <li><a href="promotions.html">Promotions</a></li>
                     </ul>
                 </li>
                 
                 <li>
-                    <a href="../safety/safety.html">Safety</a>
+                    <a href="#">Safety</a>
                     <ul>
                         <li><a href="../safety/safety_guide.html">Dating Safety Guide</a></li>
                         <li><a href="../safety/privacy_policy.html">Privacy Policy</a></li>
@@ -79,46 +210,141 @@
 
     <main>
         <section class="hero">
-            <h1>Find Your Perfect Match Today</h1>
-            <p>Welcome to Connecting Hearts, where meaningful relationships begin. Our advanced matching algorithm helps you find compatible partners based on your preferences and values.</p>
-            <a href="../register.html" class="register-button">Create Your Profile</a>
+            <h1>Relationship Blog</h1>
+            <p>Expert advice, dating tips, and insights to help you navigate your relationship journey.</p>
+        </section>
+        
+        <section class="feature-box">
+            <h2>Welcome to Our Blog</h2>
+            <p>Our blog features articles from relationship experts, dating coaches, and psychologists, offering valuable guidance for every stage of your relationship journey. From first-date tips to long-term relationship advice, we cover topics that matter to our community.</p>
+            <p>New articles are published weekly, so check back often for fresh insights and perspectives.</p>
         </section>
         
         <section class="features">
-            <h2>Why Choose Connecting Hearts?</h2>
+            <h2>Featured Article</h2>
             
-            <div class="feature-box">
-                <h3>Smart Matching</h3>
-                <p>Our algorithm suggests compatible matches based on your preferences, interests, and behavior patterns.</p>
+            <div class="blog-featured">
+                <div class="blog-featured-image">
+                    [Featured Article Image]
+                </div>
+                
+                <div class="blog-post">
+                    <div class="blog-date">May 5, 2025</div>
+                    <div class="blog-title">The Science of Compatibility: What Really Makes Relationships Work</div>
+                    <div class="blog-author">By Jane Doe, Chief Relationship Advisor</div>
+                    <div class="blog-excerpt">
+                        <p>What makes two people truly compatible? While physical attraction and shared interests are important, research shows that deeper factors often determine relationship success. This article explores the latest scientific findings on compatibility and how you can apply these insights to your own dating journey.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis varius tellus eget massa pulvinar, at malesuada nisl consectetur. Fusce a quam pulvinar, tristique sem at, tristique sapien. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="blog-categories">
+                        <span class="blog-category">Relationships</span>
+                        <span class="blog-category">Psychology</span>
+                    </div>
+                    <a href="blog_compatibility_science.html" class="read-more">Read Full Article</a>
+                </div>
             </div>
-            
-            <div class="feature-box">
-                <h3>Safe Environment</h3>
-                <p>We prioritize user safety with comprehensive guidelines and privacy measures to ensure a secure dating experience.</p>
-            </div>
-            
-            <div class="feature-box">
-                <h3>Global Community</h3>
-                <p>Connect with people from around the world with our platform serving users across London, New York, Sydney, Tokyo, and beyond.</p>
-            </div>
-        </section>
-
-        <section class="testimonial">
-            <h2>Success Stories</h2>
-            <blockquote>
-                "We met on Connecting Hearts and have been inseparable ever since. The platform made it easy for us to find each other based on our shared interests and values."
-                <cite>— Anna &amp; Mark</cite>
-            </blockquote>
         </section>
         
+        <section class="features">
+            <h2>Recent Articles</h2>
+            
+            <div class="blog-post">
+                <div class="blog-date">May 1, 2025</div>
+                <div class="blog-title">5 Communication Mistakes You Might Be Making (And How to Fix Them)</div>
+                <div class="blog-author">By Wei White, Customer Support Manager</div>
+                <div class="blog-excerpt">
+                    <p>Effective communication is the foundation of any successful relationship, yet many of us inadvertently sabotage our connections through common communication errors. This article identifies five frequent mistakes and provides practical strategies to improve your communication skills.</p>
+                </div>
+                <div class="blog-categories">
+                    <span class="blog-category">Communication</span>
+                    <span class="blog-category">Relationships</span>
+                </div>
+                <a href="blog_communication_mistakes.html" class="read-more">Read Full Article</a>
+            </div>
+            
+            <div class="blog-post">
+                <div class="blog-date">April 28, 2025</div>
+                <div class="blog-title">First Date Success: Creating Meaningful Connections From the Start</div>
+                <div class="blog-author">By Ali Smith, User Experience Designer</div>
+                <div class="blog-excerpt">
+                    <p>First dates can be both exciting and nerve-wracking. How do you make a good impression while also evaluating compatibility? This guide offers practical advice for planning, conversation, and follow-up to help you create authentic connections from the very beginning.</p>
+                </div>
+                <div class="blog-categories">
+                    <span class="blog-category">Dating Tips</span>
+                    <span class="blog-category">First Dates</span>
+                </div>
+                <a href="blog_first_date_success.html" class="read-more">Read Full Article</a>
+            </div>
+            
+            <div class="blog-post">
+                <div class="blog-date">April 25, 2025</div>
+                <div class="blog-title">Creating an Authentic Dating Profile That Attracts the Right Matches</div>
+                <div class="blog-author">By Ademoye Khan, Marketing and Community Engagement</div>
+                <div class="blog-excerpt">
+                    <p>Your dating profile is often your first impression in the online dating world. Learn how to showcase your authentic self while highlighting your best qualities. This article covers profile photos, bio writing, and preference settings that help you connect with compatible matches.</p>
+                </div>
+                <div class="blog-categories">
+                    <span class="blog-category">Online Dating</span>
+                    <span class="blog-category">Profile Tips</span>
+                </div>
+                <a href="blog_authentic_profile.html" class="read-more">Read Full Article</a>
+            </div>
+            
+            <div class="blog-post">
+                <div class="blog-date">April 21, 2025</div>
+                <div class="blog-title">Long-Distance Love: Making It Work When Miles Apart</div>
+                <div class="blog-author">By Dr. Sophia Chen, Relationship Psychologist</div>
+                <div class="blog-excerpt">
+                    <p>Long-distance relationships present unique challenges but can also foster deep emotional connections. This comprehensive guide covers communication strategies, visit planning, and maintaining intimacy across distance, with insights from couples who have successfully navigated the long-distance journey.</p>
+                </div>
+                <div class="blog-categories">
+                    <span class="blog-category">Relationships</span>
+                    <span class="blog-category">Long-Distance</span>
+                </div>
+                <a href="blog_long_distance_love.html" class="read-more">Read Full Article</a>
+            </div>
+            
+            <div class="blog-post">
+                <div class="blog-date">April 18, 2025</div>
+                <div class="blog-title">Dating After Divorce: Starting Fresh with Confidence</div>
+                <div class="blog-author">By Michael Torres, Relationship Coach</div>
+                <div class="blog-excerpt">
+                    <p>Reentering the dating world after divorce comes with its own set of challenges and opportunities. This supportive guide offers practical advice for healing, building confidence, and opening yourself to new relationships, with insights from those who have successfully found love again.</p>
+                </div>
+                <div class="blog-categories">
+                    <span class="blog-category">Dating Tips</span>
+                    <span class="blog-category">Self-Improvement</span>
+                </div>
+                <a href="blog_dating_after_divorce.html" class="read-more">Read Full Article</a>
+            </div>
+        </section>
+        
+        <div class="pagination">
+            <a href="blog.html" class="active">1</a>
+            <a href="blog_page2.html">2</a>
+            <a href="blog_page3.html">3</a>
+            <a href="blog_page4.html">4</a>
+            <a href="blog_page2.html">Next →</a>
+        </div>
+        
         <section class="how-it-works">
-            <h2>How It Works</h2>
-            <ol>
-                <li><strong>Create Your Profile</strong> - Sign up and tell us about yourself and what you're looking for.</li>
-                <li><strong>Discover Matches</strong> - Browse profiles and receive personalized match recommendations.</li>
-                <li><strong>Connect</strong> - Start conversations with people who catch your interest.</li>
-                <li><strong>Meet</strong> - When you're ready, arrange to meet in person and start your journey together.</li>
-            </ol>
+            <h2>Subscribe to Our Newsletter</h2>
+            <p>Stay updated with the latest articles, relationship advice, and dating tips by subscribing to our weekly newsletter.</p>
+            <form action="subscribe.php" method="post">
+                <div style="margin-bottom: 15px;">
+                    <label for="email" style="display: block; margin-bottom: 5px; font-weight: bold;">Email Address:</label>
+                    <input type="email" id="email" name="email" required style="width: 100%; max-width: 300px; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+                </div>
+                <div>
+                    <input type="submit" value="Subscribe" class="register-button" style="cursor: pointer;">
+                </div>
+            </form>
+        </section>
+        
+        <section class="feature-box">
+            <h2>Write for Us</h2>
+            <p>Are you a relationship expert, dating coach, or someone with valuable insights to share? We welcome guest contributions to our blog. Please email your article ideas to <a href="mailto:blog@connectinghearts.com">blog@connectinghearts.com</a> with "Guest Post" in the subject line.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis varius tellus eget massa pulvinar, at malesuada nisl consectetur.</p>
         </section>
     </main>
 
@@ -127,19 +353,20 @@
         <ul>
             <li><a href="../safety/safety_guide.html">Online Dating Safety Guide</a></li>
             <li><a href="../dating_tips.html">Dating Tips &amp; Advice</a></li>
-            <li><a href="../success_stories/success_stories.html">Success Stories</a></li>
-            <li><a href="../events/events.html">Upcoming Events</a></li>
-            <li><a href="../events/blog.html">Relationship Blog</a></li>
+            <li><a href="../success_stories/testimonials.html">Success Stories</a></li>
+            <li><a href="events.html">Upcoming Events</a></li>
+            <li><a href="promotions.html">Current Promotions</a></li>
             <li><a href="../faq.html">FAQ / Help Center</a></li>
             <li><a href="../services/premium_features.html">Premium Features</a></li>  
         </ul>
-
     </aside>
+
     <footer>
-        <p>&copy; 2025 Connecting Hearts. All rights reserved.Connecting Hearts | <a href="../safety/privacy_policy.html">Privacy Policy</a> | <a href="../terms_of_service.html">Terms of Service</a> | <a href="../contact.html">Contact Us</a></p>
+        <p>&copy; 2025 Connecting Hearts. All rights reserved. Connecting Hearts | <a href="../safety/privacy_policy.html">Privacy Policy</a> | <a href="../terms_of_service.html">Terms of Service</a> | <a href="../contact.html">Contact Us</a></p>
         
         <p>Helping people find meaningful connections since 2020.</p>
         
-        <p>123 Love Lane, London, UK | <a href="mailto:support@connectinghearts.com">support@connectinghearts.com</a> | <a href="tel:+44 (0)20 1234 5678">+44 (0)20 1234 5678</a></p></footer>
+        <p>123 Love Lane, London, UK | <a href="mailto:support@connectinghearts.com">support@connectinghearts.com</a> | <a href="tel:+44 (0)20 1234 5678">+44 (0)20 1234 5678</a></p>
+    </footer>
 </body>
 </html>

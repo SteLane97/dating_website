@@ -3,16 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connecting Hearts | Homepage</title>
-    <link rel="stylesheet" href="slicknav.css">
+    <title>Connecting Hearts | Help Centre</title>
+    <link rel="stylesheet" href="../slicknav.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="jquery.slicknav.min.js"></script>
+    <script src="../jquery.slicknav.min.js"></script>
     <script>
     $(document).ready(function(){
       $('#nav_menu').slicknav({prependTo:"#mobile_menu"});
     });
     </script>
     <link rel="stylesheet" href="../main.css"> 
+    <style>
+        /* Additional styles specific to help centre page */
+        .help-category {
+            margin-bottom: 2em;
+            padding: 2%;
+            background-color: rgba(255, 255, 255, 0.4);
+            border-left: 3px solid #1e5959;
+        }
+        
+        .help-category h3 {
+            color: #1e5959;
+            margin-bottom: 1em;
+            padding-bottom: 0.3em;
+            border-bottom: 1px solid rgba(30, 89, 89, 0.2);
+            font-size: 1.3em;
+        }
+        
+        .faq-item {
+            margin-bottom: 1.5em;
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 1em;
+            border-radius: 5px;
+        }
+        
+        .faq-question {
+            font-weight: bold;
+            color: #e74c3c;
+            margin-bottom: 0.5em;
+            cursor: pointer;
+            position: relative;
+            padding-right: 20px;
+        }
+        
+        .faq-answer {
+            line-height: 1.5;
+        }
+        
+        .contact-methods {
+            display: table;
+            width: 100%;
+            margin: 1.5em 0;
+        }
+        
+        .contact-method {
+            display: table-row;
+            margin-bottom: 1em;
+        }
+        
+        .contact-type, .contact-details {
+            display: table-cell;
+            padding: 0.8em;
+            vertical-align: top;
+        }
+        
+        .contact-type {
+            font-weight: bold;
+            color: #1e5959;
+            width: 30%;
+        }
+        
+        .search-box {
+            width: 100%;
+            padding: 1em;
+            margin-bottom: 2em;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        .search-input {
+            width: 70%;
+            padding: 0.8em;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+        
+        .search-button {
+            padding: 0.8em 1.5em;
+            background-color: #1e5959;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1em;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        
+        .search-button:hover {
+            background-color: #e74c3c;
+        }
+        
+        .help-links {
+            margin: 1.5em 0;
+        }
+        
+        .help-links ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .help-links li {
+            margin-bottom: 0.8em;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .help-links li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #1e5959;
+        }
+        
+        .help-links a {
+            color: #1e5959;
+            text-decoration: none;
+        }
+        
+        .help-links a:hover {
+            color: #e74c3c;
+            text-decoration: underline;
+        }
+        
+        @media only screen and (max-width: 767px) {
+            .contact-method {
+                display: block;
+                margin-bottom: 1.5em;
+            }
+            
+            .contact-type, .contact-details {
+                display: block;
+                width: 100%;
+                padding: 0.5em 0;
+            }
+            
+            .search-input {
+                width: 60%;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -26,25 +167,25 @@
                 </li>
 
                 <li>
-                    <a href="../about/about.html">About</a>
+                    <a href="#">About</a>
                     <ul>
-                        <li><a href="../about/about_us.html">About Us</a></li>
+                        <li><a href="../about/about.html">About Us</a></li>
                         <li><a href="../about/our_team.html">Our Team</a></li>
                         <li><a href="../about/global_reach.html">Global Reach</a></li>
                     </ul>
                 </li>
 
                 <li>
-                    <a href="../services/services.html">Services</a>
+                    <a href="#">Services</a>
                     <ul>
+                        <li><a href="../services/services.html">Services &amp; Features</a></li>
                         <li><a href="../services/membership_plans.html">Membership Plans</a></li>
-                        <li><a href="../services/features.html">Features</a></li>
                         <li><a href="../services/premium_features.html">Premium Features</a></li>
                     </ul>
                 </li>
                 
                 <li>
-                    <a href="../success_stories/success_stories.html">Success Stories</a>
+                    <a href="#">Success Stories</a>
                     <ul>
                         <li><a href="../success_stories/testimonials.html">Testimonials</a></li>
                         <li><a href="../success_stories/featured_couples.html">Featured Couples</a></li>
@@ -53,20 +194,20 @@
                 </li>
                 
                 <li>
-                    <a href="../events/events.html">News &amp; Events</a>
+                    <a href="#">News &amp; Events</a>
                     <ul>
+                        <li><a href="../events/events.html">Upcoming Events</a></li>
                         <li><a href="../events/blog.html">Blog</a></li>
-                        <li><a href="../events/upcoming_events.html">Upcoming Events</a></li>
                         <li><a href="../events/promotions.html">Promotions</a></li>
                     </ul>
                 </li>
                 
                 <li>
-                    <a href="../safety/safety.html" class="current">Safety</a>
+                    <a href="#" class="current">Safety</a>
                     <ul>
-                        <li><a href="../safety/safety_guide.html">Dating Safety Guide</a></li>
-                        <li><a href="../safety/privacy_policy.html">Privacy Policy</a></li>
-                        <li><a href="../safety/help_centre.html" class="current">Help Centre</a></li>
+                        <li><a href="safety_guide.html">Dating Safety Guide</a></li>
+                        <li><a href="privacy_policy.html">Privacy Policy</a></li>
+                        <li><a href="help_centre.html" class="current">Help Centre</a></li>
                     </ul>
                 </li>
 
@@ -79,67 +220,316 @@
 
     <main>
         <section class="hero">
-            <h1>Find Your Perfect Match Today</h1>
-            <p>Welcome to Connecting Hearts, where meaningful relationships begin. Our advanced matching algorithm helps you find compatible partners based on your preferences and values.</p>
-            <a href="../register.html" class="register-button">Create Your Profile</a>
+            <h1>Help Centre</h1>
+            <p>Find answers to common questions and get support for your Connecting Hearts experience.</p>
+        </section>
+        
+        <section class="search-box">
+            <form action="search_results.html" method="get">
+                <input type="text" name="query" placeholder="Search for help topics..." class="search-input">
+                <button type="submit" class="search-button">Search</button>
+            </form>
+        </section>
+        
+        <section class="feature-box">
+            <h2>Welcome to Our Help Centre</h2>
+            <p>Our Help Centre provides answers to frequently asked questions and guidance on using Connecting Hearts. Browse the categories below to find the information you need, or use the search bar to look for specific topics.</p>
+            <p>If you can't find what you're looking for, our customer support team is available to assist you through various contact methods listed at the bottom of this page.</p>
         </section>
         
         <section class="features">
-            <h2>Why Choose Connecting Hearts?</h2>
+            <h2>Frequently Asked Questions</h2>
             
-            <div class="feature-box">
-                <h3>Smart Matching</h3>
-                <p>Our algorithm suggests compatible matches based on your preferences, interests, and behavior patterns.</p>
+            <div class="help-category">
+                <h3>Account Management</h3>
+                
+                <div class="faq-item">
+                    <div class="faq-question">How do I create an account?</div>
+                    <div class="faq-answer">
+                        <p>To create a Connecting Hearts account:</p>
+                        <ol>
+                            <li>Visit our homepage and click "Create Your Profile" or "Sign Up"</li>
+                            <li>Enter your email address and create a password</li>
+                            <li>Provide basic information (name, date of birth, gender, etc.)</li>
+                            <li>Verify your email address by clicking the link in our confirmation email</li>
+                            <li>Complete your profile with photos and personal details</li>
+                        </ol>
+                        <p>Remember, a complete profile increases your chances of finding compatible matches!</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">How do I edit my profile?</div>
+                    <div class="faq-answer">
+                        <p>To edit your profile:</p>
+                        <ol>
+                            <li>Log in to your account</li>
+                            <li>Click on your profile picture or username in the top right corner</li>
+                            <li>Select "Edit Profile" from the dropdown menu</li>
+                            <li>Update your information in the relevant sections</li>
+                            <li>Click "Save Changes" when you're done</li>
+                        </ol>
+                        <p>You can edit your profile as often as you like to keep it updated and relevant.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">How do I reset my password?</div>
+                    <div class="faq-answer">
+                        <p>If you've forgotten your password:</p>
+                        <ol>
+                            <li>Go to the login page</li>
+                            <li>Click "Forgot Password"</li>
+                            <li>Enter the email address associated with your account</li>
+                            <li>Check your email for a password reset link</li>
+                            <li>Click the link and follow the instructions to create a new password</li>
+                        </ol>
+                        <p>If you don't receive the email, check your spam folder or contact our support team for assistance.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">How do I delete my account?</div>
+                    <div class="faq-answer">
+                        <p>To delete your account:</p>
+                        <ol>
+                            <li>Log in to your account</li>
+                            <li>Go to "Account Settings"</li>
+                            <li>Scroll to the bottom and click "Delete Account"</li>
+                            <li>Follow the prompts to confirm deletion</li>
+                        </ol>
+                        <p>Please note that account deletion is permanent and cannot be undone. All your data will be removed from our active systems within 30 days, as outlined in our Privacy Policy.</p>
+                    </div>
+                </div>
             </div>
             
-            <div class="feature-box">
-                <h3>Safe Environment</h3>
-                <p>We prioritize user safety with comprehensive guidelines and privacy measures to ensure a secure dating experience.</p>
+            <div class="help-category">
+                <h3>Subscriptions and Payments</h3>
+                
+                <div class="faq-item">
+                    <div class="faq-question">What payment methods do you accept?</div>
+                    <div class="faq-answer">
+                        <p>We accept the following payment methods:</p>
+                        <ul>
+                            <li>Credit and debit cards (Visa, Mastercard, American Express)</li>
+                            <li>PayPal</li>
+                            <li>Apple Pay (on iOS devices)</li>
+                            <li>Google Pay (on Android devices)</li>
+                            <li>Direct bank transfers (for annual subscriptions only)</li>
+                        </ul>
+                        <p>All payments are processed securely through our payment processors.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">How do I upgrade to a premium membership?</div>
+                    <div class="faq-answer">
+                        <p>To upgrade to a premium membership:</p>
+                        <ol>
+                            <li>Log in to your account</li>
+                            <li>Click on "Upgrade" in the top navigation bar or visit your Account Settings</li>
+                            <li>Select the membership plan that suits your needs</li>
+                            <li>Choose your preferred billing cycle (monthly, 3-month, 6-month, or annual)</li>
+                            <li>Enter your payment details and confirm your subscription</li>
+                        </ol>
+                        <p>Your premium features will be activated immediately after payment confirmation.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">How do I cancel my subscription?</div>
+                    <div class="faq-answer">
+                        <p>To cancel your subscription:</p>
+                        <ol>
+                            <li>Log in to your account</li>
+                            <li>Go to "Account Settings"</li>
+                            <li>Select "Subscription" or "Billing"</li>
+                            <li>Click "Cancel Subscription"</li>
+                            <li>Follow the prompts to confirm cancellation</li>
+                        </ol>
+                        <p>After cancellation, your premium features will remain active until the end of your current billing period. We don't offer prorated refunds for unused subscription time.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Can I get a refund?</div>
+                    <div class="faq-answer">
+                        <p>Our refund policy is as follows:</p>
+                        <ul>
+                            <li>If you encounter technical issues that prevent you from using our service, you may be eligible for a refund. Contact our support team with details of the problem.</li>
+                            <li>If you accidentally purchased a subscription or made a duplicate payment, contact us within 7 days for assistance.</li>
+                            <li>We do not offer refunds for change of mind, lack of matches, or other non-technical issues.</li>
+                        </ul>
+                        <p>Each refund request is evaluated on a case-by-case basis. Please contact our support team to discuss your specific situation.</p>
+                    </div>
+                </div>
             </div>
             
-            <div class="feature-box">
-                <h3>Global Community</h3>
-                <p>Connect with people from around the world with our platform serving users across London, New York, Sydney, Tokyo, and beyond.</p>
+            <div class="help-category">
+                <h3>Using the Platform</h3>
+                
+                <div class="faq-item">
+                    <div class="faq-question">How does the matching algorithm work?</div>
+                    <div class="faq-answer">
+                        <p>Our matching algorithm analyzes multiple factors to suggest compatible matches, including:</p>
+                        <ul>
+                            <li>Your stated preferences and deal-breakers</li>
+                            <li>Personality traits and values</li>
+                            <li>Mutual interests and lifestyle choices</li>
+                            <li>Relationship goals and expectations</li>
+                            <li>Location and distance preferences</li>
+                        </ul>
+                        <p>The algorithm learns from your interactions over time, improving its recommendations based on the profiles you engage with. To get the best matches, we recommend completing your profile thoroughly and keeping your preferences updated.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">How do I message other users?</div>
+                    <div class="faq-answer">
+                        <p>To message other users:</p>
+                        <ol>
+                            <li>Navigate to the profile of the person you want to contact</li>
+                            <li>Click the "Message" button on their profile</li>
+                            <li>Type your message in the text box</li>
+                            <li>Click "Send"</li>
+                        </ol>
+                        <p>Please note that messaging is a premium feature. Free users can respond to messages they receive from premium members, but cannot initiate conversations. Upgrade to a premium membership to unlock unlimited messaging.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">How do I use the Video Chat feature?</div>
+                    <div class="faq-answer">
+                        <p>To use the Video Chat feature (available to premium members):</p>
+                        <ol>
+                            <li>Open a conversation with the person you want to video chat with</li>
+                            <li>Click the video camera icon in the top right of the conversation window</li>
+                            <li>The other person will receive a video chat request notification</li>
+                            <li>Once they accept, the video call will begin</li>
+                        </ol>
+                        <p>Both users must have granted camera and microphone permissions to their browser for the video chat to work properly. For privacy reasons, users must explicitly accept video chat requests before a call can connect.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">How do I block or report a user?</div>
+                    <div class="faq-answer">
+                        <p>To block a user:</p>
+                        <ol>
+                            <li>Visit their profile</li>
+                            <li>Click the three dots (⋮) in the top right corner</li>
+                            <li>Select "Block User" from the dropdown menu</li>
+                        </ol>
+                        <p>To report inappropriate behavior:</p>
+                        <ol>
+                            <li>Visit the user's profile or open your conversation with them</li>
+                            <li>Click the three dots (⋮) in the top right corner</li>
+                            <li>Select "Report User"</li>
+                            <li>Choose the reason for reporting and provide any additional details</li>
+                            <li>Submit the report</li>
+                        </ol>
+                        <p>Our safety team reviews all reports promptly and takes appropriate action according to our community guidelines.</p>
+                    </div>
+                </div>
             </div>
         </section>
-
-        <section class="testimonial">
-            <h2>Success Stories</h2>
-            <blockquote>
-                "We met on Connecting Hearts and have been inseparable ever since. The platform made it easy for us to find each other based on our shared interests and values."
-                <cite>— Anna &amp; Mark</cite>
-            </blockquote>
+        
+        <section class="feature-box">
+            <h2>Common Issues</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">I'm not receiving any matches</div>
+                <div class="faq-answer">
+                    <p>If you're not receiving matches, consider these potential solutions:</p>
+                    <ul>
+                        <li><strong>Complete your profile</strong> - Profiles with photos and detailed information receive more matches</li>
+                        <li><strong>Broaden your preferences</strong> - Very narrow preferences may limit your potential matches</li>
+                        <li><strong>Check your location settings</strong> - Ensure your location is set correctly and consider expanding your distance range</li>
+                        <li><strong>Regular activity</strong> - Using the platform regularly signals that you're an active user</li>
+                    </ul>
+                    <p>If you've tried these steps and still aren't receiving matches, contact our support team for assistance.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">I can't upload photos</div>
+                <div class="faq-answer">
+                    <p>If you're having trouble uploading photos, try these solutions:</p>
+                    <ul>
+                        <li>Check that your photos meet our requirements: JPG or PNG format, at least 200x200 pixels, and less than 5MB in size</li>
+                        <li>Ensure you have a strong internet connection</li>
+                        <li>Try a different browser or device</li>
+                        <li>Clear your browser cache and cookies</li>
+                        <li>Make sure you're using the latest version of your browser</li>
+                    </ul>
+                    <p>If you continue to experience issues, please contact our support team with details about the problem and the device you're using.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">The app or website is running slowly</div>
+                <div class="faq-answer">
+                    <p>If you're experiencing performance issues, try these steps:</p>
+                    <ul>
+                        <li>Check your internet connection speed and stability</li>
+                        <li>Close other applications or browser tabs that might be using your bandwidth</li>
+                        <li>Clear your browser cache and cookies</li>
+                        <li>Update your browser to the latest version</li>
+                        <li>Restart the app or your device</li>
+                    </ul>
+                    <p>If the problem persists, please contact our support team with details about the issue, including your device type, browser version, and a description of the slowness you're experiencing.</p>
+                </div>
+            </div>
         </section>
         
         <section class="how-it-works">
-            <h2>How It Works</h2>
-            <ol>
-                <li><strong>Create Your Profile</strong> - Sign up and tell us about yourself and what you're looking for.</li>
-                <li><strong>Discover Matches</strong> - Browse profiles and receive personalized match recommendations.</li>
-                <li><strong>Connect</strong> - Start conversations with people who catch your interest.</li>
-                <li><strong>Meet</strong> - When you're ready, arrange to meet in person and start your journey together.</li>
-            </ol>
+            <h2>Contact Support</h2>
+            <p>Can't find the answer you're looking for? Our support team is here to help! Choose your preferred contact method below:</p>
+            
+            <div class="contact-methods">
+                <div class="contact-method">
+                    <div class="contact-type">Email Support:</div>
+                    <div class="contact-details"><a href="mailto:support@connectinghearts.com">support@connectinghearts.com</a><br>(Response within 24 hours)</div>
+                </div>
+                
+                <div class="contact-method">
+                    <div class="contact-type">Live Chat:</div>
+                    <div class="contact-details">Available Monday-Friday, 9am-6pm GMT<br>Click the chat icon in the bottom right corner of any page</div>
+                </div>
+                
+                <div class="contact-method">
+                    <div class="contact-type">Phone Support:</div>
+                    <div class="contact-details">+44 (0)20 1234 5678<br>Available Monday-Friday, 10am-4pm GMT<br>(Premium members only)</div>
+                </div>
+                
+                <div class="contact-method">
+                    <div class="contact-type">Support Ticket:</div>
+                    <div class="contact-details"><a href="submit_ticket.html">Submit a support ticket</a><br>(Response within 48 hours)</div>
+                </div>
+            </div>
         </section>
+    
     </main>
 
     <aside>
         <h3>Additional Resources</h3>
         <ul>
-            <li><a href="../safety/safety_guide.html">Online Dating Safety Guide</a></li>
+            <li><a href="safety_guide.html">Dating Safety Guide</a></li>
             <li><a href="../dating_tips.html">Dating Tips &amp; Advice</a></li>
-            <li><a href="../success_stories/success_stories.html">Success Stories</a></li>
+            <li><a href="../success_stories/testimonials.html">Success Stories</a></li>
             <li><a href="../events/events.html">Upcoming Events</a></li>
             <li><a href="../events/blog.html">Relationship Blog</a></li>
-            <li><a href="../faq.html">FAQ / Help Center</a></li>
-            <li><a href="../services/premium_features.html">Premium Features</a></li>  
+            <li><a href="../services/premium_features.html">Premium Features</a></li>
+            <li><a href="privacy_policy.html">Privacy Policy</a></li>  
         </ul>
-
     </aside>
+
     <footer>
-        <p>&copy; 2025 Connecting Hearts. All rights reserved.Connecting Hearts | <a href="../safety/privacy_policy.html">Privacy Policy</a> | <a href="../terms_of_service.html">Terms of Service</a> | <a href="../contact.html">Contact Us</a></p>
+        <p>&copy; 2025 Connecting Hearts. All rights reserved. Connecting Hearts | <a href="privacy_policy.html">Privacy Policy</a> | <a href="../terms_of_service.html">Terms of Service</a> | <a href="../contact.html">Contact Us</a></p>
         
         <p>Helping people find meaningful connections since 2020.</p>
         
-        <p>123 Love Lane, London, UK | <a href="mailto:support@connectinghearts.com">support@connectinghearts.com</a> | <a href="tel:+44 (0)20 1234 5678">+44 (0)20 1234 5678</a></p></footer>
+        <p>123 Love Lane, London, UK | <a href="mailto:support@connectinghearts.com">support@connectinghearts.com</a> | <a href="tel:+44 (0)20 1234 5678">+44 (0)20 1234 5678</a></p>
+    </footer>
 </body>
 </html>

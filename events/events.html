@@ -3,16 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connecting Hearts | Homepage</title>
-    <link rel="stylesheet" href="slicknav.css">
+    <title>Connecting Hearts | Upcoming Events</title>
+    <link rel="stylesheet" href="../slicknav.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="jquery.slicknav.min.js"></script>
+    <script src="../jquery.slicknav.min.js"></script>
     <script>
     $(document).ready(function(){
       $('#nav_menu').slicknav({prependTo:"#mobile_menu"});
     });
     </script>
     <link rel="stylesheet" href="../main.css"> 
+    <style>
+        /* Additional styles specific to events page */
+        .event-item {
+            margin-bottom: 2em;
+            padding: 2%;
+            background-color: rgba(255, 255, 255, 0.4);
+            border-left: 3px solid #1e5959;
+        }
+        
+        .event-date {
+            color: #e74c3c;
+            font-weight: bold;
+            margin-bottom: 0.5em;
+        }
+        
+        .event-title {
+            color: #1e5959;
+            font-size: 1.3em;
+            margin-bottom: 0.5em;
+        }
+        
+        .event-location {
+            font-style: italic;
+            margin-bottom: 1em;
+        }
+        
+        .event-description {
+            margin-bottom: 1em;
+        }
+        
+        .event-category {
+            display: inline-block;
+            background-color: #1e5959;
+            color: white;
+            padding: 3px 8px;
+            font-size: 0.8em;
+            border-radius: 3px;
+            margin-right: 5px;
+        }
+        
+        .event-registration {
+            margin-top: 1em;
+        }
+        
+        .event-button {
+            display: inline-block;
+            background-color: #e74c3c;
+            color: white;
+            padding: 8px 15px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            border: 2px solid #1e5959;
+        }
+        
+        .event-button:hover {
+            background-color: #c0392b;
+        }
+        
+        .events-filter {
+            margin-bottom: 2em;
+            background-color: rgba(255, 255, 255, 0.4);
+            padding: 1em;
+            border-radius: 5px;
+        }
+        
+        .filter-title {
+            margin-bottom: 1em;
+            font-weight: bold;
+            color: #1e5959;
+        }
+        
+        .filter-links a {
+            display: inline-block;
+            margin-right: 1em;
+            margin-bottom: 0.5em;
+            color: #1e5959;
+            text-decoration: none;
+        }
+        
+        .filter-links a:hover {
+            color: #e74c3c;
+            text-decoration: underline;
+        }
+        
+        .filter-links a.active {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -26,25 +116,25 @@
                 </li>
 
                 <li>
-                    <a href="../about/about.html">About</a>
+                    <a href="#">About</a>
                     <ul>
-                        <li><a href="../about/about_us.html">About Us</a></li>
+                        <li><a href="../about/about.html">About Us</a></li>
                         <li><a href="../about/our_team.html">Our Team</a></li>
                         <li><a href="../about/global_reach.html">Global Reach</a></li>
                     </ul>
                 </li>
 
                 <li>
-                    <a href="../services/services.html">Services</a>
+                    <a href="#">Services</a>
                     <ul>
+                        <li><a href="../services/services.html">Services &amp; Features</a></li>
                         <li><a href="../services/membership_plans.html">Membership Plans</a></li>
-                        <li><a href="../services/features.html">Features</a></li>
                         <li><a href="../services/premium_features.html">Premium Features</a></li>
                     </ul>
                 </li>
                 
                 <li>
-                    <a href="../success_stories/success_stories.html">Success Stories</a>
+                    <a href="#">Success Stories</a>
                     <ul>
                         <li><a href="../success_stories/testimonials.html">Testimonials</a></li>
                         <li><a href="../success_stories/featured_couples.html">Featured Couples</a></li>
@@ -53,16 +143,16 @@
                 </li>
                 
                 <li>
-                    <a href="../events/events.html" class="current">News &amp; Events</a>
+                    <a href="#" class="current">News &amp; Events</a>
                     <ul>
-                        <li><a href="../events/blog.html">Blog</a></li>
-                        <li><a href="../events/upcoming_events.html">Upcoming Events</a></li>
-                        <li><a href="../events/promotions.html">Promotions</a></li>
+                        <li><a href="events.html" class="current">Upcoming Events</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="promotions.html">Promotions</a></li>
                     </ul>
                 </li>
                 
                 <li>
-                    <a href="../safety/safety.html">Safety</a>
+                    <a href="#">Safety</a>
                     <ul>
                         <li><a href="../safety/safety_guide.html">Dating Safety Guide</a></li>
                         <li><a href="../safety/privacy_policy.html">Privacy Policy</a></li>
@@ -79,46 +169,175 @@
 
     <main>
         <section class="hero">
-            <h1>Find Your Perfect Match Today</h1>
-            <p>Welcome to Connecting Hearts, where meaningful relationships begin. Our advanced matching algorithm helps you find compatible partners based on your preferences and values.</p>
-            <a href="../register.html" class="register-button">Create Your Profile</a>
+            <h1>Upcoming Events</h1>
+            <p>Join us for exciting events designed to help you connect with others and enhance your dating experience.</p>
+        </section>
+        
+        <section class="feature-box">
+            <h2>Connect in Person</h2>
+            <p>At Connecting Hearts, we believe that online connections can lead to meaningful in-person relationships. Our events provide opportunities to meet potential matches in relaxed, fun environments where you can be yourself and make authentic connections.</p>
+            <p>From casual mixers to structured speed dating events, we offer a variety of formats to suit different preferences and comfort levels. Many of our events are exclusive to premium members, providing additional value for your subscription.</p>
         </section>
         
         <section class="features">
-            <h2>Why Choose Connecting Hearts?</h2>
+            <h2>May 2025 Events</h2>
             
-            <div class="feature-box">
-                <h3>Smart Matching</h3>
-                <p>Our algorithm suggests compatible matches based on your preferences, interests, and behavior patterns.</p>
+            <div class="event-item">
+                <div class="event-date">Saturday, May 10, 2025 • 7:00 PM - 10:00 PM</div>
+                <div class="event-title">London Spring Mixer</div>
+                <div class="event-location">The Garden Lounge, 123 Park Street, London</div>
+                <div class="event-description">
+                    <p>Join us for a relaxed evening of mingling at The Garden Lounge. This casual mixer provides a comfortable setting to meet others who are looking for meaningful connections. Enjoy complimentary drinks, light appetizers, and icebreaker activities designed to help conversation flow naturally.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis varius tellus eget massa pulvinar, at malesuada nisl consectetur.</p>
+                </div>
+                <span class="event-category">Premium Members</span>
+                <span class="event-category">In-Person</span>
+                <div class="event-registration">
+                    <a href="event_registration.html?id=1001" class="event-button">Register Now</a>
+                </div>
             </div>
             
-            <div class="feature-box">
-                <h3>Safe Environment</h3>
-                <p>We prioritize user safety with comprehensive guidelines and privacy measures to ensure a secure dating experience.</p>
+            <div class="event-item">
+                <div class="event-date">Tuesday, May 13, 2025 • 6:30 PM - 8:30 PM</div>
+                <div class="event-title">Virtual Speed Dating: Professionals 30-40</div>
+                <div class="event-location">Online (Zoom)</div>
+                <div class="event-description">
+                    <p>Meet multiple potential matches in one evening from the comfort of your home! This virtual speed dating event is specifically for professionals aged 30-40. You'll have a series of 5-minute video chats with compatible matches, followed by the opportunity to indicate interest in connecting further.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis varius tellus eget massa pulvinar, at malesuada nisl consectetur.</p>
+                </div>
+                <span class="event-category">Premium Members</span>
+                <span class="event-category">Online</span>
+                <div class="event-registration">
+                    <a href="event_registration.html?id=1002" class="event-button">Register Now</a>
+                </div>
             </div>
             
-            <div class="feature-box">
-                <h3>Global Community</h3>
-                <p>Connect with people from around the world with our platform serving users across London, New York, Sydney, Tokyo, and beyond.</p>
+            <div class="event-item">
+                <div class="event-date">Friday, May 16, 2025 • 7:00 PM - 9:00 PM</div>
+                <div class="event-title">Wine Tasting Social</div>
+                <div class="event-location">Urban Vineyard, 45 West Street, New York</div>
+                <div class="event-description">
+                    <p>Sip and mingle at this wine tasting event hosted at the charming Urban Vineyard. Sample five premium wines while connecting with other singles in a sophisticated yet relaxed atmosphere. A sommelier will guide the tasting, providing conversation starters and a shared experience to bond over.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis varius tellus eget massa pulvinar, at malesuada nisl consectetur.</p>
+                </div>
+                <span class="event-category">Premium Members</span>
+                <span class="event-category">In-Person</span>
+                <div class="event-registration">
+                    <a href="event_registration.html?id=1003" class="event-button">Register Now</a>
+                </div>
+            </div>
+            
+            <div class="event-item">
+                <div class="event-date">Saturday, May 17, 2025 • 10:00 AM - 12:00 PM</div>
+                <div class="event-title">Coffee Connections</div>
+                <div class="event-location">Brew &amp; Bean Café, 78 Harbour Drive, Sydney</div>
+                <div class="event-description">
+                    <p>Start your weekend with coffee and conversation at this casual morning meetup. Perfect for early birds and those who prefer daytime social events, this relaxed gathering offers a chance to connect over quality coffee in a bright, welcoming environment.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis varius tellus eget massa pulvinar, at malesuada nisl consectetur.</p>
+                </div>
+                <span class="event-category">All Members</span>
+                <span class="event-category">In-Person</span>
+                <div class="event-registration">
+                    <a href="event_registration.html?id=1004" class="event-button">Register Now</a>
+                </div>
+            </div>
+            
+            <div class="event-item">
+                <div class="event-date">Thursday, May 22, 2025 • 7:30 PM - 9:30 PM</div>
+                <div class="event-title">Relationship Workshop: Communication Skills</div>
+                <div class="event-location">Online (Zoom)</div>
+                <div class="event-description">
+                    <p>Enhance your relationship skills with this interactive workshop led by relationship expert Jane Doe. This session focuses on effective communication techniques that can help you build stronger connections, both in the early stages of dating and in long-term relationships. You'll learn practical strategies and have the opportunity to practice in small breakout rooms.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis varius tellus eget massa pulvinar, at malesuada nisl consectetur.</p>
+                </div>
+                <span class="event-category">All Members</span>
+                <span class="event-category">Online</span>
+                <span class="event-category">Workshop</span>
+                <div class="event-registration">
+                    <a href="event_registration.html?id=1005" class="event-button">Register Now</a>
+                </div>
+            </div>
+            
+            <div class="event-item">
+                <div class="event-date">Saturday, May 24, 2025 • 7:00 PM - 10:00 PM</div>
+                <div class="event-title">Tokyo Sakura Social</div>
+                <div class="event-location">Cherry Blossom Garden, 3-2-1 Sakura Way, Tokyo</div>
+                <div class="event-description">
+                    <p>Experience the beauty of late cherry blossoms while connecting with potential matches at this elegant evening event. Enjoy traditional Japanese refreshments, soft music, and the romantic atmosphere of illuminated cherry trees. Structured mingling activities will help you meet multiple people throughout the evening.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis varius tellus eget massa pulvinar, at malesuada nisl consectetur.</p>
+                </div>
+                <span class="event-category">Premium Members</span>
+                <span class="event-category">In-Person</span>
+                <div class="event-registration">
+                    <a href="event_registration.html?id=1006" class="event-button">Register Now</a>
+                </div>
+            </div>
+            
+            <div class="event-item">
+                <div class="event-date">Tuesday, May 27, 2025 • 6:00 PM - 8:00 PM</div>
+                <div class="event-title">Cooking Class for Singles</div>
+                <div class="event-location">Culinary Studio, 55 Gourmet Lane, London</div>
+                <div class="event-description">
+                    <p>Cook and connect at this hands-on culinary experience! You'll work in pairs to create a delicious three-course meal under the guidance of a professional chef. Partners will rotate throughout the evening, giving you the chance to interact with multiple people in a collaborative, fun environment. After cooking, you'll enjoy the meal you've prepared together.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis varius tellus eget massa pulvinar, at malesuada nisl consectetur.</p>
+                </div>
+                <span class="event-category">Premium Members</span>
+                <span class="event-category">In-Person</span>
+                <div class="event-registration">
+                    <a href="event_registration.html?id=1007" class="event-button">Register Now</a>
+                </div>
             </div>
         </section>
-
-        <section class="testimonial">
-            <h2>Success Stories</h2>
-            <blockquote>
-                "We met on Connecting Hearts and have been inseparable ever since. The platform made it easy for us to find each other based on our shared interests and values."
-                <cite>— Anna &amp; Mark</cite>
-            </blockquote>
+        
+        <section class="features">
+            <h2>June 2025 Events</h2>
+            
+            <div class="event-item">
+                <div class="event-date">Saturday, June 7, 2025 • 3:00 PM - 5:00 PM</div>
+                <div class="event-title">Outdoor Adventure: Hiking for Singles</div>
+                <div class="event-location">Woodland Park, North Entrance, New York</div>
+                <div class="event-description">
+                    <p>Connect with nature and potential matches on this guided group hike through scenic Woodland Park. The moderate 3-mile trail is suitable for all fitness levels and provides a relaxed setting to get to know others while enjoying the outdoors. The hike concludes with refreshments at a picturesque viewpoint.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis varius tellus eget massa pulvinar, at malesuada nisl consectetur.</p>
+                </div>
+                <span class="event-category">All Members</span>
+                <span class="event-category">In-Person</span>
+                <div class="event-registration">
+                    <a href="event_registration.html?id=2001" class="event-button">Register Now</a>
+                </div>
+            </div>
+            
+            <div class="event-item">
+                <div class="event-date">Tuesday, June 10, 2025 • 7:00 PM - 9:00 PM</div>
+                <div class="event-title">Virtual Game Night</div>
+                <div class="event-location">Online (Zoom)</div>
+                <div class="event-description">
+                    <p>Show your playful side at this virtual game night! Participate in a variety of interactive online games designed to spark conversation and reveal personalities. From trivia to drawing games to collaborative challenges, this event offers a fun, low-pressure way to connect with others.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis varius tellus eget massa pulvinar, at malesuada nisl consectetur.</p>
+                </div>
+                <span class="event-category">All Members</span>
+                <span class="event-category">Online</span>
+                <div class="event-registration">
+                    <a href="event_registration.html?id=2002" class="event-button">Register Now</a>
+                </div>
+            </div>
         </section>
         
         <section class="how-it-works">
-            <h2>How It Works</h2>
+            <h2>Event Guidelines</h2>
             <ol>
-                <li><strong>Create Your Profile</strong> - Sign up and tell us about yourself and what you're looking for.</li>
-                <li><strong>Discover Matches</strong> - Browse profiles and receive personalized match recommendations.</li>
-                <li><strong>Connect</strong> - Start conversations with people who catch your interest.</li>
-                <li><strong>Meet</strong> - When you're ready, arrange to meet in person and start your journey together.</li>
+                <li><strong>Registration</strong> - Most events require advance registration due to limited capacity. Please register at least 48 hours before the event.</li>
+                <li><strong>Cancellations</strong> - If you need to cancel, please do so at least 24 hours in advance to allow others to join.</li>
+                <li><strong>Premium Events</strong> - Events marked "Premium Members" are exclusive to users with active premium subscriptions.</li>
+                <li><strong>Online Events</strong> - Access details for online events will be sent to your registered email 1 hour before the event starts.</li>
+                <li><strong>Code of Conduct</strong> - All participants are expected to behave respectfully. Inappropriate behavior will result in removal from the event and possibly from the platform.</li>
             </ol>
+        </section>
+        
+        <section class="feature-box">
+            <h2>Suggest an Event</h2>
+            <p>Have an idea for an event you'd like to see? We welcome suggestions from our community! Please send your event ideas to <a href="mailto:events@connectinghearts.com">events@connectinghearts.com</a> with "Event Suggestion" in the subject line.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis varius tellus eget massa pulvinar, at malesuada nisl consectetur.</p>
         </section>
     </main>
 
@@ -127,19 +346,20 @@
         <ul>
             <li><a href="../safety/safety_guide.html">Online Dating Safety Guide</a></li>
             <li><a href="../dating_tips.html">Dating Tips &amp; Advice</a></li>
-            <li><a href="../success_stories/success_stories.html">Success Stories</a></li>
-            <li><a href="../events/events.html">Upcoming Events</a></li>
-            <li><a href="../events/blog.html">Relationship Blog</a></li>
+            <li><a href="../success_stories/testimonials.html">Success Stories</a></li>
+            <li><a href="blog.html">Relationship Blog</a></li>
+            <li><a href="promotions.html">Current Promotions</a></li>
             <li><a href="../faq.html">FAQ / Help Center</a></li>
             <li><a href="../services/premium_features.html">Premium Features</a></li>  
         </ul>
-
     </aside>
+
     <footer>
-        <p>&copy; 2025 Connecting Hearts. All rights reserved.Connecting Hearts | <a href="../safety/privacy_policy.html">Privacy Policy</a> | <a href="../terms_of_service.html">Terms of Service</a> | <a href="../contact.html">Contact Us</a></p>
+        <p>&copy; 2025 Connecting Hearts. All rights reserved. Connecting Hearts | <a href="../safety/privacy_policy.html">Privacy Policy</a> | <a href="../terms_of_service.html">Terms of Service</a> | <a href="../contact.html">Contact Us</a></p>
         
         <p>Helping people find meaningful connections since 2020.</p>
         
-        <p>123 Love Lane, London, UK | <a href="mailto:support@connectinghearts.com">support@connectinghearts.com</a> | <a href="tel:+44 (0)20 1234 5678">+44 (0)20 1234 5678</a></p></footer>
+        <p>123 Love Lane, London, UK | <a href="mailto:support@connectinghearts.com">support@connectinghearts.com</a> | <a href="tel:+44 (0)20 1234 5678">+44 (0)20 1234 5678</a></p>
+    </footer>
 </body>
 </html>

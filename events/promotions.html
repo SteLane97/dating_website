@@ -3,16 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connecting Hearts | Homepage</title>
-    <link rel="stylesheet" href="slicknav.css">
+    <title>Connecting Hearts | Promotions</title>
+    <link rel="stylesheet" href="../slicknav.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="jquery.slicknav.min.js"></script>
+    <script src="../jquery.slicknav.min.js"></script>
     <script>
     $(document).ready(function(){
       $('#nav_menu').slicknav({prependTo:"#mobile_menu"});
     });
     </script>
     <link rel="stylesheet" href="../main.css"> 
+    <style>
+        /* Additional styles specific to promotions page */
+        .promo-item {
+            margin-bottom: 2em;
+            padding: 2%;
+            background-color: rgba(255, 255, 255, 0.4);
+            border-left: 3px solid #1e5959;
+            position: relative;
+        }
+        
+        .promo-title {
+            color: #e74c3c;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 0.5em;
+        }
+        
+        .promo-description {
+            margin-bottom: 1em;
+            line-height: 1.5;
+        }
+        
+        .promo-details {
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 1em;
+            margin: 1em 0;
+            border-radius: 5px;
+        }
+        
+        .promo-code {
+            display: inline-block;
+            background-color: #e74c3c;
+            color: white;
+            padding: 0.5em 1em;
+            font-family: monospace;
+            font-size: 1.1em;
+            font-weight: bold;
+            border-radius: 3px;
+            margin: 0.5em 0;
+            letter-spacing: 1px;
+        }
+        
+        .promo-expiry {
+            color: #1e5959;
+            font-style: italic;
+            margin-bottom: 1em;
+            font-size: 0.9em;
+        }
+        
+        .promo-button {
+            display: inline-block;
+            background-color: #1e5959;
+            color: white;
+            padding: 8px 15px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-top: 1em;
+        }
+        
+        .promo-button:hover {
+            background-color: #e74c3c;
+        }
+        
+        .promo-tag {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #e74c3c;
+            color: white;
+            padding: 5px 10px;
+            font-size: 0.8em;
+            font-weight: bold;
+            border-bottom-left-radius: 5px;
+        }
+        
+        .promo-tag.new {
+            background-color: #2ecc71;
+        }
+        
+        .promo-tag.popular {
+            background-color: #f39c12;
+        }
+        
+        .promo-tag.expiring {
+            background-color: #e74c3c;
+            animation: blink 1s linear infinite;
+        }
+        
+        @keyframes blink {
+            50% {
+                opacity: 0.5;
+            }
+        }
+        
+        .promo-terms {
+            font-size: 0.8em;
+            color: #555;
+            margin-top: 0.5em;
+        }
+        
+        .referral-form {
+            margin: 1em 0;
+        }
+        
+        .referral-form input[type="email"] {
+            padding: 8px;
+            width: 60%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+        
+        .referral-form button {
+            padding: 8px 15px;
+            background-color: #1e5959;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .referral-form button:hover {
+            background-color: #e74c3c;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -26,25 +152,25 @@
                 </li>
 
                 <li>
-                    <a href="../about/about.html">About</a>
+                    <a href="#">About</a>
                     <ul>
-                        <li><a href="../about/about_us.html">About Us</a></li>
+                        <li><a href="../about/about.html">About Us</a></li>
                         <li><a href="../about/our_team.html">Our Team</a></li>
                         <li><a href="../about/global_reach.html">Global Reach</a></li>
                     </ul>
                 </li>
 
                 <li>
-                    <a href="../services/services.html">Services</a>
+                    <a href="#">Services</a>
                     <ul>
+                        <li><a href="../services/services.html">Services &amp; Features</a></li>
                         <li><a href="../services/membership_plans.html">Membership Plans</a></li>
-                        <li><a href="../services/features.html">Features</a></li>
                         <li><a href="../services/premium_features.html">Premium Features</a></li>
                     </ul>
                 </li>
                 
                 <li>
-                    <a href="../success_stories/success_stories.html">Success Stories</a>
+                    <a href="#">Success Stories</a>
                     <ul>
                         <li><a href="../success_stories/testimonials.html">Testimonials</a></li>
                         <li><a href="../success_stories/featured_couples.html">Featured Couples</a></li>
@@ -53,16 +179,16 @@
                 </li>
                 
                 <li>
-                    <a href="../events/events.html" class="current">News &amp; Events</a>
+                    <a href="#" class="current">News &amp; Events</a>
                     <ul>
-                        <li><a href="../events/blog.html">Blog</a></li>
-                        <li><a href="../events/upcoming_events.html">Upcoming Events</a></li>
-                        <li><a href="../events/promotions.html" class="current">Promotions</a></li>
+                        <li><a href="events.html">Upcoming Events</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="promotions.html" class="current">Promotions</a></li>
                     </ul>
                 </li>
                 
                 <li>
-                    <a href="../safety/safety.html">Safety</a>
+                    <a href="#">Safety</a>
                     <ul>
                         <li><a href="../safety/safety_guide.html">Dating Safety Guide</a></li>
                         <li><a href="../safety/privacy_policy.html">Privacy Policy</a></li>
@@ -79,46 +205,135 @@
 
     <main>
         <section class="hero">
-            <h1>Find Your Perfect Match Today</h1>
-            <p>Welcome to Connecting Hearts, where meaningful relationships begin. Our advanced matching algorithm helps you find compatible partners based on your preferences and values.</p>
-            <a href="../register.html" class="register-button">Create Your Profile</a>
+            <h1>Current Promotions</h1>
+            <p>Special offers and discounts to enhance your dating experience with Connecting Hearts.</p>
+        </section>
+        
+        <section class="feature-box">
+            <h2>Special Offers</h2>
+            <p>Take advantage of our limited-time promotions to access premium features and enhance your dating experience. Check back regularly for new offers and seasonal discounts.</p>
+            <p>Don't forget to enter the promo code during checkout to receive your discount!</p>
         </section>
         
         <section class="features">
-            <h2>Why Choose Connecting Hearts?</h2>
+            <h2>Limited-Time Offers</h2>
             
-            <div class="feature-box">
-                <h3>Smart Matching</h3>
-                <p>Our algorithm suggests compatible matches based on your preferences, interests, and behavior patterns.</p>
+            <div class="promo-item">
+                <div class="promo-tag new">NEW</div>
+                <div class="promo-title">Spring Into Love: 25% Off Premium</div>
+                <div class="promo-description">
+                    <p>Celebrate the season of new beginnings with 25% off our Premium membership plan. Access all premium features including Private Messaging, Video Chat, Event Invitations, and more at a special discounted rate.</p>
+                </div>
+                <div class="promo-details">
+                    <p><strong>Discount:</strong> 25% off Premium membership (1-month, 3-month, or 6-month plans)</p>
+                    <p><strong>Promo Code:</strong> <span class="promo-code">SPRING25</span></p>
+                    <div class="promo-expiry">Valid until: May 31, 2025</div>
+                </div>
+                <a href="../services/membership_plans.html" class="promo-button">Subscribe Now</a>
+                <p class="promo-terms">Terms and conditions apply. Discount applies to first payment only for monthly plans.</p>
             </div>
             
-            <div class="feature-box">
-                <h3>Safe Environment</h3>
-                <p>We prioritize user safety with comprehensive guidelines and privacy measures to ensure a secure dating experience.</p>
+            <div class="promo-item">
+                <div class="promo-tag popular">POPULAR</div>
+                <div class="promo-title">Premium Feature Bundle: Save 30%</div>
+                <div class="promo-description">
+                    <p>Get access to all our most popular features at a discounted bundle price. This offer includes Private Messaging, Video Chat, and Profile Boost features for one low price - saving you 30% compared to purchasing each feature separately.</p>
+                </div>
+                <div class="promo-details">
+                    <p><strong>Discount:</strong> 30% off when purchasing these three features together</p>
+                    <p><strong>Promo Code:</strong> <span class="promo-code">BUNDLE30</span></p>
+                    <div class="promo-expiry">Valid until: June 15, 2025</div>
+                </div>
+                <a href="../services/premium_features.html" class="promo-button">Get Bundle</a>
+                <p class="promo-terms">Terms and conditions apply. Features must be purchased together to receive discount.</p>
             </div>
             
-            <div class="feature-box">
-                <h3>Global Community</h3>
-                <p>Connect with people from around the world with our platform serving users across London, New York, Sydney, Tokyo, and beyond.</p>
+            <div class="promo-item">
+                <div class="promo-tag expiring">ENDING SOON</div>
+                <div class="promo-title">First Month Free: Premium Plus Trial</div>
+                <div class="promo-description">
+                    <p>Try our most comprehensive membership plan with no risk! Subscribe to Premium Plus and get your first month completely free. Experience all our premium features, priority matching, and premium customer support.</p>
+                </div>
+                <div class="promo-details">
+                    <p><strong>Offer:</strong> First month free with Premium Plus subscription (minimum 3-month commitment)</p>
+                    <p><strong>Promo Code:</strong> <span class="promo-code">PLUSFREE</span></p>
+                    <div class="promo-expiry">Valid until: May 10, 2025</div>
+                </div>
+                <a href="../services/membership_plans.html" class="promo-button">Start Free Trial</a>
+                <p class="promo-terms">Terms and conditions apply. Subscription will automatically renew at regular price after free month.</p>
             </div>
         </section>
-
-        <section class="testimonial">
-            <h2>Success Stories</h2>
-            <blockquote>
-                "We met on Connecting Hearts and have been inseparable ever since. The platform made it easy for us to find each other based on our shared interests and values."
-                <cite>— Anna &amp; Mark</cite>
-            </blockquote>
+        
+        <section class="features">
+            <h2>Ongoing Promotions</h2>
+            
+            <div class="promo-item">
+                <div class="promo-title">Annual Subscription Savings</div>
+                <div class="promo-description">
+                    <p>Save significantly when you commit to an annual subscription. Our annual plans offer up to 25% savings compared to monthly subscriptions, giving you uninterrupted access to all features while saving money.</p>
+                </div>
+                <div class="promo-details">
+                    <p><strong>Premium Annual:</strong> £179.99/year (Save £59.89 compared to monthly)</p>
+                    <p><strong>Premium Plus Annual:</strong> £269.99/year (Save £89.89 compared to monthly)</p>
+                    <div class="promo-expiry">Ongoing offer</div>
+                </div>
+                <a href="../services/membership_plans.html" class="promo-button">View Plans</a>
+            </div>
+            
+            <div class="promo-item">
+                <div class="promo-title">Refer a Friend: Both Get 1 Month Free</div>
+                <div class="promo-description">
+                    <p>Share the love! Refer a friend to Connecting Hearts, and when they sign up for a premium membership, you'll both receive one month of Premium membership for free. It's a win-win!</p>
+                </div>
+                <div class="promo-details">
+                    <p><strong>Offer:</strong> One month free Premium membership for both you and your referred friend</p>
+                    <p><strong>How it works:</strong> Enter your friend's email below, and we'll send them an invitation with your personal referral code. When they sign up using this code, both accounts will be credited.</p>
+                    <div class="referral-form">
+                        <input type="email" placeholder="Friend's Email Address" id="referralEmail">
+                        <button type="button">Send Invitation</button>
+                    </div>
+                    <div class="promo-expiry">Ongoing offer</div>
+                </div>
+                <p class="promo-terms">Terms and conditions apply. Free month applied after referred friend's subscription payment. Limit 5 referrals per user.</p>
+            </div>
+            
+            <div class="promo-item">
+                <div class="promo-title">Student Discount: 20% Off All Memberships</div>
+                <div class="promo-description">
+                    <p>We understand that student life can be budget-constrained. That's why we offer a special 20% discount on all membership plans for verified students. Just verify your student status through our partner platform to unlock this discount.</p>
+                </div>
+                <div class="promo-details">
+                    <p><strong>Discount:</strong> 20% off any membership plan</p>
+                    <p><strong>Eligibility:</strong> Must verify current student status</p>
+                    <div class="promo-expiry">Ongoing offer</div>
+                </div>
+                <a href="student_verification.html" class="promo-button">Verify Student Status</a>
+                <p class="promo-terms">Terms and conditions apply. Verification required annually to maintain discount.</p>
+            </div>
         </section>
         
         <section class="how-it-works">
-            <h2>How It Works</h2>
+            <h2>How to Redeem Promotions</h2>
             <ol>
-                <li><strong>Create Your Profile</strong> - Sign up and tell us about yourself and what you're looking for.</li>
-                <li><strong>Discover Matches</strong> - Browse profiles and receive personalized match recommendations.</li>
-                <li><strong>Connect</strong> - Start conversations with people who catch your interest.</li>
-                <li><strong>Meet</strong> - When you're ready, arrange to meet in person and start your journey together.</li>
+                <li><strong>Select Your Plan</strong> - Visit our <a href="../services/membership_plans.html">Membership Plans</a> or <a href="../services/premium_features.html">Premium Features</a> page to select the option you want.</li>
+                <li><strong>Enter Promo Code</strong> - During checkout, enter the promo code in the designated field.</li>
+                <li><strong>Apply Discount</strong> - Click "Apply" to see the discount reflected in your total.</li>
+                <li><strong>Complete Purchase</strong> - Proceed with the payment process to finalize your discounted subscription.</li>
+                <li><strong>Enjoy Premium Features</strong> - Once confirmed, you'll have immediate access to your premium features!</li>
             </ol>
+        </section>
+        
+        <section class="feature-box">
+            <h2>Promotion Terms and Conditions</h2>
+            <ul>
+                <li>Promotional offers cannot be combined with other discounts unless specifically stated.</li>
+                <li>Promo codes must be entered at the time of purchase; discounts cannot be applied retroactively.</li>
+                <li>Connecting Hearts reserves the right to modify or end promotions at any time.</li>
+                <li>Discounted subscriptions will renew at the regular rate after the promotional period unless canceled.</li>
+                <li>Refunds are not available for promotional purchases except as required by law.</li>
+                <li>Some promotions may have additional terms specified in their individual descriptions.</li>
+            </ul>
+            <p>For questions about our promotions, please contact our support team at <a href="mailto:support@connectinghearts.com">support@connectinghearts.com</a>.</p>
         </section>
     </main>
 
@@ -127,19 +342,20 @@
         <ul>
             <li><a href="../safety/safety_guide.html">Online Dating Safety Guide</a></li>
             <li><a href="../dating_tips.html">Dating Tips &amp; Advice</a></li>
-            <li><a href="../success_stories/success_stories.html">Success Stories</a></li>
-            <li><a href="../events/events.html">Upcoming Events</a></li>
-            <li><a href="../events/blog.html">Relationship Blog</a></li>
+            <li><a href="../success_stories/testimonials.html">Success Stories</a></li>
+            <li><a href="events.html">Upcoming Events</a></li>
+            <li><a href="blog.html">Relationship Blog</a></li>
             <li><a href="../faq.html">FAQ / Help Center</a></li>
             <li><a href="../services/premium_features.html">Premium Features</a></li>  
         </ul>
-
     </aside>
+
     <footer>
-        <p>&copy; 2025 Connecting Hearts. All rights reserved.Connecting Hearts | <a href="../safety/privacy_policy.html">Privacy Policy</a> | <a href="../terms_of_service.html">Terms of Service</a> | <a href="../contact.html">Contact Us</a></p>
+        <p>&copy; 2025 Connecting Hearts. All rights reserved. Connecting Hearts | <a href="../safety/privacy_policy.html">Privacy Policy</a> | <a href="../terms_of_service.html">Terms of Service</a> | <a href="../contact.html">Contact Us</a></p>
         
         <p>Helping people find meaningful connections since 2020.</p>
         
-        <p>123 Love Lane, London, UK | <a href="mailto:support@connectinghearts.com">support@connectinghearts.com</a> | <a href="tel:+44 (0)20 1234 5678">+44 (0)20 1234 5678</a></p></footer>
+        <p>123 Love Lane, London, UK | <a href="mailto:support@connectinghearts.com">support@connectinghearts.com</a> | <a href="tel:+44 (0)20 1234 5678">+44 (0)20 1234 5678</a></p>
+    </footer>
 </body>
 </html>

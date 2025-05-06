@@ -1,11 +1,20 @@
+/*TO ADD: - breadcrumbs
+          - change image alt text to Connecting Hearts logo
+          - change break-word to overflow: hidden;
+          - change rgb background color to #d8efea
+          - instead of #nav_menu ul::after, use #nav_menu ul {overflow: auto;}
+          - favicon
+
+/*reset margins and padding*/
 *{
     margin: 0;
-    Padding: 0;
+    padding: 0;
 }
+
 
 body {
     width: 95%;
-    max-width: 1024px;
+    max-width: 1024px;  /*max-width requirement*/
     background-color: #b4e1d8; 
     margin: 15px auto;
     font-size: 100%;
@@ -17,15 +26,15 @@ header, main{
 
 body, main, aside {
     border: 2px solid #1e5959;
-    border-radius: 5px
+    border-radius: 5px /*add borders with curved corners*/
 }
 
 img {
     max-width: 100%;
-    height: auto;
-}
+    height: auto;   
+}       /*all images responsive*/
 
-/* ------------------------------------------------------------------------------------ */
+/* -----------------------------HEADER SECTION------------------------------------- */
 
 header {
     width: 100%;
@@ -35,6 +44,7 @@ header {
     margin-bottom: 2%;
 }
 
+/*logo positiono and style*/
 #logo {
     height: auto;
     width: 15%;
@@ -46,18 +56,18 @@ header {
     margin-left: 5px;
 }
 
-header h2 {
+header h2 { /*company name*/
     font-size: 3em;
     padding-top: 0.5em;
 }
 
 header h2 a {
-    text-decoration: none;
+    text-decoration: none; /*remove underline from link*/
     color: #1e5959;
     font-size: 1em;
 }
 
-h2 {
+h2 { /*general heaading styling*/
     text-align: center;
     color: #1e5959;
     line-height: 1.3;
@@ -67,7 +77,7 @@ h2 {
 /* ------------------------ NAVIGATION BAR ----------------------------- */
 
 #mobile_menu { 
-    display: none;
+    display: none; /*hide slicknave menu by default*/
 }
 
 #nav_menu {
@@ -78,7 +88,7 @@ h2 {
 }
 
 #nav_menu ul {
-    list-style-type: none;
+    list-style-type: none; /*remove bullet points*/
     margin: 0 auto;
     position: relative;
 }
@@ -97,19 +107,23 @@ h2 {
     border-left: 1px black solid;
     border-top: 1px black solid;
     border-bottom: 1px black solid;
-    width: 14.18%;
+    width: 14.15%;
     margin-bottom: 0.5em;
     float: left;
 }
 
+#nav_menu ul li:hover {
+    border: 1px white solid; /*white border when hovering*/
+}
+
 #nav_menu ul li ul {
-    display: none;
+    display: none; /*hide submenu by default*/
     position: absolute;
     top: 100%;
 }
 
 #nav_menu ul li a {
-    text-decoration: none;
+    text-decoration: none; /*remove underline from menu items*/
     display: block;
     text-align: center;
     color: white;
@@ -118,25 +132,26 @@ h2 {
 }
 
 #nav_menu ul li a.current {
-    background-color: #e74c3c;
+    background-color: #e74c3c; /*current page different colour*/
 }
 
 #nav_menu ul li a.lastitem {
-    border-right: 1px black solid;
+    border-right: 1px black solid; /*right border to contact tab*/
 }
 
 #nav_menu ul li:hover ul {
-    display: block;
+    display: block; /*show submenu when parent hovered over*/
 }
 
 #nav_menu ul li ul li {
-    float: none;
+    float: none; /*display submenus vertically*/
     width: 100%;
     margin-bottom: 0.1em;
 }
 
+
 #nav_menu ul li ul li a {
-    border-right: 1px black solid;
+    border-right: 1px black solid;/*right border for submenu items*/
 }
 
 /* ------------------------ SLICKNAV MENU ----------------------------- */
@@ -183,7 +198,7 @@ main {
     margin-bottom: 1.5em;
     border-bottom: 1px solid #ccc;
     padding: 3%;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.4); /*lighter background for hero section, 0.4 is used for opacity*/
 }
 
 .hero h1 {
@@ -204,13 +219,12 @@ main {
     padding: 0.7em 1.5em;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 5px;
+    border-radius: 5px; /*curved button corners*/
     border: #1e5959 solid 2px;
 }
 
 .register-button:hover {
-    background-color: #e74c3c;
-    transform: scale(1.05);
+    transform: scale(1.05); /*zoomw when hovered over*/
 }
 
 /* ------------------------ FEATURES SECTION ----------------------------- */
@@ -223,15 +237,14 @@ main {
 .features h2 {
     margin-bottom: 1em;
     padding: 0.5em 0;
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.4); /*slightly lighter green*/
 }
 
-.feature-box {
+.feature-box{
     margin-bottom: 1.5em;
     padding: 2%;
     background-color: rgba(255, 255, 255, 0.4);
-    border-left: 3px solid #1e5959;
+    border-left: 3px solid #1e5959; /*dark green left border on feature tabs*/
 }
 
 .feature-box h3 {
@@ -240,6 +253,21 @@ main {
     text-align: left;
     padding-bottom: 0.3em;
     font-size: 1.4em;
+}
+
+.feature-box ol, .feature-box ul {
+    padding-left: 2em;
+    margin-bottom: 0.5em;
+}
+
+.feature-box li {
+    margin-bottom: 0.8em;
+    line-height: 1.4;
+    padding: 0.5em 0;
+}
+
+.feature-box strong {
+    color: #e74c3c; /*bold text in orange*/
 }
 
 /* ------------------------ TESTIMONIAL SECTION ----------------------------- */
@@ -252,13 +280,13 @@ main {
 }
 
 blockquote {
-    font-style: italic;
+    font-style: italic; /*blockquote foor testimonial*/
     margin-left: 1em;
     line-height: 1.5;
 }
 
 cite {
-    display: block;
+    display: block;/*separates names from quote aa bit better*/
     text-align: right;
     margin-top: 0.8em;
     font-weight: bold;
@@ -274,7 +302,11 @@ cite {
     border-left: 3px solid #1e5959;
 }
 
-.how-it-works ol {
+.how-it-works p {
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+}
+.how-it-works ol, .how-it-works ul { /*indenting the list items for readaability*/
     padding-left: 2em;
     margin-bottom: 0.5em;
 }
@@ -295,7 +327,7 @@ aside {
     width: 25%;
     float: right;
     padding: 2%;
-    background-color: #f1f8f6;
+    background-color: #f1f8f6;/*different to rest of page due to link colour requirements*/
     margin: 0 2% 2% 0;
 }
 
@@ -310,6 +342,7 @@ aside li {
     margin-bottom: 0.5em;
 }
 
+/*styling links without underlines and with colours in assignment requirements*/
 aside li a {
     text-decoration: none;
     color: #2a7d74;
@@ -350,7 +383,7 @@ footer a {
 
 @media screen and (max-width: 1050px) {
     #nav_menu ul li {
-        width: 13.9%; 
+        width: 13.9%; /*reduce nav menu item width to avoid breakpoint*/
     }
     
     #nav_menu ul li a {
@@ -366,7 +399,7 @@ footer a {
     }
 }
 
-@media only screen and (max-width: 900px) { 
+@media only screen and (max-width: 900px) { /*reduce font size for <900px  screen*/
     html {font-size: 90%;}
 
     header h2 {
@@ -375,7 +408,7 @@ footer a {
 }
 
 @media only screen and (max-width: 767px) { 
-    #mobile_menu { display: block; }
+    #mobile_menu { display: block; } /*switch to slicknav menu display*/
     #nav_menu {display: none;}
     header h2 {
         font-size: 2.2em;
@@ -388,17 +421,17 @@ footer a {
     #logo {
         width: 18%;
         min-width: 60px;
-    }
+    } /*adjust logo sizing for visual reasons*/
 }
 
-@media only screen and (max-width: 479px) {
+@media only screen and (max-width: 479px) { /*mobile portrait view*/
     html {font-size: 80%;} 
     #logo {
         width: 20%;
         min-width: 50px;
         margin: 0 auto 10px auto;
         float: none;
-        display: block;
+        display: block; /*display logo on its own row aboove company name*/
     }
     header h2 {
         font-size: 1.8em;
@@ -407,7 +440,7 @@ footer a {
     }
     main, aside {
         width: 90%;
-        float: none;
+        float: none; /*display aadditional features underneath main content*/
         margin: 1em auto;
         padding: 3%;
     }
@@ -415,12 +448,52 @@ footer a {
     main {
         margin-bottom: 0;
     }
-    .slicknav_menu {padding: 8px;}
-    .slicknav_btn {margin: 3px;}
-    .slicknav_nav a {padding: 10px 8px;}
+
     .feature-box, .testimonial, .how-it-works {
         padding: 4%;
         margin-bottom: 5%;
     }  
-    footer {word-wrap: break-word;}
+    footer {word-wrap: break-word;} /*stops a breakpoint in the middle of 'terms of service' link*/
+}
+
+/* ------------------------ ABOUT US PAGE ----------------------------- */
+
+.feature-box ul, .feature-box ol {
+    line-height: 1.5;
+}
+
+.feature-box li {
+    margin-bottom: 0.8em;
+}
+
+.feature-box strong {
+    color: #e74c3c;
+}
+
+.dedicated-team ul, .sets-apart ul {
+    list-style-type: none;
+}
+
+/* ------------------------ GLOBAL REACH PAGE ----------------------------- */
+
+.growth-statistics ul {
+    list-style-type: none;
+}
+
+
+/* ------------------------ OUR TEAM PAGE ----------------------------- */
+.team-member {
+    margin-bottom: 1.5em;
+}
+
+.team-member h3 {
+    border-bottom: 1px solid rgba(30, 89, 89, 0.2);
+    padding-bottom: 0.5em;
+}
+
+.team-member strong {
+    color: #1e5959;
+    font-size: 1.1em;
+    display: block;
+    margin-bottom: 1em;
 }
