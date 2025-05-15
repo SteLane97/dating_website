@@ -13,101 +13,10 @@
     });
     </script>
     <link rel="stylesheet" href="../main.css"> 
-    <style>
-        /* Additional styles specific to featured couples page */
-        .featured-couple {
-            margin-bottom: 3em;
-            padding: 0;
-        }
-        
-        .couple-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 1.5em;
-            background-color: rgba(255, 255, 255, 0.4);
-            padding: 1em;
-            border-radius: 5px;
-        }
-        
-        .couple-photo {
-            width: 150px;
-            height: 150px;
-            background-color: #ccc;
-            border-radius: 50%;
-            margin-right: 20px;
-            border: 3px solid #1e5959;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #1e5959;
-            font-size: 0.8em;
-            text-align: center;
-        }
-        
-        .couple-info {
-            flex: 1;
-        }
-        
-        .couple-name {
-            color: #e74c3c;
-            font-size: 1.5em;
-            margin-bottom: 0.3em;
-        }
-        
-        .couple-meta {
-            color: #1e5959;
-            font-style: italic;
-            margin-bottom: 0.5em;
-        }
-        
-        .couple-quote {
-            font-style: italic;
-            margin-top: 0.5em;
-            color: #e74c3c;
-        }
-        
-        .article-section {
-            margin-bottom: 1.5em;
-        }
-        
-        .article-section h4 {
-            color: #1e5959;
-            margin-bottom: 0.8em;
-            font-size: 1.2em;
-            border-bottom: 1px solid rgba(30, 89, 89, 0.2);
-            padding-bottom: 0.3em;
-        }
-        
-        .read-more {
-            display: inline-block;
-            background-color: #1e5959;
-            color: white;
-            padding: 0.5em 1em;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 1em;
-        }
-        
-        .read-more:hover {
-            background-color: #e74c3c;
-        }
-        
-        @media only screen and (max-width: 767px) {
-            .couple-header {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .couple-photo {
-                margin-right: 0;
-                margin-bottom: 1em;
-            }
-        }
-    </style>
 </head>
 <body>
     <header>
-        <a href="../index.html"><img src="../image.png" alt="Company Logo" id="logo"></a>
+        <a href="../index.html"><img src="../image.png" alt="Connecting Hearts logo" id="logo"></a>
         <h2><a href="../index.html" id="company_name">Connecting Hearts</a></h2>
         <nav id="mobile_menu"></nav>
         <nav id="nav_menu">
@@ -139,7 +48,6 @@
                     <ul>
                         <li><a href="testimonials.html">Testimonials</a></li>
                         <li><a href="featured_couples.html" class="current">Featured Couples</a></li>
-                        <li><a href="share_story.html">Share Your Story</a></li>
                     </ul>
                 </li>
                 
@@ -152,14 +60,14 @@
                     </ul>
                 </li>
                 
-                <li>
+                <!-- <li>
                     <a href="#">Safety</a>
                     <ul>
                         <li><a href="../safety/safety_guide.html">Dating Safety Guide</a></li>
                         <li><a href="../safety/privacy_policy.html">Privacy Policy</a></li>
                         <li><a href="../safety/help_centre.html">Help Centre</a></li>
                     </ul>
-                </li>
+                </li> -->
 
                 <li>
                     <a href="../contact.html" class="lastitem">Contact</a>
@@ -169,164 +77,90 @@
     </header>
 
     <main>
+        <!-- Breadcrumbs navigation -->
+        <div class="breadcrumbs">
+            <p>Home &gt; Success Stories &gt; Featured Couples</p>
+        </div>
+        
         <section class="hero">
             <h1>Featured Couples</h1>
-            <p>In-depth stories of couples who found love through Connecting Hearts.</p>
         </section>
         
         <section class="feature-box">
-            <h2>Love Stories in the Spotlight</h2>
-            <p>Every month, we highlight a few couples who met on our platform and share their journey in detail. These featured stories go beyond simple testimonials to show the real impact of meaningful connections. From first messages to future plans, these couples share their experiences to inspire others on their dating journey.</p>
+            <h2>Success Through Connection</h2>
+            <p>At Connecting Hearts, nothing makes us prouder than seeing real relationships blossom from our platform. These featured couples have generously shared their stories to inspire others on their journey to finding love.</p>
         </section>
         
-        <section class="features">
-            <h2>This Month's Featured Couples</h2>
-            
-            <article class="featured-couple">
-                <div class="couple-header">
-                    <div class="couple-photo">
-                        [Placeholder for couple photo]
-                    </div>
-                    <div class="couple-info">
-                        <h3 class="couple-name">Sarah &amp; David</h3>
-                        <p class="couple-meta">Together for 2 years, recently engaged</p>
-                        <p>Met through Connecting Hearts in March 2023</p>
-                        <p class="couple-quote">"The video chat feature allowed us to connect on a deeper level before meeting in person. It was a game-changer for building trust early in our relationship."</p>
-                    </div>
-                </div>
-                
-                <div class="feature-box">
-                    <div class="article-section">
-                        <h4>How They Met</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis varius tellus eget massa pulvinar, at malesuada nisl consectetur. Sarah and David were both busy professionals who had little time for traditional dating. After matching on Connecting Hearts, they spent two weeks getting to know each other through messages before having their first video call.</p>
-                        <p>"We both felt that taking the time to communicate deeply before meeting in person helped us establish a strong foundation," says Sarah. David agrees: "The pressure was off because we already knew we had a connection."</p>
-                    </div>
-                    
-                    <div class="article-section">
-                        <h4>Building Their Relationship</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. After their first in-person date at a local café, Sarah and David quickly realized they had found something special. They credit Connecting Hearts' compatibility matching for helping them find each other despite living in different parts of the city.</p>
-                        <p>"The algorithm really works," laughs David. "We had so many common interests and values that conversation was easy from the start."</p>
-                    </div>
-                    
-                    <div class="article-section">
-                        <h4>Their Advice for Others</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Both Sarah and David encourage online daters to be patient and authentic. "Don't rush the process," advises Sarah. "Take time to get to know someone before meeting in person."</p>
-                        <p>David adds: "Use the video chat feature! It helps you establish a real connection and build trust before meeting face-to-face."</p>
-                    </div>
-                    
-                    <div class="article-section">
-                        <h4>Looking Ahead</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. The couple is now planning their wedding for summer 2026. They recently bought their first home together and are excited about their future.</p>
-                        <p>"We're so grateful to have found each other," says Sarah. "Finding the right person changes everything."</p>
-                    </div>
-                </div>
-            </article>
-            
-            <article class="featured-couple">
-                <div class="couple-header">
-                    <div class="couple-photo">
-                        [Placeholder for couple photo]
-                    </div>
-                    <div class="couple-info">
-                        <h3 class="couple-name">Hiroshi &amp; Lauren</h3>
-                        <p class="couple-meta">Together for 2 years, engaged</p>
-                        <p>Connected across borders: Tokyo &amp; Sydney</p>
-                        <p class="couple-quote">"The cultural sensitivity of the platform helped us navigate our different backgrounds. We appreciate how Connecting Hearts considers cultural factors in matching."</p>
-                    </div>
-                </div>
-                
-                <div class="feature-box">
-                    <div class="article-section">
-                        <h4>An International Love Story</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. When Hiroshi from Tokyo and Lauren from Sydney matched on Connecting Hearts, neither expected to find love across such a distance. Lauren had set her location preferences to include international matches because she was planning to travel to Japan for work.</p>
-                        <p>"I was curious about meeting people from different cultures," Lauren explains. "I never expected to fall in love with someone on the other side of the world."</p>
-                    </div>
-                    
-                    <div class="article-section">
-                        <h4>Overcoming Distance</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. For the first six months, Hiroshi and Lauren maintained a long-distance relationship, relying heavily on Connecting Hearts' video chat feature. They scheduled regular virtual dates despite the time difference.</p>
-                        <p>"It wasn't easy," admits Hiroshi, "but the connection we felt was worth the effort. We made it work by being intentional about our communication."</p>
-                    </div>
-                    
-                    <div class="article-section">
-                        <h4>Cultural Exchange</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Both Hiroshi and Lauren value how their relationship has enriched their understanding of different cultures. They've taught each other their respective languages and traditions, creating a unique blend in their relationship.</p>
-                        <p>"I love learning about Japanese culture through Hiroshi's eyes," says Lauren. "And I enjoy sharing Australian traditions with him."</p>
-                    </div>
-                    
-                    <div class="article-section">
-                        <h4>Making It Work</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. After a year of long-distance dating, Lauren accepted a job offer in Tokyo and moved to be with Hiroshi. Six months later, he proposed during a cherry blossom viewing picnic.</p>
-                        <p>The couple is now planning an international wedding that celebrates both their cultures. "We're proof that love can cross oceans," says Lauren with a smile.</p>
-                    </div>
-                </div>
-            </article>
-            
-            <article class="featured-couple">
-                <div class="couple-header">
-                    <div class="couple-photo">
-                        [Placeholder for couple photo]
-                    </div>
-                    <div class="couple-info">
-                        <h3 class="couple-name">Carlos &amp; Sophie</h3>
-                        <p class="couple-meta">Together for 9 months</p>
-                        <p>Met through Connecting Hearts' Event feature</p>
-                        <p class="couple-quote">"As busy professionals, dating was challenging for both of us. Connecting Hearts simplified the process and helped us find each other despite our hectic schedules."</p>
-                    </div>
-                </div>
-                
-                <div class="feature-box">
-                    <div class="article-section">
-                        <h4>Finding Time for Love</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Carlos, a surgeon, and Sophie, a corporate lawyer, both struggled to find time for dating due to their demanding careers. They had been on Connecting Hearts for several months but hadn't found meaningful connections.</p>
-                        <p>"With my unpredictable schedule, it was hard to maintain conversations or plan dates," explains Carlos. Sophie agrees: "I was tired of starting conversations that fizzled out because we couldn't find time to meet."</p>
-                    </div>
-                    
-                    <div class="article-section">
-                        <h4>The Event That Changed Everything</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Everything changed when they both attended a Connecting Hearts mixer event for busy professionals. The structured format of the event, with timed mini-dates, helped them meet multiple people efficiently.</p>
-                        <p>"I almost didn't go," admits Sophie. "But I'm so glad I made time for it. Carlos and I immediately connected over our similar lifestyles and challenges."</p>
-                    </div>
-                    
-                    <div class="article-section">
-                        <h4>Making Relationships Work with Busy Schedules</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Carlos and Sophie found creative ways to prioritize their relationship despite their packed schedules. They used Connecting Hearts' Date Planner feature to coordinate their limited free time.</p>
-                        <p>"We schedule quality time together the way we would important work commitments," says Carlos. "It's about making each other a priority, even when time is scarce."</p>
-                    </div>
-                    
-                    <div class="article-section">
-                        <h4>Relationship Growth</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nine months into their relationship, Carlos and Sophie have found a rhythm that works for them. They recently vacationed together for the first time and are discussing moving in together next year.</p>
-                        <p>"Finding someone who understands the demands of a busy career has been incredible," says Sophie. "We support each other's ambitions while building something meaningful together."</p>
-                    </div>
-                </div>
-                
-                <a href="carlos_sophie_full.html" class="read-more">Read their full story</a>
-            </article>
+        <!-- First Featured Couple -->
+        <section class="feature-box couple">
+            <h2>Anna &amp; Mark</h2>
+            <div class="couple-photo">
+                <img src="../images/couple1.jpg" alt="Anna and Mark">
+            </div>
+            <div class="couple-story">
+                <h3>Together since January 2023</h3>
+                <p>"We met on Connecting Hearts and have been inseparable ever since. The platform made it easy for us to find each other." - Anna</p>
+                <p>Mark was initially hesitant about online dating, lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan ligula ac felis gravida laoreet.</p>
+                <p>Donec et fringilla enim. Sed est magna, sollicitudin nec mauris in, semper malesuada risus. Cras faucibus diam a scelerisque lobortis.</p>
+                <p class="quote">"Fusce iaculis massa sed diam posuere vulputate. Nulla facilisi. Mauris risus tellus, hendrerit quis feugiat eget, volutpat et enim." - Mark</p>
+            </div>
+            <div class="clearfix"></div>
         </section>
         
-        <section class="feature-box">
-            <h2>Previously Featured Couples</h2>
-            <p>Explore stories from couples we've featured in previous months:</p>
-            <ul>
-                <li><a href="featured_anna_mark.html">Anna &amp; Mark</a> - Met through Connecting Hearts in January 2023</li>
-                <li><a href="featured_rachel_john.html">Rachel &amp; John</a> - Married in April 2024 after meeting on our platform</li>
-                <li><a href="featured_michael_priya.html">Michael &amp; Priya</a> - Connected despite different cultural backgrounds</li>
-                <li><a href="featured_alejandro_natalie.html">Alejandro &amp; Natalie</a> - An international love story between London and Madrid</li>
-            </ul>
+        <!-- Second Featured Couple -->
+        <section class="feature-box couple">
+            <h2>Sarah &amp; David</h2>
+            <div class="couple-photo">
+                <img src="../images/couple2.jpg" alt="Sarah and David">
+            </div>
+            <div class="couple-story">
+                <h3>Engaged after 14 months</h3>
+                <p>"The video chat feature allowed us to connect on a deeper level before meeting in person. It was a game-changer." - Sarah</p>
+                <p>Sarah and David lived in different cities curabitur ultricies convallis urna, eu tincidunt nunc maximus ac. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+                <p>Donec sit amet urna eget nisi egestas gravida eu in lacus. Maecenas in mauris rhoncus, venenatis urna vel, tincidunt nulla.</p>
+                <p class="quote">"Suspendisse tincidunt sagittis elit, eget venenatis elit. Maecenas sollicitudin urna at erat aliquet tincidunt." - David</p>
+            </div>
+            <div class="clearfix"></div>
+        </section>
+        
+        <!-- Third Featured Couple -->
+        <section class="feature-box couple">
+            <h2>Rachel &amp; John</h2>
+            <div class="couple-photo">
+                <img src="../images/couple3.jpg" alt="Rachel and John">
+            </div>
+            <div class="couple-story">
+                <h3>Married in April 2024</h3>
+                <p>"The customer support team is incredibly helpful. They guided us through the process and made sure we felt safe." - Rachel</p>
+                <p>Rachel joined Connecting Hearts after ending a long-term relationship. Phasellus consequat tincidunt porta. Proin eleifend faucibus dui non tristique. Nam at ultricies nulla.</p>
+                <p>Integer sed ullamcorper nunc. Maecenas vitae cursus felis. Nam sagittis ac mauris ac luctus. Cras vel erat at lacus malesuada efficitur vitae quis leo.</p>
+                <p class="quote">"Ut fermentum nunc quis massa mattis, a ultrices enim scelerisque. Cras varius, velit vitae tincidunt ornare, neque lorem dignissim ipsum, et tincidunt augue odio in massa." - John</p>
+            </div>
+            <div class="clearfix"></div>
         </section>
         
         <section class="how-it-works">
-            <h2>Could Your Story Be Next?</h2>
-            <p>If you've found love through Connecting Hearts, we'd love to hear from you! Your journey could inspire others and be featured on our website. Here's how to share your story:</p>
-            <ol>
-                <li><strong>Submit Your Story</strong> - Fill out our story submission form on the <a href="share_story.html">Share Your Story</a> page.</li>
-                <li><strong>Interview Process</strong> - If selected, our team will contact you for a more detailed interview about your experience.</li>
-                <li><strong>Photo Session</strong> - You'll have the opportunity to share photos or participate in a professional photo session.</li>
-                <li><strong>Review and Approval</strong> - You'll review your feature before it's published to ensure you're happy with it.</li>
-            </ol>
-            <p>We feature new couples each month, so don't hesitate to share your Connecting Hearts success story!</p>
+            <h2>What Made These Connections Special</h2>
+            <p>Duis varius tellus eget massa pulvinar, at malesuada nisl consectetur. All the connections made had these factors in common:</p>
+            <ul>
+                <li><strong>Honest Profiles</strong> - Vestibulum malesuada leo vitae maximus tristique</li>
+                <li><strong>Active Engagement</strong> - Nunc non sagittis ante etiam eget velit ut sem mollis interdum non sed arcu</li>
+                <li><strong>Open Communication</strong> - Proin lobortis nulla in odio imperdiet pharetra</li>
+                <li><strong>Followed Safety Guidelines</strong> - Etiam auctor gravida lectus, sodales facilisis dolor condimentum ac</li>
+            </ul>
         </section>
+        
+        <section class="feature-box">
+            <h2>Your Love Story Awaits</h2>
+            <p>Ready to start your own success story? Creating a profile is the first step toward finding your perfect match.</p>
+            <a href="../register.html" class="register-button">Join Connecting Hearts</a><!--Fix button and maybe put to side-->
+        </section>
+        <!--DELETE SHARE STORY?-->
+        <!-- <section class="feature-box">
+            <h2>Share Your Story</h2>
+            <p>Have you found love on Connecting Hearts? You could be our next featured couple! Share your experience and inspire others on their journey to finding love.</p>
+            <p>Visit our <a href="share_story.html">Share Your Story</a> page to tell us about your relationship.</p>
+        </section> -->
     </main>
 
     <aside>
@@ -337,7 +171,7 @@
             <li><a href="testimonials.html">Testimonials</a></li>
             <li><a href="../events/events.html">Upcoming Events</a></li>
             <li><a href="../events/blog.html">Relationship Blog</a></li>
-            <li><a href="../faq.html">FAQ / Help Center</a></li>
+            <li><a href="../faq.html">FAQ / Help Centre</a></li>
             <li><a href="../services/premium_features.html">Premium Features</a></li>  
         </ul>
     </aside>

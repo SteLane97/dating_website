@@ -1,9 +1,19 @@
-/*TO ADD: - breadcrumbs
+/*TO ADD (not now, at end): - breadcrumbs
           - change image alt text to Connecting Hearts logo
           - change break-word to overflow: hidden;
           - change rgb background color to #d8efea
           - instead of #nav_menu ul::after, use #nav_menu ul {overflow: auto;}
           - favicon
+          - only have one paragraph at the top
+          - Remove premium features page?
+          -Make membership plans page elements responsive sizes instead of px
+          - Make sure all table elements on membership plans page is in taught material
+          -Align h1 in Hero classes
+          -Fix register page (share story) names and stylings
+          - Blog changed to Daily news - fix styling names 
+          -Add line height to all?
+          -Fix Titles and Locations for events 
+          - choose either div or section (probably section)
 
 /*reset margins and padding*/
 *{
@@ -107,7 +117,7 @@ h2 { /*general heaading styling*/
     border-left: 1px black solid;
     border-top: 1px black solid;
     border-bottom: 1px black solid;
-    width: 14.15%;
+    width: 16.5%;
     margin-bottom: 0.5em;
     float: left;
 }
@@ -120,6 +130,7 @@ h2 { /*general heaading styling*/
     display: none; /*hide submenu by default*/
     position: absolute;
     top: 100%;
+    width: 16.5%;
 }
 
 #nav_menu ul li a {
@@ -212,6 +223,7 @@ main {
     line-height: 1.5;
 }
 
+
 .register-button {
     display: inline-block;
     background-color: #e74c3c;
@@ -270,6 +282,10 @@ main {
     color: #e74c3c; /*bold text in orange*/
 }
 
+.feature-box ul, .feature-box ol {
+    line-height: 1.5;
+}
+
 /* ------------------------ TESTIMONIAL SECTION ----------------------------- */
 
 .testimonial {
@@ -279,13 +295,13 @@ main {
     border-left: 3px solid #1e5959;
 }
 
-blockquote {
+.testimonial blockquote {
     font-style: italic; /*blockquote foor testimonial*/
     margin-left: 1em;
     line-height: 1.5;
 }
 
-cite {
+.testimonial cite {
     display: block;/*separates names from quote aa bit better*/
     text-align: right;
     margin-top: 0.8em;
@@ -458,25 +474,7 @@ footer a {
 
 /* ------------------------ ABOUT US PAGE ----------------------------- */
 
-.feature-box ul, .feature-box ol {
-    line-height: 1.5;
-}
-
-.feature-box li {
-    margin-bottom: 0.8em;
-}
-
-.feature-box strong {
-    color: #e74c3c;
-}
-
-.dedicated-team ul, .sets-apart ul {
-    list-style-type: none;
-}
-
-/* ------------------------ GLOBAL REACH PAGE ----------------------------- */
-
-.growth-statistics ul {
+.how-it-works.dedicated-team ul, .how-it-works.sets-apart ul {
     list-style-type: none;
 }
 
@@ -487,13 +485,473 @@ footer a {
 }
 
 .team-member h3 {
-    border-bottom: 1px solid rgba(30, 89, 89, 0.2);
+    border-bottom: 1px solid rgba(30, 89, 89, 0.2); /*subtle visual parting beneath name of team member*/
     padding-bottom: 0.5em;
 }
 
-.team-member strong {
+.team-member strong { /*team member role*/
     color: #1e5959;
     font-size: 1.1em;
     display: block;
+    margin-bottom: 1em; /*block and margin for spacing*/
+}
+
+
+/* example */
+/* ------------------------ BREADCRUMBS ----------------------------- */
+.breadcrumbs {
+    margin: 1em 0;
+    padding: 0.5em;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-left: 3px solid #1e5959;
+}
+
+.breadcrumbs p {
+    margin: 0;
+    font-size: 0.8em;
+    color: #1e5959;
+}
+
+/* ------------------------ MEMBERSHIP PLANS PAGE ----------------------------- */
+
+
+.plan-box {
+    width: 30%;
+    margin: 1.5%;
+    margin-left: 2.5em; /*to centre booxes, better way?*/
+    padding: 20px;
+    float: left;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-left: 3px solid #1e5959;
+    margin-bottom: 2em;
+    text-align: center;
+    min-height: 400px;
+}
+
+.plan-box h3 {
+    border-bottom: 1px solid #1e5959;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.plan-price {
+    font-size: 1.8em;
+    color: #e74c3c;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.plan-duration {
+    font-size: 0.9em;
+    color: #1e5959;
+    margin-bottom: 20px;
+}
+
+.plan-features {
+    text-align: left;
+    margin: 20px 0;
+    min-height: 150px;
+    padding-left: 25px;
+}
+
+.plan-features li {
+    margin-bottom: 10px;
+    list-style-type: none;
+    position: relative;
+}
+
+.plan-button {
+    display: inline-block;
+    background-color: #1e5959;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.plan-button:hover {
+    background-color: #e74c3c;
+}
+
+/* Plan table styles */
+.plan-comparison {
+    clear: both;
+}
+
+.plan-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2em 0;
+}
+
+.plan-table th, .plan-table td {
+    border: 1px solid #1e5959;
+    padding: 10px;
+    text-align: center;
+}
+
+.plan-table th {
+    background-color: #1e5959;
+    color: white;
+}
+
+.plan-table tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.plan-table tr:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.price-highlight {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+.feature-included {
+    color: #2ecc71;
+    font-weight: bold;
+}
+
+.feature-excluded {
+    color: #e74c3c;
+}
+
+/* Media query for tablets and smaller screens */
+@media only screen and (max-width: 767px) {
+    .plan-box {
+        width: 90%;
+        float: none;
+        margin: 20px auto;
+    }
+}
+
+/* testimonial Page */
+
+
+.testimonial-timeline {
+    font-size: 0.9em;
+    color: #1e5959;
+    text-align: right;
+    font-style: italic;
+}
+
+/* Media query for tablets and below */
+@media only screen and (max-width: 767px) {
+    .testimonial {
+        width: 90%;
+        margin: 0 auto 1.5em auto;
+        float: none;
+    }
+}
+
+/*featured couples*/
+/* Featured Couples Page Styles */
+
+.couple h2 {
+    color: #e74c3c; /*couple name colour*/
+    margin-bottom: 1em;/*space between names and content*/
+}
+
+.couple-photo {
+    width: 30%; /*preferred width*/
+    float: left; /*image on left, text on right*/
+    margin: 0 2% 1em 0;
+}
+
+.couple-photo img {
+    border: 2px solid #1e5959;
+    padding: 3px;
+    background-color: white; /*style placeholder*/
+}
+
+.couple-story {
+    width: 66%;
+    float: left;
+}
+
+.couple-story h3 { /*timeline information*/
+    color: #1e5959; 
+    font-style: italic;
+    font-size: 1.1em;
+}
+
+.couple-story .quote { /*end quote standing out*/
+    font-style: italic;
+    color: #e74c3c;
+    margin: 1em 0; /*top and bottom margins*/
+    padding-left: 1em;
+    border-left: 2px solid #1e5959; /*border-left style, like on feature boxes*/
+}
+
+.couple::after { /*used to help clear floats and achieve the desired display of featured couples sections*/
+    content:"";
+    display:block;
+    clear: both;
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 767px) {
+    .couple-photo, .couple-story {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+    }
+    
+    .couple-photo {
+        margin-bottom: 1em;
+        text-align: center;
+    }
+    
+    .couple-photo img {
+        max-width: 80%;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    .couple-photo img {
+        max-width: 100%;
+    }
+    
+    .quote {
+        padding-left: 0.5em;
+    }
+}
+
+
+/*share story */
+/* Form styling based on Chapter 13 */
+form {
+    width: 95%;
+    margin: 0 auto;
+    padding: 1em 0;
+}
+
+fieldset {
+    margin-top: 1em;
     margin-bottom: 1em;
+    padding-top: 0.5em;
+    border: 1px solid #1e5959;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+legend {
+    color: #e74c3c;
+    font-weight: bold;
+    font-size: 85%;
+    margin-bottom: 0.5em;
+    padding: 0 0.5em;
+}
+
+label {
+    float: left;
+    width: 12em;
+    text-align: right;
+    padding-right: 1em;
+    margin-top: 0.2em;
+}
+
+input, select, textarea {
+    width: 15em;
+    margin-left: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+input[type="checkbox"] {
+    width: auto;
+    margin-left: 12.5em; /* To align with other form elements */
+}
+
+input[type="checkbox"] + label {
+    float: none;
+    width: auto;
+    text-align: left;
+}
+
+textarea {
+    height: 10em;
+    width: 30em;
+}
+
+input[type="submit"], input[type="reset"] {
+    width: 10em;
+    margin-left: 1em;
+    background-color: #e74c3c;
+    color: white;
+    font-weight: bold;
+    border: 2px solid #1e5959;
+    border-radius: 5px;
+    padding: 0.5em;
+}
+
+input[type="submit"] {
+    margin-left: 12em; /* To align with form fields */
+}
+
+br {
+    clear: both;
+}
+
+/* Form validation styling from Chapter 13 */
+input:required {
+    border: 3px solid #e74c3c;
+}
+
+input:valid {
+    border: 1px solid black;
+}
+
+input:invalid {
+    box-shadow: none;
+}
+
+/* Media Queries for form responsiveness, based on Chapter 8 */
+@media only screen and (max-width: 767px) {
+    label {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 90%;
+        margin-left: 0;
+    }
+    
+    input, select, textarea {
+        width: 90%;
+        margin-left: 0;
+    }
+    
+    input[type="checkbox"] {
+        margin-left: 0;
+    }
+    
+    input[type="submit"], input[type="reset"] {
+        margin-left: 0;
+        margin-bottom: 1em;
+    }
+    
+    textarea {
+        width: 90%;
+    }
+}
+
+/*Blog - Daily News Page*/
+/* Additional styles specific to blog page */
+.daily-article {
+    margin-bottom: 2em;
+    padding: 2%;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-left: 3px solid #1e5959;
+}
+
+.article-date {
+    color: #e74c3c;
+    font-size: 0.9em;
+    margin-bottom: 0.5em;
+}
+
+.article-title {
+    color: #1e5959;
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+.article-author {
+    font-style: italic;
+    margin-bottom: 1em;
+    font-size: 0.9em;
+}
+
+.article-preview {
+    margin-bottom: 1em;
+    line-height: 1.5;
+}
+
+.read-more { /*Subscribe for full article button*/
+    display: inline-block; /*spacing tweak*/
+    background-color: #1e5959;
+    color: white;
+    padding: 5px 12px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+
+.read-more:hover {
+    background-color: #e74c3c;
+}
+
+/* .blog-featured {
+    margin-bottom: 2em;
+    padding: 0;
+} */
+
+.featured-article img { /*image for today's article*/
+    background-color: #ccc;
+    margin-bottom: 15px;
+    display: block; /*takes up whole width*/
+    text-align: center;/*placeholder text*/
+    line-height: 150px;/*vertically centred*/
+    color: #1e5959;/*placeholder text colour*/
+}
+
+/*PROMOTIONS PAGE*/
+
+
+.promo-title {/*offer name*/
+    color: #e74c3c;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.promo-description {
+    line-height: 1.5; /*readability*/
+}
+
+.promo-details {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 1em;
+    margin: 1em 0; /*spacing between box and description*/
+    border-radius: 5px;
+}
+
+.promo-code {
+    display: inline-block;
+    background-color: #e74c3c;
+    color: white;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    border-radius: 3px;
+    margin: 0.5em 0; /*spacing*/
+}
+
+.promo-expiry {
+    color: #1e5959;
+    font-style: italic;
+}
+
+.read-more.promotions {
+    padding: 0.7em 1em;
+    font-weight: bold;
+}
+
+/*Contact Page*/
+.contact-submit {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid #1e5959;
+}
+
+.contact-submit:hover {
+    background-color: #c0392b;
 }
