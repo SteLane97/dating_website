@@ -1,29 +1,31 @@
 <!DOCTYPE html>
-<!--REGISTER PAGE-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Connecting Hearts is a premier online dating platform to help people find their perfect match. Sign up here to get your journey started.">
+    <meta name="keywords" content="online dating, find love, dating platform, relationship matching, Connecting Hearts, dating profiles">
     <title>Connecting Hearts | Register</title>
-    <link rel="stylesheet" href="../slicknav.css">
+    <link rel="stylesheet" href="./slicknav.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="../jquery.slicknav.min.js"></script>
+    <script src="./jquery.slicknav.min.js"></script>
     <script>
     $(document).ready(function(){
       $('#nav_menu').slicknav({prependTo:"#mobile_menu"});
     });
     </script>
     <link rel="stylesheet" href="./main.css"> 
+    <link rel="icon" href="./favicon.ico">
 </head>
 <body>
     <header>
-        <a href="../index.html"><img src="../summative_assessment/image.png" alt="Company Logo" id="logo"></a>
-        <h2><a href="../index.html" id="company_name">Connecting Hearts</a></h2>
+        <a href="./index.html"><img src="./image.png" alt="Connecting Hearts Logo" id="logo"></a>
+        <h2><a href="./index.html" id="company_name">Connecting Hearts</a></h2>
         <nav id="mobile_menu"></nav>
         <nav id="nav_menu">
             <ul>
                 <li>
-                    <a href="../index.html">Home</a>   
+                    <a href="./index.html">Home</a>   
                 </li>
 
                 <li>
@@ -40,14 +42,13 @@
                     <ul>
                         <li><a href="../summative_assessment/services/services.html">Services &amp; Features</a></li>
                         <li><a href="../summative_assessment/services/membership_plans.html">Membership Plans</a></li>
-                        <li><a href="../summative_assessment/services/premium_features.html">Premium Features</a></li>
                     </ul>
                 </li>
                 
                 <li>
                     <a href="#">Success Stories</a>
                     <ul>
-                        <li><a href="../summative_assessment/success_stories/testimonials.html" class="current">Testimonials</a></li>
+                        <li><a href="../summative_assessment/success_stories/testimonials.html">Testimonials</a></li>
                         <li><a href="../summative_assessment/success_stories/featured_couples.html">Featured Couples</a></li>
                     </ul>
                 </li>
@@ -55,20 +56,11 @@
                 <li>
                     <a href="#">News &amp; Events</a>
                     <ul>
-                        <li><a href="../summative_assessment/events/events.html">Upcoming Events</a></li>
-                        <li><a href="../summative_assessment/events/blog.html">Blog</a></li>
-                        <li><a href="../summative_assessment/events/promotions.html">Promotions</a></li>
+                        <li><a href="./events/events.html">Upcoming Events</a></li>
+                        <li><a href="./events/daily_news.html">Daily News</a></li>
+                        <li><a href="./events/promotions.html">Promotions</a></li>
                     </ul>
                 </li>
-                
-                <!-- <li>
-                    <a href="#">Safety</a>
-                    <ul>
-                        <li><a href="../safety/safety_guide.html">Dating Safety Guide</a></li>
-                        <li><a href="../safety/privacy_policy.html">Privacy Policy</a></li>
-                        <li><a href="../safety/help_centre.html">Help Centre</a></li>
-                    </ul>
-                </li> -->
 
                 <li>
                     <a href="../summative_assessment/contact.html" class="lastitem">Contact</a>
@@ -78,168 +70,167 @@
     </header>
 
     <main>
+        <section class="breadcrumbs">
+            <p><a href="./index.html">Home</a> &gt; <a href="#">Register</a></p>
+        </section>
+
         <section class="hero">
             <h1>Register With Us Today</h1>
             <p>Start your journey to finding that deeper connection.</p>
         </section>
         
-        <!-- Form using techniques from Chapter 13 -->
-        <section class="story-form">
+        <!--form using techniques from Chapter 13-->
             
-            <form id="storyForm" action="submit_story.php" method="post">
-                <fieldset>
-                    <legend>Account Information</legend>
+        <form id="register_form" action="register_form.php" method="post">
+            <fieldset>
+                <legend>Account Information</legend>
 
-                    <label for="email">Email Address:</label>
-                    <input type="email" id="email" name="email" required autofocus><br>
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required autofocus><br>
 
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" name="password" required pattern="[a-zA-Z0-9]{6,}" placeholder="At least 6 letters or numbers" title="Must be at least 6 alphanumeric characters">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required pattern="[a-zA-Z0-9]{6,}" placeholder="At least 6 letters or numbers" title="Must be at least 6 alphanumeric characters">
 
-                    <label for="confirm_password">Confirm Password:</label>
-                    <input type="password" id="confirm_password" name="confirm_password" required>
-                </fieldset>
+                <label for="confirm_password">Confirm Password:</label>
+                <input type="password" id="confirm_password" name="confirm_password" required>
+            </fieldset>
 
-                <fieldset>
-                    <legend>Basic Information</legend>
+            <fieldset>
+                <legend>Basic Information</legend>
                     
-                    <label for="first_name">First Name:</label>
-                    <input type="text" id="first_name" name="first_name" required><br>
+                <label for="first_name">First Name:</label>
+                <input type="text" id="first_name" name="first_name" required><br>
 
-                    <label for="last_name">Last Name:</label>
-                    <input type="text" id="last_name" name="last_name" required><br>
+                <label for="last_name">Last Name:</label>
+                <input type="text" id="last_name" name="last_name" required><br>
                     
 
-                    <label for="date_of_birth">Date of Birth:</label>
-                    <input type="date" id="date_of_brith" name="date_of_birth" required><br>
+                <label for="date_of_birth">Date of Birth:</label>
+                <input type="date" id="date_of_birth" name="date_of_birth" required><br>
                     
-                    <label for="gender">Gender:</label>
-                    <select name="gender" id="gender" required>
-                        <option value="">Please Select</option>
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
-                        <option value="other">Other</option>
-                        <option value="prefer_not_to_say">Prefer not to say</option>
-                    </select>
+                <label for="gender">Gender:</label>
+                <select name="gender" id="gender" required>
+                    <option value="">Please Select</option> <!--Thought this looked cleaner-->
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                    <option value="prefer_not_to_say">Prefer not to say</option>
+                </select>
 
-                    <label for="phone">Phone Number:</label>
-                    <input type="tel" id="phone" name="phone" pattern="`\d{3}[\-]\d{3}[\-]\d{4}`" placeholder="999-999-9999" title="Must be in format 999-999-9999">
-                </fieldset>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" pattern="`\d{3}[\-]\d{3}[\-]\d{4}`" placeholder="999-999-9999" title="Must be in format 999-999-9999">
+            </fieldset>
                 
-                <fieldset>
-                    <legend>Location Details</legend>
+            <fieldset>
+                <legend>Location Details</legend>
                     
-                    <label for="city">City:</label>
-                    <input type="text" id="city" name="city" required><br>
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required><br>
 
-                    <label for="country">Country:</label>
-                    <select id="country" name="country" required>
-                        <option value="">Please select</option>
-                        <option value="australia">Australia</option>
-                        <option value="brazil">Brazil</option>
-                        <option value="france">France</option>
-                        <option value="germany">Germany</option>
-                        <option value="japan">Japan</option>
-                        <option value="united_kingdom">UK</option>
-                        <option value="united_states">USA</option>
-                    </select><br>
-                </fieldset>
+                <label for="country">Country:</label>
+                <select id="country" name="country" required>
+                    <option value="">Please select</option>
+                    <option value="australia">Australia</option>
+                     <option value="brazil">Brazil</option>
+                    <option value="france">France</option>
+                    <option value="germany">Germany</option>
+                    <option value="japan">Japan</option>
+                    <option value="united_kingdom">UK</option>
+                    <option value="united_states">USA</option>
+                </select><br>
+            </fieldset>
                 
-                <fieldset>
-                    <legend>Profile Dettails</legend>
+            <fieldset>
+                <legend>Profile Dettails</legend>
 
-                    <label for="profile_pic">Profile Picture:</label>
-                    <input type="file" id="profile_pic" name="profile_pic" accept="image/jpeg, image/gif"><br>
+                <label for="profile_pic">Profile Picture:</label>
+                <input type="file" id="profile_pic" name="profile_pic" accept="image/jpeg, image/gif"><br>
 
-                    <label for="about_me">About Me:</label>
-                    <textarea name="about_me" id="about_me" maxlength="250" placeholder="Tell us a little bit about yourself, your interests and what you're looking for in a relationship!"></textarea><br>
-                </fieldset>
+                <label for="about_me">About Me:</label>
+                <textarea name="about_me" id="about_me" maxlength="250" placeholder="Tell us a little bit about yourself, your interests and what you're looking for in a relationship!"></textarea><br>
+            </fieldset>
 
-                <fieldset>
-                    <legend>Interests</legend>
+            <fieldset>
+                <legend>Interests</legend>
                     <!--Format label for indent-->
-                    <p>What are your interests?</p>
-                    <p>(select all that apply)</p>
-                    <input type="checkbox" id="interest_travel" name="interests" value="travel">
-                    <label for="interest_travel">Travel</label><br>
+                <p>What are your interests?</p>
+                <p>(select all that apply)</p>
+                <input type="checkbox" id="interest_travel" name="interests" value="travel">
+                <label for="interest_travel">Travel</label><br>
                     
-                    <input type="checkbox" id="interest_music" name="interests" value="music">
-                    <label for="interest_music">Music</label><br>
+                <input type="checkbox" id="interest_music" name="interests" value="music">
+                <label for="interest_music">Music</label><br>
                     
-                    <input type="checkbox" id="interest_sports" name="interests" value="sports">
-                    <label for="interest_sports">Sports</label><br>
+                <input type="checkbox" id="interest_sports" name="interests" value="sports">
+                <label for="interest_sports">Sports</label><br>
 
-                    <input type="checkbox" id="interest_films" name="interests" value="films">
-                    <label for="interest_films">Films</label><br>
+                <input type="checkbox" id="interest_films" name="interests" value="films">
+                <label for="interest_films">Films</label><br>
                     
-                    <input type="checkbox" id="interest_reading" name="interests" value="reading">
-                    <label for="interest_reading">Reading</label><br>
+                <input type="checkbox" id="interest_reading" name="interests" value="reading">
+                <label for="interest_reading">Reading</label><br>
 
-                    <input type="checkbox" id="interest_cooking" name="interests" value="cooking">
-                    <label for="interest_cooking">Cooking</label><br>
-                </fieldset>
+                <input type="checkbox" id="interest_cooking" name="interests" value="cooking">
+                <label for="interest_cooking">Cooking</label><br>
+            </fieldset>
 
-                <fieldset>
-                    <legend>Relationship Preferences</legend>
+            <fieldset>
+                <legend>Relationship Preferences</legend>
 
-                    <label for="looking_for">I am looking for:</label>
-                    <select name="looking_for" id="looking_for" required>
-                        <option value="">Please select</option>
-                        <option value="men">Men</option>
-                        <option value="women">Women</option>
-                        <option value="everyone">Everyone</option>
-                    </select><br>
+                <label for="looking_for">I am looking for:</label>
+                <select name="looking_for" id="looking_for" required>
+                    <option value="">Please select</option>
+                    <option value="men">Men</option>
+                    <option value="women">Women</option>
+                    <option value="everyone">Everyone</option>
+                </select><br>
 
-                    <label for="relationship_type">Relationship Type:</label>
-                    <select name="relationship_type" id="relationship_type" required>
-                        <option value="">Please select</option>
-                        <option value="long_term">Long-term</option>
-                        <option value="casual">Casual dating</option>
-                        <option value="friendship">Friendship</option>
-                        <option value="marriage">Marriage</option>
-                    </select><br>
+                <label for="relationship_type">Relationship Type:</label>
+                <select name="relationship_type" id="relationship_type" required>
+                    <option value="">Please select</option>
+                    <option value="long_term">Long-term</option>
+                    <option value="casual">Casual dating</option>
+                    <option value="friendship">Friendship</option>
+                    <option value="marriage">Marriage</option>
+                </select><br>
 
-                    <label for="age_min">Minimum Age:</label>
-                    <input type="number" id="age_min" name="age_min" min="18" max="100" value="18"><br>
+                <label for="age_min">Minimum Age:</label>
+                <input type="number" id="age_min" name="age_min" min="18" max="100" value="18"><br>
 
-                    <label for="age_max">Maximum Age:</label>
-                    <input type="number" id="age_max" name="age_max" min="18" max="100" value="100"><br>
+                <label for="age_max">Maximum Age:</label>
+                <input type="number" id="age_max" name="age_max" min="18" max="100" value="100"><br>
 
-                    <label for="distance">Maximum Distance (km):</label>
-                    <input type="number" id="distance" name="distance" min="5" max="500" value="50">
-                </fieldset>
+                <label for="distance">Maximum Distance (km):</label>
+                <input type="number" id="distance" name="distance" min="5" max="500" value="50">
+            </fieldset>
                 
-                <fieldset>
-                    <legend>Membership Type</legend>
+            <fieldset>
+                <legend>Membership Type</legend>
+                <label for="membership_type">Relationship Type:</label>
+                <select name="membership_type" id="membership_type" required>
+                    <option value="">Please select</option>
+                    <option value="basic_membership">Basic (FREE)</option>
+                    <option value="premium_monthly_membership">Premium Monthly (£9.99)</option>
+                    <option value="premium_annual_membership">Premium Annual (£179.99)</option>
+                </select><br>
+            </fieldset>
 
-                    <p>Select your membership type:</p>
-                    <input type="radio" id="membership_free" name="membership"  value="free">
-                    <label for="membership_free">Free (Basic features)</label><br>
-
-                    <input type="radio" id="membership_premium_monthly" name="membership" value="premium_monthly" checked>
-                    <label for="membership_premium_monthly">Premium Monthly (£9.99/month)</label><br>
-
-                    <input type="radio" id="membership_premium_annually" name="membership" value="premium_annually">
-                    <label for="membership_premium_anually">Premium Annually (£179.99/year)</label><br>
-                </fieldset>
-
-                <fieldset>
-                    <legend>Permissions</legend>
+            <fieldset>
+                <legend>Permissions</legend>
                     
-                    <input type="checkbox" id="permission" name="permission" required>
-                    <label for="permission">I grant Connecting Hearts permission to share our story and photo on their website, social media, and marketing materials.</label><br>
-                    <br>
-                    <input type="checkbox" id="contactPermission" name="contactPermission">
-                    <label for="contactPermission">I'm interested in being contacted by Connecting Hearts to be notified of any updates or upcoming events.</label><br>
-                </fieldset>
+                <input type="checkbox" id="permission" name="permission" required>
+                <label for="permission">I grant Connecting Hearts permission to share our story and photo on their website, social media, and marketing materials.</label><br>
+                <br>
+                <input type="checkbox" id="contact_permission" name="contact_permission">
+                <label for="contact_permission">I'm interested in being contacted by Connecting Hearts to be notified of any updates or upcoming events.</label><br>
+            </fieldset>
                 
-                <fieldset> <!--fix buttons-->
-                    <legend>Register Your Account</legend>
-                    <input type="submit" value="Create Account" id="submit">
-                    <input type="reset" value="Reset Form">
-                </fieldset>
-            </form>
-        </section>
+            <fieldset> <!--fix buttons-->
+                <legend>Register Your Account</legend>
+                <input type="submit" value="Create Account" id="submit">
+                <input type="reset" value="Reset Form">
+            </fieldset>
+        </form>
         
         <section class="how-it-works">
             <h2>What Happens Next?</h2>
@@ -256,22 +247,22 @@
     <aside>
         <h3>Additional Resources</h3>
         <ul>
-            <li><a href="../safety/safety_guide.html">Online Dating Safety Guide</a></li>
-            <li><a href="../dating_tips.html">Dating Tips &amp; Advice</a></li>
-            <li><a href="testimonials.html">Testimonials</a></li>
-            <li><a href="../events/events.html">Upcoming Events</a></li>
-            <li><a href="../events/blog.html">Relationship Blog</a></li>
-            <li><a href="../faq.html">FAQ / Help Centre</a></li>
-            <li><a href="../services/premium_features.html">Premium Features</a></li>  
+            <li><a href="https://www.gov.uk/government/publications/online-dating-what-to-look-out-for/online-dating-what-to-look-out-for">Guidelines for Online Dating</a></li>
+            <li><a href="https://www.bbc.co.uk/news/topics/cp84ezjp839t">Dating Tips &amp; Advice</a></li>
+            <li><a href="./success_stories/testimonials.html">Success Stories</a></li>
+            <li><a href="./events/events.html">Upcoming Events</a></li>
+            <li><a href="https://www.bbc.co.uk/programmes/articles/1gvH8Vjlm6c0x7ln7LJ9SxQ/tips-for-successful-online-dating">Radio 4 Dating Tips</a></li>
+            <li><a href="./services/membership_plans.html">Premium Features</a></li>  
         </ul>
     </aside>
 
     <footer>
-        <p>&copy; 2025 Connecting Hearts. All rights reserved. Connecting Hearts | <a href="../safety/privacy_policy.html">Privacy Policy</a> | <a href="../terms_of_service.html">Terms of Service</a> | <a href="../contact.html">Contact Us</a></p>
+        <p>&copy; 2025 Connecting Hearts. All rights reserved. Connecting Hearts | <a href="./privacy_policy.html">Privacy Policy</a> | <a href="./contact.html">Contact Us</a></p>
         
         <p>Helping people find meaningful connections since 2020.</p>
         
         <p>123 Love Lane, London, UK | <a href="mailto:support@connectinghearts.com">support@connectinghearts.com</a> | <a href="tel:+44 (0)20 1234 5678">+44 (0)20 1234 5678</a></p>
     </footer>
+    <script src="validation.js"></script>
 </body>
 </html>

@@ -1,19 +1,17 @@
-/*TO ADD (not now, at end): - breadcrumbs
-          - change image alt text to Connecting Hearts logo
-          - change break-word to overflow: hidden;
-          - change rgb background color to #d8efea
-          - instead of #nav_menu ul::after, use #nav_menu ul {overflow: auto;}
-          - favicon
-          - only have one paragraph at the top
-          - Remove premium features page?
-          -Make membership plans page elements responsive sizes instead of px
+/*TO ADD:
+        ALL PAGES:
+          - Breadcrumbs
+          - Favicon
+          - Choose either div or section (probably section)
+
+          SPECIFIC PAGES:
+          - Make membership plans page elements responsive sizes instead of px
           - Make sure all table elements on membership plans page is in taught material
-          -Align h1 in Hero classes
-          -Fix register page (share story) names and stylings
-          - Blog changed to Daily news - fix styling names 
-          -Add line height to all?
-          -Fix Titles and Locations for events 
-          - choose either div or section (probably section)
+          - Fix Titles and Locations for events 
+          - Choose either div or section (probably section)
+          - Tidy up CSS generally
+          - Daily news, sort out div, maybe shorten too
+          - Same with Events page
 
 /*reset margins and padding*/
 *{
@@ -23,15 +21,15 @@
 
 
 body {
-    width: 95%;
-    max-width: 1024px;  /*max-width requirement*/
-    background-color: #b4e1d8; 
+    width: 95%; /*requirement*/
+    max-width: 1024px;  /*max-width requirem ent*/
+    background-color: #b4e1d8;/*goes well with darker green in logo*/
     margin: 15px auto;
     font-size: 100%;
 }
 
 header, main{
-    background-color: #b4e1d8;
+    background-color: #b4e1d8; /*if removed, doesn't make different because of body background colour, but thought it was better practice to include*/
 }
 
 body, main, aside {
@@ -49,8 +47,8 @@ img {
 header {
     width: 100%;
     height: 5%;
-    border-bottom: 2px solid #1e5959;
-    padding: 2% 0;
+    border-bottom: 2px solid #1e5959;/*requirement*/
+    padding: 1em 0;
     margin-bottom: 2%;
 }
 
@@ -59,11 +57,11 @@ header {
     height: auto;
     width: 15%;
     max-width: 160px;
-    min-width: 70px;
+    min-width: 70px;/*retain image quality*/
     float: left;
     border: 2px solid white;
     border-radius: 3px;
-    margin-left: 5px;
+    margin-left: 1%;
 }
 
 header h2 { /*company name*/
@@ -74,13 +72,11 @@ header h2 { /*company name*/
 header h2 a {
     text-decoration: none; /*remove underline from link*/
     color: #1e5959;
-    font-size: 1em;
 }
 
 h2 { /*general heaading styling*/
     text-align: center;
     color: #1e5959;
-    line-height: 1.3;
     font-size: 1.7em;
 }
 
@@ -91,34 +87,34 @@ h2 { /*general heaading styling*/
 }
 
 #nav_menu {
-    height: 50px;
-    padding: 10px 0;
+    padding: 1% 0;
     clear: both;
     width: 100%;
 }
 
 #nav_menu ul {
     list-style-type: none; /*remove bullet points*/
-    margin: 0 auto;
+    margin: 0 auto; /*centres menu*/
     position: relative;
 }
 
 #nav_menu > ul {
-    width: 98%;
+    width: 98%; /*leave space at sides*/
 }
 
-#nav_menu ul::after {
+#nav_menu ul::after { /*taught as way to ensure correct display of multi tier navigation menus*/
     content: "";
     display: block;
     clear: both;
 }
+
 
 #nav_menu ul li {
     border-left: 1px black solid;
     border-top: 1px black solid;
     border-bottom: 1px black solid;
     width: 16.5%;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.1em;
     float: left;
 }
 
@@ -129,8 +125,8 @@ h2 { /*general heaading styling*/
 #nav_menu ul li ul {
     display: none; /*hide submenu by default*/
     position: absolute;
-    top: 100%;
-    width: 16.5%;
+    top: 100%; /*displays directly under parent*/
+    width: 16.5%;/*same width as parent*/
 }
 
 #nav_menu ul li a {
@@ -157,7 +153,6 @@ h2 { /*general heaading styling*/
 #nav_menu ul li ul li {
     float: none; /*display submenus vertically*/
     width: 100%;
-    margin-bottom: 0.1em;
 }
 
 
@@ -168,8 +163,8 @@ h2 { /*general heaading styling*/
 /* ------------------------ SLICKNAV MENU ----------------------------- */
 
 .slicknav_menu {
-    background-color: #b4e1d8;
-    padding: 10px;
+    background-color: #b4e1d8; /*same as header*/
+    padding: 2%;
 }
   
 .slicknav_btn {
@@ -177,7 +172,7 @@ h2 { /*general heaading styling*/
 }
   
 .slicknav_nav {
-    background-color: #1e5959;
+    background-color: #1e5959; /*same as nav bar*/
     border-radius: 5px;
 }
   
@@ -187,40 +182,56 @@ h2 { /*general heaading styling*/
   
 .slicknav_nav a:hover, .slicknav_nav .slicknav_row:hover {
     background: #e74c3c;
-    border-radius: 5px;
+    border-radius: 5px; /*looks slicker*/
 }
   
 .slicknav_menu .slicknav_menutxt {
-    text-shadow: none;
+    text-shadow: none; /*realised by default there is a text shadow so removed it*/
 }
 
-/* ------------------------ HERO SECTION ----------------------------- */
+/* ------------------------ HERO & BREADCRUMBS SECTION ----------------------------- */
 
 
 main {
-    width: 55%;
+    width: 55%; /*allows for main and aside content both at top of page*/
     float: left;
     padding: 2%;
     margin: 0 2% 2% 2%;
 }
 
+.breadcrumbs {
+    margin: 1em 0;
+    padding: 0.5em;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-left: 3px solid #1e5959;
+}
+
+.breadcrumbs p {
+    margin: 0;
+    font-size: 0.8em;
+    color: #1e5959;
+}
+
+.breadcrumbs a {
+    color: #1e5959
+}
+
+
 .hero {
     text-align: center;
     margin-bottom: 1.5em;
-    border-bottom: 1px solid #ccc;
-    padding: 3%;
-    background-color: rgba(255, 255, 255, 0.4); /*lighter background for hero section, 0.4 is used for opacity*/
+    padding: 2%;
+    background-color: rgba(255, 255, 255, 0.4); /*lighter background for hero section, rgba and 0.4 is used for opacity to make it more like the background colour*/
 }
 
 .hero h1 {
     color: #1e5959;
-    margin-bottom: 3%;
     font-size: 2em;
 }
 
 .hero p {
-    margin-bottom: 4%;
-    line-height: 1.5;
+    margin: 2% 0;
+    line-height: 1.25; /*small bit of extra spacing between lines for readability*/
 }
 
 
@@ -228,7 +239,7 @@ main {
     display: inline-block;
     background-color: #e74c3c;
     color: white;
-    padding: 0.7em 1.5em;
+    padding: 1.5%;
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px; /*curved button corners*/
@@ -241,9 +252,9 @@ main {
 
 /* ------------------------ FEATURES SECTION ----------------------------- */
 
-.features {
+/* .features {
     margin-bottom: 2em;
-}
+} */
 
 
 .features h2 {
@@ -253,18 +264,21 @@ main {
 }
 
 .feature-box{
-    margin-bottom: 1.5em;
+    margin-bottom: 1.5em; /*space between boxes*/
     padding: 2%;
     background-color: rgba(255, 255, 255, 0.4);
     border-left: 3px solid #1e5959; /*dark green left border on feature tabs*/
 }
 
+.feature-box p{
+    margin: 0.2em;
+}
+
 .feature-box h3 {
     color: #e74c3c;
-    margin-bottom: 0.5em;
+    margin-bottom: 1%;
     text-align: left;
-    padding-bottom: 0.3em;
-    font-size: 1.4em;
+    padding-bottom: 0.3em; /*padding was more by default*/
 }
 
 .feature-box ol, .feature-box ul {
@@ -273,25 +287,23 @@ main {
 }
 
 .feature-box li {
-    margin-bottom: 0.8em;
-    line-height: 1.4;
-    padding: 0.5em 0;
+    padding: 0.5em 0; /*applies on global_reach.html for example*/
 }
 
 .feature-box strong {
     color: #e74c3c; /*bold text in orange*/
 }
-
+/* 
 .feature-box ul, .feature-box ol {
     line-height: 1.5;
-}
+} */
 
 /* ------------------------ TESTIMONIAL SECTION ----------------------------- */
 
-.testimonial {
+.testimonial { /*same stylings as feature box*/
     margin-bottom: 1.5em;
     background-color: rgba(255, 255, 255, 0.4);
-    padding: 2.5%;
+    padding: 2%;
     border-left: 3px solid #1e5959;
 }
 
@@ -311,24 +323,23 @@ main {
 
 /* ------------------------ HOW IT WORKS SECTION ----------------------------- */
 
-.how-it-works {
+.how-it-works { /*same as feature-box and how-it-works*/
     margin-bottom: 1.5em;
-    padding: 2.5%;
+    padding: 2%;
     background-color: rgba(255, 255, 255, 0.4);
     border-left: 3px solid #1e5959;
 }
 
-.how-it-works p {
+.how-it-works p { /*needed?*/
     margin-bottom: 0.5em;
     margin-top: 0.5em;
 }
 .how-it-works ol, .how-it-works ul { /*indenting the list items for readaability*/
-    padding-left: 2em;
+    padding-left: 1em;
     margin-bottom: 0.5em;
 }
 
 .how-it-works li {
-    margin-bottom: 0.8em;
     line-height: 1.4;
     padding: 0.5em 0;
 }
@@ -344,7 +355,7 @@ aside {
     float: right;
     padding: 2%;
     background-color: #f1f8f6;/*different to rest of page due to link colour requirements*/
-    margin: 0 2% 2% 0;
+    margin: 0 2% 0 0;
 }
 
 h3 {
@@ -386,7 +397,7 @@ footer {
 
 
 footer p {
-    margin-bottom: 0.8em;
+    margin-bottom: 1%;
 }
 
 footer a {
@@ -396,24 +407,6 @@ footer a {
 
 
 /* ------------------------ MEDIA QUERIES ----------------------------- */
-
-@media screen and (max-width: 1050px) {
-    #nav_menu ul li {
-        width: 13.9%; /*reduce nav menu item width to avoid breakpoint*/
-    }
-    
-    #nav_menu ul li a {
-        padding: 0.5em 0.3em;
-    }
-    
-    #nav_menu {
-        font-size: 95%;
-    }
-
-    header h2 {
-        font-size: 2.7em;
-    }
-}
 
 @media only screen and (max-width: 900px) { /*reduce font size for <900px  screen*/
     html {font-size: 90%;}
@@ -469,7 +462,6 @@ footer a {
         padding: 4%;
         margin-bottom: 5%;
     }  
-    footer {word-wrap: break-word;} /*stops a breakpoint in the middle of 'terms of service' link*/
 }
 
 /* ------------------------ ABOUT US PAGE ----------------------------- */
@@ -480,37 +472,19 @@ footer a {
 
 
 /* ------------------------ OUR TEAM PAGE ----------------------------- */
-.team-member {
-    margin-bottom: 1.5em;
-}
 
 .team-member h3 {
     border-bottom: 1px solid rgba(30, 89, 89, 0.2); /*subtle visual parting beneath name of team member*/
-    padding-bottom: 0.5em;
 }
 
 .team-member strong { /*team member role*/
     color: #1e5959;
     font-size: 1.1em;
     display: block;
-    margin-bottom: 1em; /*block and margin for spacing*/
+    margin-bottom: 0.5em; /*block and margin for spacing*/
 }
 
 
-/* example */
-/* ------------------------ BREADCRUMBS ----------------------------- */
-.breadcrumbs {
-    margin: 1em 0;
-    padding: 0.5em;
-    background-color: rgba(255, 255, 255, 0.4);
-    border-left: 3px solid #1e5959;
-}
-
-.breadcrumbs p {
-    margin: 0;
-    font-size: 0.8em;
-    color: #1e5959;
-}
 
 /* ------------------------ MEMBERSHIP PLANS PAGE ----------------------------- */
 
@@ -519,69 +493,66 @@ footer a {
     width: 30%;
     margin: 1.5%;
     margin-left: 2.5em; /*to centre booxes, better way?*/
-    padding: 20px;
+    padding: 2%;
     float: left;
     background-color: rgba(255, 255, 255, 0.4);
     border-left: 3px solid #1e5959;
     margin-bottom: 2em;
-    text-align: center;
+    text-align: center; /*for prices*/
     min-height: 400px;
 }
 
 .plan-box h3 {
-    border-bottom: 1px solid #1e5959;
-    padding-bottom: 10px;
-    margin-bottom: 15px;
-    text-align: center;
+    border-bottom: 1px solid #1e5959; /*separation*/
+    padding-bottom: 1%;
 }
 
 .plan-price {
     font-size: 1.8em;
     color: #e74c3c;
     font-weight: bold;
-    margin: 15px 0;
+    margin: 2% 0;
 }
 
 .plan-duration {
     font-size: 0.9em;
     color: #1e5959;
-    margin-bottom: 20px;
 }
 
 .plan-features {
     text-align: left;
-    margin: 20px 0;
-    min-height: 150px;
-    padding-left: 25px;
+    margin: 1em 0;
+    min-height: 100px;
+    padding-left: 20%; /* centred text*/
 }
 
 .plan-features li {
-    margin-bottom: 10px;
+    margin-bottom: 10px;/*space between list items*/
     list-style-type: none;
-    position: relative;
+    /* position: relative; */
 }
 
 .plan-button {
     display: inline-block;
     background-color: #1e5959;
     color: white;
-    padding: 10px 20px;
+    padding: 5% 10%;
     text-decoration: none;
-    margin-top: 20px;
+    margin-top: 2%;
 }
 
 .plan-button:hover {
     background-color: #e74c3c;
 }
 
-/* Plan table styles */
+/*------------membership plan table styles----------------*/
 .plan-comparison {
-    clear: both;
+    clear: both; /*separation*/
 }
 
 .plan-table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: collapse; /*no space between cells*/
     margin: 2em 0;
 }
 
@@ -598,13 +569,13 @@ footer a {
 
 .plan-table tr:nth-child(even) {
     background-color: rgba(255, 255, 255, 0.4);
-}
+} /*alternating coolours foor better visibility*/
 
 .plan-table tr:nth-child(odd) {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-.price-highlight {
+.price {
     font-size: 1.2em;
     font-weight: bold;
     color: #e74c3c;
@@ -613,13 +584,13 @@ footer a {
 .feature-included {
     color: #2ecc71;
     font-weight: bold;
-}
+} /*colouring of ticks and crosses*/
 
 .feature-excluded {
     color: #e74c3c;
 }
 
-/* Media query for tablets and smaller screens */
+/*Displays plan boxes on top of each other rather than side-by-side*/
 @media only screen and (max-width: 767px) {
     .plan-box {
         width: 90%;
@@ -628,27 +599,21 @@ footer a {
     }
 }
 
-/* testimonial Page */
+/*------TESTIMONIAL PAGE-------*/
 
 
-.testimonial-timeline {
+.testimonial-timeline { /*'together since..*/
     font-size: 0.9em;
     color: #1e5959;
     text-align: right;
     font-style: italic;
 }
 
-/* Media query for tablets and below */
-@media only screen and (max-width: 767px) {
-    .testimonial {
-        width: 90%;
-        margin: 0 auto 1.5em auto;
-        float: none;
-    }
-}
+/*-------------FEATURED COUPLES*/
 
-/*featured couples*/
-/* Featured Couples Page Styles */
+.register-button.story-awaits {
+    margin-left: 30%; /*centres register button at bottom*/
+}
 
 .couple h2 {
     color: #e74c3c; /*couple name colour*/
@@ -669,7 +634,7 @@ footer a {
 
 .couple-story {
     width: 66%;
-    float: left;
+    float: left; /*moves inline with image so doesn't wrap around it*/
 }
 
 .couple-story h3 { /*timeline information*/
@@ -692,13 +657,12 @@ footer a {
     clear: both;
 }
 
-/* Media query for smaller screens */
 @media only screen and (max-width: 767px) {
     .couple-photo, .couple-story {
         float: none;
         width: 100%;
         margin-right: 0;
-    }
+    } /*couple photo appears onn top rather than next to the story*/
     
     .couple-photo {
         margin-bottom: 1em;
@@ -714,15 +678,10 @@ footer a {
     .couple-photo img {
         max-width: 100%;
     }
-    
-    .quote {
-        padding-left: 0.5em;
-    }
 }
 
 
-/*share story */
-/* Form styling based on Chapter 13 */
+/*------------REGISTER PAGE------*/
 form {
     width: 95%;
     margin: 0 auto;
@@ -759,15 +718,13 @@ input, select, textarea {
     margin-bottom: 0.5em;
 }
 
-input[type="checkbox"] {
+input[type="checkbox"] { /*[ ] used to select specifically checkbox type*/
     width: auto;
     margin-left: 12.5em; /* To align with other form elements */
 }
 
-input[type="checkbox"] + label {
+input[type="checkbox"] + label { /* selects the checkboxes and their label, a label that comes immediately after a checkbox*/
     float: none;
-    width: auto;
-    text-align: left;
 }
 
 textarea {
@@ -775,26 +732,18 @@ textarea {
     width: 30em;
 }
 
-input[type="submit"], input[type="reset"] {
+input[type="submit"], input[type="reset"] { /*formats buttons at bottom*/
     width: 10em;
-    margin-left: 1em;
+    /* margin-left: 1em; */
     background-color: #e74c3c;
     color: white;
     font-weight: bold;
-    border: 2px solid #1e5959;
     border-radius: 5px;
     padding: 0.5em;
 }
 
-input[type="submit"] {
-    margin-left: 12em; /* To align with form fields */
-}
 
-br {
-    clear: both;
-}
-
-/* Form validation styling from Chapter 13 */
+/*form validation*/
 input:required {
     border: 3px solid #e74c3c;
 }
@@ -807,7 +756,7 @@ input:invalid {
     box-shadow: none;
 }
 
-/* Media Queries for form responsiveness, based on Chapter 8 */
+/*media queries to fix some layouts of form on smaller screens*/
 @media only screen and (max-width: 767px) {
     label {
         float: none;
@@ -836,18 +785,11 @@ input:invalid {
     }
 }
 
-/*Blog - Daily News Page*/
-/* Additional styles specific to blog page */
-.daily-article {
-    margin-bottom: 2em;
-    padding: 2%;
-    background-color: rgba(255, 255, 255, 0.4);
-    border-left: 3px solid #1e5959;
-}
+/*---------DAILY NEW PAGE--------*/
+
 
 .article-date {
     color: #e74c3c;
-    font-size: 0.9em;
     margin-bottom: 0.5em;
 }
 
@@ -858,15 +800,10 @@ input:invalid {
     font-weight: bold;
 }
 
-.article-author {
+.article-location {
     font-style: italic;
     margin-bottom: 1em;
     font-size: 0.9em;
-}
-
-.article-preview {
-    margin-bottom: 1em;
-    line-height: 1.5;
 }
 
 .read-more { /*Subscribe for full article button*/
@@ -884,10 +821,6 @@ input:invalid {
     background-color: #e74c3c;
 }
 
-/* .blog-featured {
-    margin-bottom: 2em;
-    padding: 0;
-} */
 
 .featured-article img { /*image for today's article*/
     background-color: #ccc;
@@ -898,7 +831,7 @@ input:invalid {
     color: #1e5959;/*placeholder text colour*/
 }
 
-/*PROMOTIONS PAGE*/
+/*---------PROMOTIONS PAGE---------*/
 
 
 .promo-title {/*offer name*/
@@ -913,7 +846,7 @@ input:invalid {
 }
 
 .promo-details {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.4); /*highlight box within box*/
     padding: 1em;
     margin: 1em 0; /*spacing between box and description*/
     border-radius: 5px;
@@ -924,7 +857,6 @@ input:invalid {
     background-color: #e74c3c;
     color: white;
     padding: 0.5em 1em;
-    font-size: 1em;
     border-radius: 3px;
     margin: 0.5em 0; /*spacing*/
 }
@@ -939,19 +871,3 @@ input:invalid {
     font-weight: bold;
 }
 
-/*Contact Page*/
-.contact-submit {
-    background-color: #e74c3c;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    font-size: 1em;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    border: 2px solid #1e5959;
-}
-
-.contact-submit:hover {
-    background-color: #c0392b;
-}
